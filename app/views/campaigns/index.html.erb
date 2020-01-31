@@ -1,5 +1,10 @@
-<!-- <h1>11K1K2KEK2</h1> -->
+<!-- <h1> TEST </h1> -->
 
 <% @campaigns.each do |campaign| %>
-  <h2><%= campaign.name %></h2>
+  <h2> le nom de la campagne est <%= campaign.name %></h2>
+  <p> Elle commence le <%= campaign.starts_at %> et fini le <%= campaign.ends_at %></p>
+  <p> Son objectif : <%= campaign.goal %></p>
+  <p> Sa cible : <%= campaign.target %></p>
+  <p> le message de la campagne : <%= campaign.message %></p>
+  <p> les hashtags associés sont : <%= campaign.hashtag %></p>
 <% end %>
