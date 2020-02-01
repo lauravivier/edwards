@@ -1,0 +1,15 @@
+.btn-home {
+  color: #0047FE;
+  border: 1px solid #0047FE;
+  padding: 8px 24px;
+  border-radius: 30px;
+  font-weight: lighter;
+  opacity: 0.6;
+  transition: opacity 0.3s ease;
+  justify-content: flex-end;
+}
+
+.btn-home:hover {
+  opacity: 1;
+}
+
