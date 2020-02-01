@@ -6,24 +6,29 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-puts 'Creating Campaign...'
-tour_d_argent = Campaign.new(name: "La Tour d'Argent")
-tour_d_argent.save!
-
-chez_gladines = Campaign.new(name: "Chez Gladines")
-chez_gladines.save!
-
-voyages = Campaign.new(name: "Voyages")
-voyages.save!
+#Campaign.destroy_all
+#User.destroy_all
 
 puts 'Creating User'
-cyrille = User.new (name: "Cyrille")
-cyrille.save!
+user_01 = User.new(name: "Cyrille", email: "cyr@gmail.com", password: "helloo")
+user_01.save!
 
-ken = User.new (name: "Ken")
-Ken.save!
+user_02 = User.new(name: "Ken", email: "ken@gmail.com", password: "helloo")
+user_02.save!
 
-laura = User.new (name: "Laura")
-Laura.save!
+user_03 = User.new(name: "Laura", email: "lau@gmail.com", password: "helloo")
+user_03.save!
+
+puts 'Creating Campaign...'
+campaign_01 = Campaign.new(name: "Cravache Time", user_id: user_01.id, starts_at: Date.new(2020,03,02), ends_at: Date.new(2020,02,03), goal: "gagner de l'argent", target: "18-24ans", message: "achetez mes cravaches", hashtag: "#sm #fiftyshadesofgrey")
+campaign_01.save!
+
+campaign_02 = Campaign.new(name: "Chez Gladines", user_id: user_02.id, starts_at: Date.new(2020,02,02), ends_at: Date.new(2020,02,03), goal: "gagner de l'argent", target: "18-24ans", message: "achetez mes cravaches", hashtag: "#sm #fiftyshadesofgrey")
+campaign_02.save!
+
+campaign_03 = Campaign.new(name: "Voyages", user_id: user_03.id, starts_at: Date.new(2020,02,02), ends_at: Date.new(2020,02,03), goal: "gagner de l'argent", target: "18-24ans", message: "achetez mes cravaches", hashtag: "#sm #fiftyshadesofgrey")
+campaign_03.save!
+
+
 
 puts 'Finished!'
