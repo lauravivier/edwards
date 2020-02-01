@@ -4,9 +4,9 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
   has_many :campaigns
-  validates :email, presence: true, uniqueness: true
-  validates :password, presence: true
-  validates :name, presence: true
+  #validates :email, presence: true, uniqueness: true
+  #validates :password, presence: true
+  #validates :name, presence: true
 
   devise :database_authenticatable, :registerable, :recoverable, :rememberable, :validatable
 end
