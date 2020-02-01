@@ -9,6 +9,7 @@ class CreateCampaigns < ActiveRecord::Migration[6.0]
       t.string :message
       t.string :hashtag
 
+      t.references :user, foreign_key: true
       t.timestamps
     end
   end
