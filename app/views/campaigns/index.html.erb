@@ -2,7 +2,7 @@
 
 <% @campaigns.each do |campaign| %>
   <h2> le nom de la campagne est <%= campaign.name %></h2>
-  <p> Elle commence le <%= campaign.starts_at %> et fini le <%= campaign.ends_at %></p>
+  <p> Elle commence le <%= I18n.l(campaign.starts_at, format: :long) %> et fini le <%= I18n.l(campaign.ends_at, format: :long) %></p>
   <p> Son objectif : <%= campaign.goal %></p>
   <p> Sa cible : <%= campaign.target %></p>
   <p> le message de la campagne : <%= campaign.message %></p>
