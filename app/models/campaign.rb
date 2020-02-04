@@ -1,5 +1,6 @@
 class Campaign < ApplicationRecord
   has_many :campaign_influencers
+  has_many :influencers, through: :campaign_influencers
   has_many :metrics
   belongs_to :user
 

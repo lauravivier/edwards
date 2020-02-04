@@ -1,5 +1,5 @@
 class Influencer < ApplicationRecord
-  belongs_to :campaign_influencer
+  has_many :campaign_influencers
   has_many :influencer_tags
 
   #validates: name, presence: true
