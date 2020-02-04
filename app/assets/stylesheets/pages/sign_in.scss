@@ -1,16 +1,50 @@
 .s {
-
+position: absolute;
 width: 216px;
 height: 26px;
 left: 249px;
 top: 174px;
-
 font-family: Lato;
 font-style: normal;
 font-weight: bold;
 font-size: 35px;
 line-height: 42px;
 text-align: center;
-
 color: rgba(40, 47, 51, 0.69);
+
+}
+
+.box {
+width: 400px;
+height: 310px;
+left: 161px;
+top: 276px;
+ }
+
+.img{
+position: absolute;
+width: 730px;
+height: 904px;
+left: 710px;
+top: 0px;
+background: url(image.png);
+}
+
+.champs {
+position: absolute;
+width: 399px;
+height: 79px;
+left: 152px;
+top: 307px;
+background: #F5F6F7;
+border-radius: 30px;
+}
+
+.img {
+position: absolute;
+width: 730px;
+height: 904px;
+left: 710px;
+top: 0px;
+background: url(image.png);
 }
