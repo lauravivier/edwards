@@ -9,7 +9,6 @@ class CreateInfluencers < ActiveRecord::Migration[6.0]
       t.integer :men_stats
       t.string :engagement_rate
       t.string :media
-      t.references :campaign_influencer, null: false, foreign_key: true
 
       t.timestamps
     end
