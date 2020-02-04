@@ -40,7 +40,7 @@ class ProfilesController < ApplicationController
     params.require(:user).permit(:email, :password, :name)
   end
 
-  def set_user
-    @user = User.find(params[:id])
+def set_user
+  @user = User.find(params[:id])
   end
 end
