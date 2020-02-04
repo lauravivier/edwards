@@ -10,10 +10,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_02_01_113324) do
+ActiveRecord::Schema.define(version: 2020_02_04_080439) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "campaign_influencers", force: :cascade do |t|
+    t.bigint "campaign_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["campaign_id"], name: "index_campaign_influencers_on_campaign_id"
+  end
 
   create_table "campaigns", force: :cascade do |t|
     t.string "name"
@@ -29,6 +36,38 @@ ActiveRecord::Schema.define(version: 2020_02_01_113324) do
     t.index ["user_id"], name: "index_campaigns_on_user_id"
   end
 
+  create_table "influencer_tags", force: :cascade do |t|
+    t.string "tag_id"
+    t.bigint "influencer_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["influencer_id"], name: "index_influencer_tags_on_influencer_id"
+  end
+
+  create_table "influencers", force: :cascade do |t|
+    t.string "name"
+    t.string "community_location"
+    t.string "community_age"
+    t.integer "community_size"
+    t.integer "women_stats"
+    t.integer "men_stats"
+    t.string "engagement_rate"
+    t.string "media"
+    t.bigint "campaign_influencer_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["campaign_influencer_id"], name: "index_influencers_on_campaign_influencer_id"
+  end
+
+  create_table "tags", force: :cascade do |t|
+    t.string "name"
+    t.string "color"
+    t.bigint "influencer_tag_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["influencer_tag_id"], name: "index_tags_on_influencer_tag_id"
+  end
+
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
@@ -42,5 +81,9 @@ ActiveRecord::Schema.define(version: 2020_02_01_113324) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "campaign_influencers", "campaigns"
   add_foreign_key "campaigns", "users"
+  add_foreign_key "influencer_tags", "influencers"
+  add_foreign_key "influencers", "campaign_influencers"
+  add_foreign_key "tags", "influencer_tags"
 end
