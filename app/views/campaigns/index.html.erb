@@ -1,5 +1,5 @@
 <!-- <h1> TEST </h1> -->
-
+<h1>hello</h1>
 <% @campaigns.each do |campaign| %>
   <h2> le nom de la campagne est <%= campaign.name %></h2>
   <p> Elle commence le <%= I18n.l(campaign.starts_at, format: :long) %> et fini le <%= I18n.l(campaign.ends_at, format: :long) %></p>
