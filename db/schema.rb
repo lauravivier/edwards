@@ -10,16 +10,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_02_04_080439) do
+ActiveRecord::Schema.define(version: 2020_02_04_192524) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "campaign_influencers", force: :cascade do |t|
     t.bigint "campaign_id", null: false
+    t.bigint "influencer_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["campaign_id"], name: "index_campaign_influencers_on_campaign_id"
+    t.index ["influencer_id"], name: "index_campaign_influencers_on_influencer_id"
   end
 
   create_table "campaigns", force: :cascade do |t|
@@ -37,7 +39,6 @@ ActiveRecord::Schema.define(version: 2020_02_04_080439) do
   end
 
   create_table "influencer_tags", force: :cascade do |t|
-    t.string "tag_id"
     t.bigint "influencer_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
@@ -53,10 +54,8 @@ ActiveRecord::Schema.define(version: 2020_02_04_080439) do
     t.integer "men_stats"
     t.string "engagement_rate"
     t.string "media"
-    t.bigint "campaign_influencer_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["campaign_influencer_id"], name: "index_influencers_on_campaign_influencer_id"
   end
 
   create_table "tags", force: :cascade do |t|
@@ -82,8 +81,8 @@ ActiveRecord::Schema.define(version: 2020_02_04_080439) do
   end
 
   add_foreign_key "campaign_influencers", "campaigns"
+  add_foreign_key "campaign_influencers", "influencers"
   add_foreign_key "campaigns", "users"
   add_foreign_key "influencer_tags", "influencers"
-  add_foreign_key "influencers", "campaign_influencers"
   add_foreign_key "tags", "influencer_tags"
 end

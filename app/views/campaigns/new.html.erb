@@ -1,21 +1,22 @@
 <!-- <h1> TEST </h1> -->
 
-<%= form_for(@campaign) do |f| %>
-  <%= f.label :name %>
-  <%= f.text_field :name %>
-  <%= f.label :starts_at %>
-  <%= f.text_field :starts_at %>
-  <%= f.label :ends_at %>
-  <%= f.text_field :ends_at %>
-  <%= f.label :goal %>
-  <%= f.text_field :goal %>
-  <%= f.label :goal %>
-  <%= f.text_field :target %>
-  <%= f.label :message %>
-  <%= f.text_field :message %>
-  <%= f.label :hashtag %>
-  <%= f.text_field :hashtag%>
-  <%= f.submit %>
-<% end %>
+<div class="container d-flex justify-content-center" >
+  <%= simple_form_for (@campaign) do |f| %>
+          <%= f.input :name, label: 'Nom de votre campagne' %>
+          <%= f.input :ends_at, label: 'Date de fin' %>
 
-<%= render 'form', campaign: @campaign %>
+
+          <%= f.input :ends_at, label: 'Date de fin' %>
+
+
+          <%= f.input :goal, label: 'Objectif' %>
+
+
+           <%= f.input :message, label: 'Brief' %>
+
+
+          <%= f.input :hashtag, label: 'Hashtags associés' %>
+
+        <%= f.submit "sélection des influencers", class: "form-button" %>
+    <% end %>
+</div>
