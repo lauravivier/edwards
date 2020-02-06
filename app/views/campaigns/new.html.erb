@@ -3,30 +3,20 @@
     <div class="col-xs-12 col-sm-6 col-sm-offset-3">
       <div class="form-campaign">
         <h1>Créer votre campagne d'influence en trois clics</h1>
-        <h2> Compléter le brief créatif pour les influencers </h2>
+        <h2> Renseigner votre brief créatif </h2>
         <%= simple_form_for(@campaign) do |f| %>
           <div class="row">
-            <div class="col-xs-6">
-              <%= f.input :name, label: 'Nom de la campagn', placeholder: 'Nom de votre campagne' %>
-            <div>
-              <%= f.input :goal, label: 'Objectif', collection: Campaign::STATUSES, prompt: "Quel est votre objectif principal ?" %>
-            </div>
-            <div>
+            <div class="col-xs-6" >
+              <%= f.input :name, label: false, placeholder: 'Nom de votre campagne' %>
+              <%= f.input :goal, label: false, collection: Campaign::STATUSES, prompt: "Quel est votre objectif principal ?" %>
               <%= f.input :starts_at, label: 'Date de début' %>
-            </div>
-            <div>
               <%= f.input :ends_at, label: 'Date de fin' %>
+              <%= f.input :message, label: false, placeholder: 'Brief' %>
+              <%= f.input :hashtag, label: false, placeholder: 'Hashtags associés' %>
             </div>
-            <div>
-              <%= f.input :message, placeholder: 'Brief' %>
             </div>
-            <div>
-              <%= f.input :hashtag, placeholder: 'Hashtags associés' %>
-            </div>
+             <%= f.submit "Sélectionner des influencers", class: "btn-ghost" %>
           </div>
-          <!-- <div>
-             <%= f.submit "Sélection des influencers", class: "form-button"  %>
-          </div> -->
         <% end %>
       </div>
     </div>
