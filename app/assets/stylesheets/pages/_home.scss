@@ -1,53 +1,45 @@
 // Specific CSS for your home-page
+body {
+  font-family: Lato;
+}
 
-htitle {
-position: absolute;
-width: 700px;
-height: 85px;
-left: 83px;
-top: 246px;
-font-family: Lato;
-font-style: normal;
-font-weight: 800;
-font-size: 36px;
-line-height: 43px;
-color: #0047FE;
+.container-fluid,
+.container {
+  height: calc(100vh - 58px);
+}
+
+h1 {
+  font-weight: 800;
+  font-size: 36px;
+  line-height: 43px;
+  color: #0047FE;
 }
 
 
-hmarket {
-position: absolute;
-width: 667px;
-height: 181px;
-left: 83px;
-top: 426px;
-font-family: Lato;
-font-style: normal;
+h2 {
 font-weight: 300;
 font-size: 36px;
 line-height: 43px;
 color: #000000;
-mix-blend-mode: normal;
+// mix-blend-mode: normal;
 }
 
 
 .bouton {
-  justify-content: flex-end;
   color: white;
   padding: 8px 24px;
   border-radius: 50px;
   font-weight: lighter;
-  opacity: 0.6;
-  transition: opacity 0.3s ease;
+  transition: background 0.3s ease;
+  background: #0047FE;
+  width: 171px;
+  text-align: center;
+  align-self: flex-end;
 }
 
-.hover {
-  opacity: 1;
-}
-
-
-.authentication {
-    position: absolute;
-    background: #0047FE;
-
+.bouton:hover {
+  color: white;
+  text-decoration: none;
+  background: #003cd6;
+  transition: background 0.3s ease;
 }
