@@ -1,3 +1,21 @@
+
+<!-- <h1> TEST </h1> -->
+
+
+<div class="mx-auto mt-20 =" style="width: 500px;">
+       <div class="progress-bar role nav ="progressbar" style="width: 25%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"> ETAPE 1</div>
+</div>
+
+  <%= simple_form_for (@campaign) do |f| %>
+          <%= f.input :name, label: 'Nom de votre campagne' %>
+          <%= f.input :ends_at, label: 'Date de fin' %>
+
+
+          <%= f.input :ends_at, label: 'Date de fin' %>
+
+
+          <%= f.input :goal, label: 'Objectif' %>
+
 <div class="container">
   <div class="row">
     <div class="col-xs-12 col-sm-6 col-sm-offset-3">
@@ -32,7 +50,3 @@
     </div>
   </div>
 </div>
-
-
-
-
