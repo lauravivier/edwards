@@ -4,6 +4,9 @@ class Campaign < ApplicationRecord
   has_many :metrics
   belongs_to :user
 
+  STATUSES = ["Renforcer son image", "Accroître l'engagement", "Améliorer la conversion", "Récolter des informations"]
+  validates :goal, inclusion: {in: STATUSES}
+
   #validates :name, presence: true
   #validates :starts_at, presence: true
   #validates :ends_at, presence: true

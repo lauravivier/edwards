@@ -1,3 +1,4 @@
+
 <!-- <h1> TEST </h1> -->
 
 
@@ -15,13 +16,37 @@
 
           <%= f.input :goal, label: 'Objectif' %>
 
-
-           <%= f.input :message, label: 'Brief' %>
-
-
-          <%= f.input :hashtag, label: 'Hashtags associés' %>
-
-        <%= f.submit "sélection des influencers", class: "form-button" %>
-    <% end %>
-
-
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12 col-sm-6 col-sm-offset-3">
+      <div class="form-campaign">
+        <h1>Créer votre campagne d'influence en trois clics</h1>
+        <h2> Compléter le brief créatif pour les influencers </h2>
+        <%= simple_form_for(@campaign) do |f| %>
+          <div class="row">
+            <div class="col-xs-6">
+              <%= f.input :name, label: 'Nom de la campagn', placeholder: 'Nom de votre campagne' %>
+            <div>
+              <%= f.input :goal, label: 'Objectif', collection: Campaign::STATUSES, prompt: "Quel est votre objectif principal ?" %>
+            </div>
+            <div>
+              <%= f.input :starts_at, label: 'Date de début' %>
+            </div>
+            <div>
+              <%= f.input :ends_at, label: 'Date de fin' %>
+            </div>
+            <div>
+              <%= f.input :message, placeholder: 'Brief' %>
+            </div>
+            <div>
+              <%= f.input :hashtag, placeholder: 'Hashtags associés' %>
+            </div>
+          </div>
+          <!-- <div>
+             <%= f.submit "Sélection des influencers", class: "form-button"  %>
+          </div> -->
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>

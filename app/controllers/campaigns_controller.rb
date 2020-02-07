@@ -15,8 +15,11 @@ class CampaignsController < ApplicationController
 
   def create
     @campaigns = Campaign.new(campaigns_params)
-    @campaigns.save
-    redirect_to campaign_path(@campaign)
+    if @campaign.save
+      redirect_to campaign_path(@campaign)
+    else
+      render :new
+    end
   end
 
   private
