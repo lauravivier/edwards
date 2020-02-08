@@ -11,19 +11,20 @@ class CampaignsController < ApplicationController
 
   def new
     @campaign = Campaign.new
+    @influencers = Influencer.all
   end
 
   def create
-    @campaigns = Campaign.new(campaign_params)
-    @campaigns.save
+    @campaign = Campaign.new
+    @campaign.save
     redirect_to campaign_path(@campaign)
   end
 
   private
 
-  def campaign_params
-    params.require(:campaign).permit(:name, :starts_at, :ends_at, :goal, :target, :message, :hashtag)
-  end
+  # def campaign_params
+  #   params.require(:campaign).permit(:name, :starts_at, :ends_at, :goal, :target, :message, :hashtag)
+  # end
 
   def set_campaign
     @campaign = Campaign.find(params[:id])

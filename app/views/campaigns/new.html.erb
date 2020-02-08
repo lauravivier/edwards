@@ -30,6 +30,10 @@
 
 
     <%= f.submit "submit", class: "form-button" %>
+
+    <% @influencers.each do |influencer| %>
+    <p> <%= influencer.name %> </p>
+    <% end %>
 <% end %>
 
 </div>
