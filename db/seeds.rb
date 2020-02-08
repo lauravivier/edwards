@@ -16,8 +16,8 @@ CampaignInfluencer.destroy_all
 InfluencerTag.destroy_all
 Influencer.destroy_all
 Campaign.destroy_all
-User.destroy_all
 Tag.destroy_all
+User.destroy_all
 
 
 puts 'Creating User...'
