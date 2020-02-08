@@ -1,33 +1,36 @@
 
 <!-- <h1> TEST </h1> -->
 
-<!--
-<div class="mx-auto mt-20 " style="width: 500px;">
-       <div class="progress-bar role nav ="progressbar" style="width: 25%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"> ETAPE 1</div>
-</div> -->
+<div class="container" >
+  <%= simple_form_for (@campaign) do |f| %>
+    <%= f.input :name, label: 'Nom de votre campagne' %>
+    <%= f.input :ends_at, label: 'Date de fin' %>
 
 
-<div class="container">
-  <div class="row">
-    <div class="col-xs-12 col-sm-6 col-sm-offset-3">
-      <div class="form-campaign">
-        <h1>Créer votre campagne d'influence en trois clics</h1>
-        <h2> Renseigner votre brief créatif </h2>
-        <%= simple_form_for(@campaign) do |f| %>
-          <div class="row">
-            <div class="col-xs-6" >
-              <%= f.input :name, label: false, placeholder: 'Nom de votre campagne' %>
-              <%= f.input :goal, label: false, collection: Campaign::STATUSES, prompt: "Quel est votre objectif principal ?" %>
-              <%= f.input :starts_at, label: 'Date de début' %>
-              <%= f.input :ends_at, label: 'Date de fin' %>
-              <%= f.input :message, label: false, placeholder: 'Brief' %>
-              <%= f.input :hashtag, label: false, placeholder: 'Hashtags associés' %>
-            </div>
-            </div>
-             <%= f.submit "Sélectionner des influencers", class: "btn-ghost" %>
-          </div>
-        <% end %>
-      </div>
-    </div>
-  </div>
+    <%= f.input :ends_at, label: 'Date de fin' %>
+
+
+    <%= f.input :goal, label: 'Objectif' %>
+
+
+     <%= f.input :message, label: 'Brief' %>
+
+
+    <%= f.input :hashtag, label: 'Hashtags associés' %>
+
+
+  <h1>Search</h1>
+    <%= form_tag influencers_path, method: :get do %>
+      <%= text_field_tag :query,
+      params[:query],
+      class: "form-control",
+      placeholder: "Find something"
+      %>
+      <%= submit_tag "Search influencers", class: "btn btn-primary" %>
+    <% end %>
+
+
+    <%= f.submit "submit", class: "form-button" %>
+<% end %>
+
 </div>

@@ -2,14 +2,16 @@
   color: #0047FE;
   border: 1px solid #0047FE;
   padding: 8px 24px;
-  border-radius: 30px;
-  font-weight: bold;
-  opacity: 0.6;
-  transition: opacity 0.3s ease;
+  border-radius: 50px;
+  font-weight: lighter;
+  transition: background 0.3s ease;
+  justify-content: flex-end;
 }
 
 .btn-ghost:hover {
-  opacity: 1;
+  color:white;
+  font-weight:normal;
+  background-color: #0047FE;
 }
 
 .head_logo {

@@ -5,3 +5,20 @@
     <h2> Hashtags associés <%= @campaign.hashtag %> </h2>
     <p> *** </p>
 </div>
+
+
+<div class="container">
+  <div class="row">
+    <div class="col-sm-8 offset-sm-2">
+      <div id="campaigns">
+        <% @influencers.each do |influencers| %>
+          <h4><%= influencers.name %></h4>
+          <p><%= influencers.community_age %></p>
+           <p><%= influencers.engagement_rate %></p>
+            <p><%= influencers.media %></p>
+             <p><%= tags.name %></p>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
