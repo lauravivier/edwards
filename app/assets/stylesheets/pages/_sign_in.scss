@@ -13,17 +13,17 @@ text-align: center;
 color: rgba(40, 47, 51, 0.69);
 }
 
-.box {
-width: 400px;
-height: 310px;
-left: 161px;
-top: 276px;
- }
+  .box {
+  width: 400px;
+  height: 310px;
+  left: 161px;
+  top: 276px;
+   }
 
  .image-form {
-  padding-top: 100px;
-  margin: Opx;
- }
+  padding-top: 10px;
+  padding-right: 0px;
+  }
 
 // .img{
 // position: absolute;
@@ -43,7 +43,7 @@ background: #F5F6F7;
 border-radius: 30px;
 }
 
-.flex-form {
+.flexf {
   display: flex;
   justify-content: space-around;
 }
@@ -55,4 +55,21 @@ border-radius: 30px;
 
 .signup-form {
   padding-top: 100px;
+}
+
+.txtbtn {
+font-family: Lato;
+font-style: normal;
+font-weight: 300;
+font-size: 15px;
+line-height: 29px;
+color: white;
+}
+
+.txtform {
+font-family: Lato;
+font-style: normal;
+font-weight: 300;
+font-size: 15px;
+line-height: 29px;
 }
