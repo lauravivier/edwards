@@ -11,6 +11,15 @@
 
 puts 'Seed is coming...'
 
+puts 'Detele old data'
+CampaignInfluencer.destroy_all
+InfluencerTag.destroy_all
+Influencer.destroy_all
+Campaign.destroy_all
+Tag.destroy_all
+User.destroy_all
+
+
 puts 'Creating User...'
 user_01 = User.new(name: "Cyrille", email: "cyrille@gmail.com", password: "helloo")
 user_01.save!
@@ -23,13 +32,13 @@ user_03.save!
 
 
 puts 'Creating Campaign...'
-campaign_01 = Campaign.new(name: "Cravache Time", user_id: user_01.id, starts_at: Date.new(2020,03,02), ends_at: Date.new(2020,02,03), goal: "gagner de l'argent", target: "18-24ans", message: "achetez mes cravaches", hashtag: "#sm #fiftyshadesofgrey")
+campaign_01 = Campaign.new(name: "Cravache Time", user_id: user_01.id, starts_at: Date.new(2020,03,02), ends_at: Date.new(2020,02,03), goal: "Accroître l'engagement", target: "18-24ans", message: "achetez mes cravaches", hashtag: ["#sm", "#fiftyshadesofgrey"])
 campaign_01.save!
 
-campaign_02 = Campaign.new(name: "Chez Gladines", user_id: user_02.id, starts_at: Date.new(2020,02,02), ends_at: Date.new(2020,02,03), goal: "gagner de l'argent", target: "18-24ans", message: "achetez mes cravaches", hashtag: "#sm #fiftyshadesofgrey")
+campaign_02 = Campaign.new(name: "Chez Gladines", user_id: user_02.id, starts_at: Date.new(2020,02,02), ends_at: Date.new(2020,02,03), goal: "Accroître l'engagement", target: "18-24ans", message: "achetez mes cravaches", hashtag: ["#sm", "#fiftyshadesofgrey"])
 campaign_02.save!
 
-campaign_03 = Campaign.new(name: "Voyages", user_id: user_03.id, starts_at: Date.new(2020,02,02), ends_at: Date.new(2020,02,03), goal: "gagner de l'argent", target: "18-24ans", message: "achetez mes cravaches", hashtag: "#sm #fiftyshadesofgrey")
+campaign_03 = Campaign.new(name: "Voyages", user_id: user_03.id, starts_at: Date.new(2020,02,02), ends_at: Date.new(2020,02,03), goal: "Accroître l'engagement", target: "18-24ans", message: "achetez mes cravaches", hashtag: ["#sm", "#fiftyshadesofgrey"])
 campaign_03.save!
 
 
