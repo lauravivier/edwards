@@ -1,5 +1,5 @@
 .s {
-position: absolute;
+padding-top: 100px;
 width: 216px;
 height: 26px;
 left: 249px;
@@ -11,7 +11,6 @@ font-size: 35px;
 line-height: 42px;
 text-align: center;
 color: rgba(40, 47, 51, 0.69);
-
 }
 
 .box {
@@ -19,6 +18,11 @@ width: 400px;
 height: 310px;
 left: 161px;
 top: 276px;
+ }
+
+ .image-form {
+  padding-top: 100px;
+  margin: Opx;
  }
 
 // .img{
@@ -31,7 +35,6 @@ top: 276px;
 // }
 
 .champs {
-position: absolute;
 width: 399px;
 height: 79px;
 left: 152px;
@@ -43,10 +46,13 @@ border-radius: 30px;
 .flex-form {
   display: flex;
   justify-content: space-around;
-
 }
 
 .form-control {
 background: #F5F6F7;
 border-radius: 30px;
+}
+
+.signup-form {
+  padding-top: 100px;
 }
