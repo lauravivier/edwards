@@ -14,12 +14,12 @@ class Influencer < ApplicationRecord
   # validates: media, presence: true
 
   pg_search_scope :global_search,
-  against: [:name, :community_location, :community_age, :engagement_rate, :media],
+  against: [:community_location],
   associated_against: {
     tag: [:name]
   },
   using: {
     tsearch: { prefix: true }
   }
-  multisearchable against: [:name, :community_location, :community_age, :engagement_rate, :media]
+  multisearchable against: [:community_location]
 end
