@@ -13,17 +13,16 @@
         <h2> Renseigner votre brief créatif </h2>
         <%= simple_form_for(@campaign) do |f| %>
               <%= f.input :name, label: false, placeholder: 'Nom de votre campagne' %>
-              <div class: goal-campaign>
-                <%= f.input :goal, label: "Quel est votre objectif principal ?", as: :radio_buttons, collection: Campaign::STATUSES, wrapper: :vertical_collection_inline %>
+              <div class= "goal-campaign">
+                <%= f.input :goal, label: "Quel est votre objectif principal ?", as: :radio_buttons, collection: Campaign::GOALS, wrapper: :vertical_collection_inline %>
               </div>
               <%= f.input :starts_at, label: 'Date de début' %>
               <%= f.input :ends_at, label: 'Date de fin' %>
-              <div class: brief-campaign>
+              <div class="brief-campaign">
                 <%= f.input :message, label: false, placeholder: 'Brief' %>
               </div>
-              <%= f.association :hashtags, as: :check_boxes %>
-              <%= f.input :hashtag, label: false, placeholder: 'Hashtags associés' %>
-     <!--  <%= f.submit "Sélectionner des influencers", class: "btn-ghost" %> -->
+              <%= f.input :hashtag, label: "Quels sont les hashtags associés ?", as: :check_boxes, collection: Campaign::HASHTAGS, wrapper: :vertical_collection_inline %>
+              <%= f.submit "Sélectionner des influencers", class: "btn-ghost" %>
           </div>
         <% end %>
       </div>
