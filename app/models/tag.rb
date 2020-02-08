@@ -1,4 +1,5 @@
 class Tag < ApplicationRecord
-  belongs_to :influencer
-  has_many :influencer_tags
+  include PgSearch::Model
+  multisearchable against: [:name]
+  has_many :influencers, through: :influencer_tags
 end

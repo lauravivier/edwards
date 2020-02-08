@@ -1,6 +1,6 @@
 // Specific CSS for your home-page
 body {
-  font-family: 'Lato', sans-serif;
+font-family: 'Lato', sans-serif;
 }
 
 .container-fluid,
@@ -36,6 +36,14 @@ color: #000000;
   text-align: center;
   align-self: flex-end;
 }
+
+
+.image-card {
+  display:flex;
+  min-height: 0;
+min-width: 0;
+}
+
 
 .bouton:hover {
   color: white;

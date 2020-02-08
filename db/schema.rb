@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_02_04_192524) do
+ActiveRecord::Schema.define(version: 2020_02_08_140047) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -31,18 +31,20 @@ ActiveRecord::Schema.define(version: 2020_02_04_192524) do
     t.string "goal"
     t.string "target"
     t.string "message"
-    t.string "hashtag"
-    t.bigint "user_id"
+    t.bigint "user_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.text "hashtag", default: [], array: true
     t.index ["user_id"], name: "index_campaigns_on_user_id"
   end
 
   create_table "influencer_tags", force: :cascade do |t|
-    t.bigint "influencer_id", null: false
+    t.bigint "influencer_id"
+    t.bigint "tag_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["influencer_id"], name: "index_influencer_tags_on_influencer_id"
+    t.index ["tag_id"], name: "index_influencer_tags_on_tag_id"
   end
 
   create_table "influencers", force: :cascade do |t|
@@ -58,13 +60,20 @@ ActiveRecord::Schema.define(version: 2020_02_04_192524) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
+  create_table "pg_search_documents", force: :cascade do |t|
+    t.text "content"
+    t.string "searchable_type"
+    t.bigint "searchable_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["searchable_type", "searchable_id"], name: "index_pg_search_documents_on_searchable_type_and_searchable_id"
+  end
+
   create_table "tags", force: :cascade do |t|
     t.string "name"
     t.string "color"
-    t.bigint "influencer_tag_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["influencer_tag_id"], name: "index_tags_on_influencer_tag_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -84,5 +93,5 @@ ActiveRecord::Schema.define(version: 2020_02_04_192524) do
   add_foreign_key "campaign_influencers", "influencers"
   add_foreign_key "campaigns", "users"
   add_foreign_key "influencer_tags", "influencers"
-  add_foreign_key "tags", "influencer_tags"
+  add_foreign_key "influencer_tags", "tags"
 end

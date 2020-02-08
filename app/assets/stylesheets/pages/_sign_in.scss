@@ -1,5 +1,5 @@
 .s {
-position: absolute;
+padding-top: 100px;
 width: 216px;
 height: 26px;
 left: 249px;
@@ -11,15 +11,19 @@ font-size: 35px;
 line-height: 42px;
 text-align: center;
 color: rgba(40, 47, 51, 0.69);
-
 }
 
-.box {
-width: 400px;
-height: 310px;
-left: 161px;
-top: 276px;
- }
+  .box {
+  width: 400px;
+  height: 310px;
+  left: 161px;
+  top: 276px;
+   }
+
+ .image-form {
+  padding-top: 10px;
+  padding-right: 0px;
+  }
 
 // .img{
 // position: absolute;
@@ -31,7 +35,6 @@ top: 276px;
 // }
 
 .champs {
-position: absolute;
 width: 399px;
 height: 79px;
 left: 152px;
@@ -40,13 +43,33 @@ background: #F5F6F7;
 border-radius: 30px;
 }
 
-.flex-form {
+.flexf {
   display: flex;
   justify-content: space-around;
-
 }
 
 .form-control {
 background: #F5F6F7;
 border-radius: 30px;
+}
+
+.signup-form {
+  padding-top: 100px;
+}
+
+.txtbtn {
+font-family: Lato;
+font-style: normal;
+font-weight: 300;
+font-size: 15px;
+line-height: 29px;
+color: white;
+}
+
+.txtform {
+font-family: Lato;
+font-style: normal;
+font-weight: 300;
+font-size: 15px;
+line-height: 29px;
 }

@@ -1,10 +1,10 @@
 
 <div class="container-fluid">
-  <div class="h-10 bg-white">
+  <div class="h-5 bg-white">
     <div class="col-xs-12">
-      <div class="flex-form">
+      <div class="flexf">
         <div class="signup-form">
-          <div class="flex-column p-1">
+          <div class="flex-column p-1 s">
             CRÉATION DE COMPTE
           </div>
 
@@ -13,32 +13,32 @@
             <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
             <%= f.error_notification %>
 
-            <div class="form-inputs">
+            <div class="signup-form txtform">
               <%= f.input :email,
                           required: true,
                           autofocus: true,
                           input_html: { autocomplete: "email" }%>
               <%= f.input :password,
                           required: true,
-                          hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length),
-                          input_html: { autocomplete: "new-password" } %>
+                          hint: ("#{@minimum_password_length} caractères minimums" if @minimum_password_length),
+                          input_html: { autocomplete: "mot de passe" } %>
               <%= f.input :password_confirmation,
                           required: true,
-                          input_html: { autocomplete: "new-password" } %>
+                          input_html: { autocomplete: "mot de passe" } %>
             </div>
 
-            <div class="form-actions">
-              <%= f.button :submit, "Sign up" %>
+            <div class="blueb">
+              <%= f.button :submit, "Sign up", class: "d-block mx-auto txtbtn" %>
             </div>
 
             <% end %>
-            <%= render "devise/shared/links" %>
+            <%= render "devise/shared/links"%>
           </div>
       </div>
 
         <div class="image-form">
           <div class="">
-           <%= image_tag "https://res.cloudinary.com/dsqiqzd8q/image/upload/v1580845024/Edwards/Logo_mnvi9o.png", alt: "Le Wagon", width: 500, class: "d-block mx-auto" %>
+           <%= image_tag "https://res.cloudinary.com/danxfwhmp/image/upload/c_scale,q_100,r_0,w_1500/v1581164733/403462d712903281ced4092186dc8b20_ep7pxh.jpg", alt: "Edwards", width: 500, class: "d-block mx-auto" %>
           </div>
         </div>
     </div>
