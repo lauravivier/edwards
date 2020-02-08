@@ -30,8 +30,8 @@ class CampaignsController < ApplicationController
     @campaign.user = current_user
     @campaign.hashtag = campaign_params["hashtag"].reject(&:blank?)
     if @campaign.save
-      redirect_to campaign_path(@campaign)
-     else
+      redirect_to edit_campaign_path(@campaign)
+    else
       render :new
     end
 
