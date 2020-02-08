@@ -1,34 +1,30 @@
 .form-campaign {
   background: white;
-  margin-top: 50px;
   padding: 20px;
   border-radius: 5px;
+  border: 1px solid #0047FE;
+  margin-top: 50px;
   h1 {
     text-align: center;
     font-weight: bolder;
     font-size: 20px;
     color: #0047FE;
-    margin-top: 10px;
   }
   h2 {
     text-align: center;
     font-weight: lighter;
     font-size: 20px;
     color: #0047FE;
-    margin-bottom: 50px;
+    margin-bottom: 10px;
   }
-  .btn {
-    width: 100%;
-    padding: 10px;
-    font-weight: bold;
-  }
+}
 
-  input[type=text] {
-  border: none;
+input[type=text] {
   border-left: 5px solid #0047FE;
-  width: 100%;
-  height: 30px;
+  width: 300px;
+  height: 100px;
+  padding: 5px;
+  box-sizing: border-box;
+  border-radius: 5px;
 }
-}
-
 
