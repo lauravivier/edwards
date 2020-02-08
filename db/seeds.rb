@@ -46,25 +46,25 @@ puts 'Creating Influencer...'
 influencer_01 = Influencer.new(name: "XXXXXXX1", community_location: "France", community_age: "18-24", community_size: 452032, women_stats: 44, men_stats: 56, engagement_rate: "2,45%", media: "instagram")
 influencer_01.save!
 
-influencer_02 = Influencer.new(name: "XXXXXXX2", community_location: "France", community_age: "18-24", community_size: 452032, women_stats: 44, men_stats: 56, engagement_rate: "2,45%", media: "instagram")
+influencer_02 = Influencer.new(name: "XXXXXXX2", community_location: "Espagne", community_age: "18-24", community_size: 452032, women_stats: 44, men_stats: 56, engagement_rate: "2,45%", media: "instagram")
 influencer_02.save!
 
-influencer_03 = Influencer.new(name: "XXXXXXX3", community_location: "France", community_age: "18-24", community_size: 452032, women_stats: 44, men_stats: 56, engagement_rate: "2,45%", media: "instagram")
+influencer_03 = Influencer.new(name: "XXXXXXX3", community_location: "Italie", community_age: "18-24", community_size: 452032, women_stats: 44, men_stats: 56, engagement_rate: "2,45%", media: "instagram")
 influencer_03.save!
 
-influencer_04 = Influencer.new(name: "XXXXXXX4", community_location: "France", community_age: "18-24", community_size: 452032, women_stats: 44, men_stats: 56, engagement_rate: "2,45%", media: "instagram")
+influencer_04 = Influencer.new(name: "XXXXXXX4", community_location: "Belgique", community_age: "18-24", community_size: 452032, women_stats: 44, men_stats: 56, engagement_rate: "2,45%", media: "instagram")
 influencer_04.save!
 
 influencer_05 = Influencer.new(name: "XXXXXXX5", community_location: "France", community_age: "18-24", community_size: 452032, women_stats: 44, men_stats: 56, engagement_rate: "2,45%", media: "instagram")
 influencer_05.save!
 
-influencer_06 = Influencer.new(name: "XXXXXXX6", community_location: "France", community_age: "18-24", community_size: 452032, women_stats: 44, men_stats: 56, engagement_rate: "2,45%", media: "instagram")
+influencer_06 = Influencer.new(name: "XXXXXXX6", community_location: "Espagne", community_age: "18-24", community_size: 452032, women_stats: 44, men_stats: 56, engagement_rate: "2,45%", media: "instagram")
 influencer_06.save!
 
-influencer_07 = Influencer.new(name: "XXXXXXX7", community_location: "France", community_age: "18-24", community_size: 452032, women_stats: 44, men_stats: 56, engagement_rate: "2,45%", media: "instagram")
+influencer_07 = Influencer.new(name: "XXXXXXX7", community_location: "Italie", community_age: "18-24", community_size: 452032, women_stats: 44, men_stats: 56, engagement_rate: "2,45%", media: "instagram")
 influencer_07.save!
 
-influencer_08 = Influencer.new(name: "XXXXXXX8", community_location: "France", community_age: "18-24", community_size: 452032, women_stats: 44, men_stats: 56, engagement_rate: "2,45%", media: "instagram")
+influencer_08 = Influencer.new(name: "XXXXXXX8", community_location: "Belgique", community_age: "18-24", community_size: 452032, women_stats: 44, men_stats: 56, engagement_rate: "2,45%", media: "instagram")
 influencer_08.save!
 
 
