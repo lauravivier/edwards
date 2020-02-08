@@ -12,7 +12,7 @@
 puts 'Seed is coming...'
 
 puts 'Creating User...'
-user_01 = User.new(name: "Cyrille", email: "cyr@gmail.com", password: "helloo")
+user_01 = User.new(name: "Cyrille", email: "cyrille@gmail.com", password: "helloo")
 user_01.save!
 
 user_02 = User.new(name: "Ken", email: "ken@gmail.com", password: "helloo")
@@ -71,5 +71,63 @@ CampaignInfluencer.create(campaign: campaign_02, influencer: influencer_06)
 CampaignInfluencer.create(campaign: campaign_03, influencer: influencer_07)
 CampaignInfluencer.create(campaign: campaign_03, influencer: influencer_08)
 CampaignInfluencer.create(campaign: campaign_03, influencer: influencer_01)
+
+puts 'Creating Tag...'
+tag_01 = Tag.new(name: "foodporn")
+tag_01.save!
+
+tag_02 = Tag.new(name: "style")
+tag_02.save!
+
+tag_03 = Tag.new(name: "love")
+tag_03.save!
+
+tag_04 = Tag.new(name: "money")
+tag_04.save!
+
+tag_05 = Tag.new(name: "life")
+tag_05.save!
+
+tag_06 = Tag.new(name: "wallpaper")
+tag_06.save!
+
+tag_07 = Tag.new(name: "phone")
+tag_07.save!
+
+tag_08 = Tag.new(name: "brand")
+tag_08.save!
+
+puts 'Creating Influencer_tag...'
+InfluencerTag.create(influencer: influencer_01, tag: tag_01)
+InfluencerTag.create(influencer: influencer_01, tag: tag_02)
+InfluencerTag.create(influencer: influencer_01, tag: tag_03)
+
+InfluencerTag.create(influencer: influencer_02, tag: tag_04)
+InfluencerTag.create(influencer: influencer_02, tag: tag_05)
+InfluencerTag.create(influencer: influencer_02, tag: tag_06)
+
+InfluencerTag.create(influencer: influencer_03, tag: tag_07)
+InfluencerTag.create(influencer: influencer_03, tag: tag_08)
+InfluencerTag.create(influencer: influencer_03, tag: tag_01)
+
+InfluencerTag.create(influencer: influencer_04, tag: tag_01)
+InfluencerTag.create(influencer: influencer_04, tag: tag_02)
+InfluencerTag.create(influencer: influencer_04, tag: tag_03)
+
+InfluencerTag.create(influencer: influencer_05, tag: tag_04)
+InfluencerTag.create(influencer: influencer_05, tag: tag_05)
+InfluencerTag.create(influencer: influencer_05, tag: tag_06)
+
+InfluencerTag.create(influencer: influencer_06, tag: tag_07)
+InfluencerTag.create(influencer: influencer_06, tag: tag_08)
+InfluencerTag.create(influencer: influencer_06, tag: tag_01)
+
+InfluencerTag.create(influencer: influencer_07, tag: tag_01)
+InfluencerTag.create(influencer: influencer_07, tag: tag_02)
+InfluencerTag.create(influencer: influencer_07, tag: tag_03)
+
+InfluencerTag.create(influencer: influencer_08, tag: tag_04)
+InfluencerTag.create(influencer: influencer_08, tag: tag_05)
+InfluencerTag.create(influencer: influencer_08, tag: tag_06)
 
 puts 'Seed is Finished!'
