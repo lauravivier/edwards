@@ -1,22 +1,35 @@
 <!-- <h1> TEST </h1> -->
 
-<div class="container d-flex justify-content-center" >
+<div class="container" >
   <%= simple_form_for (@campaign) do |f| %>
-          <%= f.input :name, label: 'Nom de votre campagne' %>
-          <%= f.input :ends_at, label: 'Date de fin' %>
+    <%= f.input :name, label: 'Nom de votre campagne' %>
+    <%= f.input :ends_at, label: 'Date de fin' %>
 
 
-          <%= f.input :ends_at, label: 'Date de fin' %>
+    <%= f.input :ends_at, label: 'Date de fin' %>
 
 
-          <%= f.input :goal, label: 'Objectif' %>
+    <%= f.input :goal, label: 'Objectif' %>
 
 
-           <%= f.input :message, label: 'Brief' %>
+     <%= f.input :message, label: 'Brief' %>
 
 
-          <%= f.input :hashtag, label: 'Hashtags associés' %>
+    <%= f.input :hashtag, label: 'Hashtags associés' %>
 
-        <%= f.submit "sélection des influencers", class: "form-button" %>
+
+  <h1>Search</h1>
+    <%= form_tag influencers_path, method: :get do %>
+      <%= text_field_tag :query,
+      params[:query],
+      class: "form-control",
+      placeholder: "Find something"
+      %>
+      <%= submit_tag "Search influencers", class: "btn btn-primary" %>
     <% end %>
+
+
+    <%= f.submit "submit", class: "form-button" %>
+<% end %>
+
 </div>
