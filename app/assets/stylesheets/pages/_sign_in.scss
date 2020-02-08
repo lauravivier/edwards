@@ -21,14 +21,14 @@ left: 161px;
 top: 276px;
  }
 
-.img{
-position: absolute;
-width: 730px;
-height: 904px;
-left: 710px;
-top: 0px;
-background: url(image.png);
-}
+// .img{
+// position: absolute;
+// width: 730px;
+// height: 904px;
+// left: 710px;
+// top: 0px;
+// background: url(image.png);
+// }
 
 .champs {
 position: absolute;
@@ -40,13 +40,10 @@ background: #F5F6F7;
 border-radius: 30px;
 }
 
-.img {
-position: absolute;
-width: 730px;
-height: 904px;
-left: 710px;
-top: 0px;
-background: url(image.png);
+.flex-form {
+  display: flex;
+  justify-content: space-around;
+
 }
 
 .form-control {
