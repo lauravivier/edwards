@@ -1,36 +1,32 @@
 
 <!-- <h1> TEST </h1> -->
 
-<div class="container" >
-  <%= simple_form_for (@campaign) do |f| %>
-    <%= f.input :name, label: 'Nom de votre campagne' %>
-    <%= f.input :ends_at, label: 'Date de fin' %>
+<!-- <div class="mx-auto mt-20 =" style="width: 500px;">
+       <div class="progress-bar role nav ="progressbar" style="width: 25%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"> ETAPE 1</div>
+</div> -->
 
 
-    <%= f.input :ends_at, label: 'Date de fin' %>
-
-
-    <%= f.input :goal, label: 'Objectif' %>
-
-
-     <%= f.input :message, label: 'Brief' %>
-
-
-    <%= f.input :hashtag, label: 'Hashtags associés' %>
-
-
-  <h1>Search</h1>
-    <%= form_tag influencers_path, method: :get do %>
-      <%= text_field_tag :query,
-      params[:query],
-      class: "form-control",
-      placeholder: "Find something"
-      %>
-      <%= submit_tag "Search influencers", class: "btn btn-primary" %>
-    <% end %>
-
-
-    <%= f.submit "submit", class: "form-button" %>
-<% end %>
-
-</div>
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12 col-sm-6 offset-sm-3">
+      <div class="form-campaign">
+        <h1>Créer votre campagne d'influence en trois clics</h1>
+        <h2> Renseigner votre brief créatif </h2>
+        <%= simple_form_for(@campaign) do |f| %>
+              <%= f.input :name, label: false, placeholder: 'Nom de votre campagne' %>
+              <div class: goal-campaign>
+                <%= f.input :goal, label: "Quel est votre objectif principal ?", as: :radio_buttons, collection: Campaign::STATUSES, wrapper: :vertical_collection_inline %>
+              </div>
+              <%= f.input :starts_at, label: 'Date de début' %>
+              <%= f.input :ends_at, label: 'Date de fin' %>
+              <div class: brief-campaign>
+                <%= f.input :message, label: false, placeholder: 'Brief' %>
+              </div>
+              <%= f.association :hashtags, as: :check_boxes %>
+              <%= f.input :hashtag, label: false, placeholder: 'Hashtags associés' %>
+     <!--  <%= f.submit "Sélectionner des influencers", class: "btn-ghost" %> -->
+          </div>
+        <% end %>
+      </div>
+    </div>
+  </div>
