@@ -15,16 +15,16 @@ class CampaignsController < ApplicationController
     @influencers = Influencer.all
   end
 
-  def step_2
-    @influencers = Influencer.all
-      if params[:query].present?
-      sql_query = " \
-      influencers.community_location ILIKE :query \
-      "
-      @influencers = Influencer.joins(:tag).where(sql_query, query: "%#{params[:query]}%")
-    else
-      @influencers = []
-  end
+  #def step_2
+    # @influencers = Influencer.all
+      #if params[:query].present?
+      #sql_query = " \
+      #influencers.community_location ILIKE :query \
+     # "
+     #  @influencers = Influencer.joins(:tag).where(sql_query, query: "%#{params[:query]}%")
+    # else
+    #  @influencers = []
+  #end
 
   def edit
     @campaign = Campaign.find(params[:id])
@@ -45,8 +45,6 @@ class CampaignsController < ApplicationController
     else
       render :new
     end
-  end
-
   end
 
   private
