@@ -1,0 +1,125 @@
+
+
+
+.contain {
+margin: 10px;
+padding: 150px;
+width: 1000px;
+display: flex;
+justify-content: space-between;
+}
+
+.round {
+  border-radius: 100px;
+}
+
+.contain .kard {
+position: relative;
+}
+
+.contain .kard .face.face1 {
+width: 300px;
+height: 200px;
+transition: 0.5s;
+}
+
+.contain .kard .face.face1 {
+position: relative;
+background: #333;
+display: flex;
+justify-content: center;
+align-items: center;
+z-index: 1;
+transform: translateY(10px);
+}
+
+.contain .kard .face.face1 {
+position: relative;
+background: #fff;
+display: flex;
+justify-content: center;
+align-items: center;
+padding: 10px;
+border-radius: 20px;
+box-shadow: 0 10px 10px rgba(0,0,0,0.2);
+}
+
+.contain .kard:hover .face.face1 {
+  transform: translateY(1px);
+  }
+
+.contain .kard .face.face1 p
+{
+  margin: 0;
+  paddding: 0;
+  font-family: Lato;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 24px;
+  color: #3D415B;
+}
+
+.contain .kard .face.face1 a
+{
+  margin: 1px 0 0;
+  display: inline-block;
+  text-decoration: none;
+  font-weight: 900px;
+  color: #333;
+  padding: 5px;
+  border: 1px solid
+}
+
+.contain .kard .face.face1 c
+{
+  display: inline-block;
+  font-family: Lato;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 15px;
+  line-height: 18px;
+}
+
+.contain .kard .face.face1 t
+{
+  margin: 1px 0 0;
+  display: inline-block;
+  text-decoration: none;
+  font-weight: 900px;
+  color: #333;
+  padding: 5px;
+  border: 1px solid
+}
+
+c1 {
+  font-family: Lato;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 24px;
+  color: #3D415B;
+}
+
+c2 {
+font-family: Lato;
+font-style: normal;
+font-weight: bold;
+font-size: 15px;
+line-height: 15px;
+display: flex;
+align-items: center;
+text-align: center;
+
+color: #757790;
+}
+
+c3 {
+font-family: Lato;
+font-style: normal;
+font-weight: bold;
+font-weight: 800;
+font-size: 10px;
+line-height: 12px;
+color: #3D415B;
+}
