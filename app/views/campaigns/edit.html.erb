@@ -11,19 +11,15 @@
 <% end %>
 
 <div class="container">
-  <% @influencers.each do |i| %>
-    <div class="card">
-      <h3 class="title"><%= i.name %></h3>
-      <div class="bar">
-        <h4 class="title"> Communauté</h4>
-        <h4 class="title"> Communazuté</h4>
-        <div class="emptybar"></div>
-        <div class="filledbar"></div>
-      </div>
-      <div class="circle">
-        <circle class="stroke" cx="60" cy="60" r="50"/>
-        </svg>
-      </div>
-    </div>
+  <%= simple_form_for(@campaign) do |f| %>
+    <%= f.input :name %>
+
+    <%= simple_fields_for :selection do |x| %>
+      <% @influencers.each do |i| %>
+        <%= render 'influencer_card', influencer: i %>
+        <%= x.input i.name.to_sym, as: :boolean, input_html: { id: "checkbox-#{i.id}" } %>
+      <% end %>
+    <% end %>
+    <%= f.submit %>
   <% end %>
 </div>

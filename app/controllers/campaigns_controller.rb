@@ -43,7 +43,12 @@ class CampaignsController < ApplicationController
 
   def update
     @campaign = Campaign.find(params[:id])
-    @campaign.update(campaigns_params)
+    @campaign.update(campaign_params)
+
+    params[:selection].select { |k, v| v == '1'}.keys.each do |influencer|
+      CampaignInfluencer.create(campaign: @campaign, influencer: Influencer.find_by(name: influencer))
+    end
+
     redirect_to campaign_path(@campaign)
   end
 
