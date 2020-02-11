@@ -27,7 +27,18 @@ class CampaignsController < ApplicationController
   #end
 
   def edit
+    @influencers = Influencer.all
     @campaign = Campaign.find(params[:id])
+
+    if params[:community_location]
+      @influencers = @influencers.global_search(params[:community_location])
+    end
+
+    if params[:media]
+      @influencers = @influencers.where(media: params[:media])
+    end
+
+
   end
 
   def update
@@ -59,5 +70,5 @@ class CampaignsController < ApplicationController
     @campaign = Campaign.find(params[:id])
   end
 end
-end
+
 

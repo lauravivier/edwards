@@ -1,68 +1,29 @@
+<br>
 
-<head>
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300i,400" rel="stylesheet">
-</head>
+<%= form_tag edit_campaign_path, method: :get do %>
+  <%= text_field_tag :community_location,
+  params[:community_location],
+  class: "form-control",
+  placeholder: "Find a city"
+  %>
+  <%= select_tag :media, options_for_select(Influencer.pluck(:media).uniq, '') %>
+  <%= submit_tag 'Search' %>
+<% end %>
 
-<body>
-
-</body><div class="container">
-  <div class="card">
-    <h3 class="title">Bruno Maltor</h3>
-    <div class="bar">
-      <h4 class="title"> Communauté</h4>
-      <h4 class="title"> Communazuté</h4>
-      <div class="emptybar"></div>
-      <div class="filledbar"></div>
+<div class="container">
+  <% @influencers.each do |i| %>
+    <div class="card">
+      <h3 class="title"><%= i.name %></h3>
+      <div class="bar">
+        <h4 class="title"> Communauté</h4>
+        <h4 class="title"> Communazuté</h4>
+        <div class="emptybar"></div>
+        <div class="filledbar"></div>
+      </div>
+      <div class="circle">
+        <circle class="stroke" cx="60" cy="60" r="50"/>
+        </svg>
+      </div>
     </div>
-    <div class="circle">
-      <circle class="stroke" cx="60" cy="60" r="50"/>
-    </svg>
-    </div>
-  </div>
-
-  <div class="card ">
-    <h3 class="title">Isabelle Bidulle</h3>
-    <div class="bar">
-      <h2 class="title"> Communauté</h2>
-      <h2 class="title"> Communauté</h2>
-      <h2 class="title"> Communauté</h2>
-      <h2 class="title"> Communauté</h2>
-      <div class="emptybar"></div>
-      <div class="filledbar"></div>
-    </div>
-    <div class="circle">
-      <circle class="stroke" cx="60" cy="60" r="50"/>
-    </svg>
-    </div>
-  </div>
-
-  <div class="card">
-    <h3 class="title">Sandra Ballek</h3>
-    <div class="bar">
-      <h2 class="title"> Communauté</h2>
-
-      <div class="emptybar"></div>
-      <div class="filledbar"></div>
-    </div>
-    <div class="circle">
-      <circle class="stroke" cx="60" cy="60" r="50"/>
-    </svg>
-    </div>
-  </div>
-
-  <div class="card">
-    <h3 class="title">Emma Blabla</h3>
-    <div class="bar">
-      <h2 class="title"> Communauté</h2>
-      <div class="emptybar"></div>
-      <div class="filledbar"></div>
-    </div>
-    <div class="circle">
-      <circle class="stroke" cx="60" cy="60" r="50"/>
-    </svg>
-    </div>
-  </div>
+  <% end %>
 </div>
-
-
-</body>
