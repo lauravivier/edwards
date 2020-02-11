@@ -59,3 +59,5 @@ class CampaignsController < ApplicationController
     @campaign = Campaign.find(params[:id])
   end
 end
+end
+
