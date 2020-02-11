@@ -15,11 +15,11 @@ class Influencer < ApplicationRecord
 
   pg_search_scope :global_search,
   against: [:community_location],
-  associated_against: {
-    tag: [:name]
-  },
+  # associated_against: {
+  #   tag: [:name]
+  # },
   using: {
     tsearch: { prefix: true }
   }
-  multisearchable against: [:community_location]
+  # multisearchable against: [:community_location]
 end
