@@ -139,4 +139,39 @@ InfluencerTag.create(influencer: influencer_08, tag: tag_04)
 InfluencerTag.create(influencer: influencer_08, tag: tag_05)
 InfluencerTag.create(influencer: influencer_08, tag: tag_06)
 
+puts 'Creating Influencer_data...'
+
+metric = Metric.create(company: company, user: User.first, format: 'csv', submission_date: Date.today, source: 'Arval')
+
+require 'csv'
+filepath = File.join(Rails.root, 'db', 'metrics_seed.csv')
+csv_options = { col_sep: ';', quote_char: '"', headers: :first_row }
+CSV.foreach(filepath, csv_options) do |row|
+  # Here, row is an array of columns
+
+  Metric.create!
+  (entity: row[0],
+    department: row[9],
+    traveller_first_name: first_name,
+    traveller_last_name: last_name,
+    traveller_email: "#{last_name}@heineken.com",
+    amount: row[7],
+    reservation_mode: row[8],
+    supplier: row[10],
+    transaction_type: row[5],
+    report: report
+  )
+
+  t.date :post_date
+      t.string :social_media
+      t.string :media_type
+      t.string :hashtag
+      t.integer :impression
+      t.integer :click
+      t.integer :like
+      t.integer :comment
+      t.float :engagement
+      t.float :emv
+end
+
 puts 'Seed is Finished!'

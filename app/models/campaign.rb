@@ -1,8 +1,7 @@
 class Campaign < ApplicationRecord
   has_many :campaign_influencers
   has_many :influencers, through: :campaign_influencers
-  has_many :metrics
-  belongs_to :user
+  belongs_to :user, :metric
 
   GOALS = ["Renforcer son image", "Accroître l'engagement", "Améliorer la conversion", "Récolter des informations"]
   validates :goal, inclusion: {in: GOALS}
