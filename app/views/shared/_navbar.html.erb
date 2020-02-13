@@ -1,3 +1,5 @@
+
+<div class="header_border-gradient"></div>
 <div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
   <%= link_to root_path, class: "head_logo" do %>
     <%= image_tag "logo-edwards.png" %>
@@ -13,16 +15,17 @@
 
       <% if user_signed_in? %>
         <li class="nav-item active">
-          <%= link_to "#", class: "navbar-brand" do %>
-            <%= image_tag "https://res.cloudinary.com/dsqiqzd8q/image/upload/v1580566936/Edwards/time_cerjeg.png" %>
-          <% end %>
-          <%= link_to "Campagne en cours", "#", class: "nav-link" %>
-        </li>
-        <li class="nav-item active">
-          <%= link_to "#", class: "navbar-brand" do %>
+          <%= link_to new_campaign_path, class: "nav-link navbar-brand" do %>
             <%= image_tag "https://res.cloudinary.com/dsqiqzd8q/image/upload/v1580566936/Edwards/plus_mzovix.png" %>
+            <%= content_tag :span, "Nouvelle Campagne" %>
           <% end %>
-          <%= link_to "Nouvelle campagne", new_campaign_path, class: "nav-link" %>
+        </li>
+       <li class="nav-item active">
+        <%= link_to "#", class: "navbar-brand" do %>
+        <%= image_tag "https://res.cloudinary.com/dsqiqzd8q/image/upload/v1580566936/Edwards/time_cerjeg.png" %>
+        <% end %>
+        <%= link_to "Campagne en cours", "#", class: "nav-link" %>
+
         </li>
         <li class="nav-item active">
           <%= link_to "#", class: "navbar-brand" do %>
@@ -37,7 +40,7 @@
           <%= link_to "Trouver des influencers", "#", class: "nav-link" %>
         </li>
         <li class="nav-item dropdown">
-          <%= image_tag "https://kitt.lewagon.com/placeholder/users/ssaunier", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
+          <%= image_tag "logo-decathlon.png", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
           <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
             <%= link_to "Mon profil", "#", class: "dropdown-item" %>
             <%= link_to "Another action", "#", class: "dropdown-item" %>

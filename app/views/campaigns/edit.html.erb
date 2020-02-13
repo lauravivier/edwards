@@ -7,7 +7,19 @@
   placeholder: "Find a city"
   %>
   <%= select_tag :media, options_for_select(Influencer.pluck(:media).uniq, '') %>
-  <%= submit_tag 'Search' %>
+  <%= submit_tag 'Validate' %>
+
+  <%= select_tag :media, options_for_select(Influencer.pluck(:media).uniq, '') %>
+  <%= submit_tag 'Validate' %>
+
+  <%= select_tag :media, options_for_select(Influencer.pluck(:media).uniq, '') %>
+  <%= submit_tag 'Validate' %>
+
+  <%= select_tag :media, options_for_select(Influencer.pluck(:media).uniq, '') %>
+  <%= submit_tag 'Validate' %>
+
+  <%= select_tag :media, options_for_select(Influencer.pluck(:media).uniq, '') %>
+  <%= submit_tag 'Validate' %>
 <% end %>
 
 <div class="container">

@@ -21,13 +21,13 @@ User.destroy_all
 
 
 puts 'Creating User...'
-user_01 = User.new(name: "Cyrille", email: "cyrille@gmail.com", password: "helloo")
+user_01 = User.new(name: "Cyrille", email: "cyrille@decathlon.com", password: "helloo")
 user_01.save!
 
-user_02 = User.new(name: "Ken", email: "ken@gmail.com", password: "helloo")
+user_02 = User.new(name: "Ken", email: "ken@decathlon.com", password: "helloo")
 user_02.save!
 
-user_03 = User.new(name: "Laura", email: "lau@gmail.com", password: "helloo")
+user_03 = User.new(name: "Laura", email: "lau@decathlon.com", password: "helloo")
 user_03.save!
 
 
@@ -43,28 +43,28 @@ campaign_03.save!
 
 
 puts 'Creating Influencer...'
-influencer_01 = Influencer.new(name: "XXXXXXX1", community_location: "France", community_age: "18-24", community_size: 452032, women_stats: 44, men_stats: 56, engagement_rate: "2,45%", media: "instagram")
+influencer_01 = Influencer.new(name: "Jean", community_location: "France", community_age: "18-24", community_size: 100, women_stats: 30, men_stats: 70, engagement_rate: "10,45%", media: "instagram")
 influencer_01.save!
 
-influencer_02 = Influencer.new(name: "XXXXXXX2", community_location: "Espagne", community_age: "18-24", community_size: 452032, women_stats: 44, men_stats: 56, engagement_rate: "2,45%", media: "facebook")
+influencer_02 = Influencer.new(name: "Michel", community_location: "Espagne", community_age: "13-17", community_size: 1500, women_stats: 55, men_stats: 45, engagement_rate: "9,45%", media: "facebook")
 influencer_02.save!
 
-influencer_03 = Influencer.new(name: "XXXXXXX3", community_location: "Italie", community_age: "18-24", community_size: 452032, women_stats: 44, men_stats: 56, engagement_rate: "2,45%", media: "instagram")
+influencer_03 = Influencer.new(name: "Patricia", community_location: "Italie", community_age: "25-34", community_size: 5500, women_stats: 80, men_stats: 20, engagement_rate: "8,45%", media: "instagram")
 influencer_03.save!
 
-influencer_04 = Influencer.new(name: "XXXXXXX4", community_location: "Belgique", community_age: "18-24", community_size: 452032, women_stats: 44, men_stats: 56, engagement_rate: "2,45%", media: "pinterest")
+influencer_04 = Influencer.new(name: "Jeremy", community_location: "Belgique", community_age: "35-44", community_size: 10500, women_stats: 12, men_stats: 88, engagement_rate: "7,45%", media: "pinterest")
 influencer_04.save!
 
-influencer_05 = Influencer.new(name: "XXXXXXX5", community_location: "France", community_age: "18-24", community_size: 452032, women_stats: 44, men_stats: 56, engagement_rate: "2,45%", media: "instagram")
+influencer_05 = Influencer.new(name: "Alice", community_location: "France", community_age: "45-54", community_size: 50500, women_stats: 76, men_stats: 24, engagement_rate: "6,45%", media: "facebook")
 influencer_05.save!
 
-influencer_06 = Influencer.new(name: "XXXXXXX6", community_location: "Espagne", community_age: "18-24", community_size: 452032, women_stats: 44, men_stats: 56, engagement_rate: "2,45%", media: "twitter")
+influencer_06 = Influencer.new(name: "Eleanore", community_location: "Espagne", community_age: "55-64", community_size: 100500, women_stats: 66, men_stats: 34, engagement_rate: "5,45%", media: "twitter")
 influencer_06.save!
 
-influencer_07 = Influencer.new(name: "XXXXXXX7", community_location: "Italie", community_age: "18-24", community_size: 452032, women_stats: 44, men_stats: 56, engagement_rate: "2,45%", media: "instagram")
+influencer_07 = Influencer.new(name: "Franck", community_location: "Italie", community_age: "65+", community_size: 500500, women_stats: 100, men_stats: 0, engagement_rate: "4,45%", media: "instagram")
 influencer_07.save!
 
-influencer_08 = Influencer.new(name: "XXXXXXX8", community_location: "Belgique", community_age: "18-24", community_size: 452032, women_stats: 44, men_stats: 56, engagement_rate: "2,45%", media: "instagram")
+influencer_08 = Influencer.new(name: "Helene", community_location: "Belgique", community_age: "18-24", community_size: 1000500, women_stats: 0, men_stats: 100, engagement_rate: "3,45%", media: "instagram")
 influencer_08.save!
 
 
