@@ -7,19 +7,19 @@
   placeholder: "Sélectionner un Pays"
   %>
   <%= select_tag :media, options_for_select(Influencer.pluck(:media).uniq, '') %>
-  <%= submit_tag 'Validate' %>
+  <%= submit_tag 'medias' %>
 
   <%= select_tag :community_age, options_for_select(Influencer.pluck(:community_age).uniq, '') %>
-  <%= submit_tag 'Validate' %>
+  <%= submit_tag 'Age' %>
 
   <%= select_tag :community_size, options_for_select(Influencer.pluck(:community_size).uniq, '') %>
-  <%= submit_tag 'Validate' %>
+  <%= submit_tag 'Nombre de followers' %>
 
   <%= select_tag :men_stats, options_for_select(Influencer.pluck(:men_stats).uniq, '') %>
-  <%= submit_tag 'Validate' %>
+  <%= submit_tag 'Genre' %>
 
   <%= select_tag :engagement_rate, options_for_select(Influencer.pluck(:engagement_rate).uniq, '') %>
-  <%= submit_tag 'Validate' %>
+  <%= submit_tag 'Engagement Rate' %>
 <% end %>
 
 <div class="container">
