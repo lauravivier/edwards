@@ -6,18 +6,20 @@
   class: "form-control",
   placeholder: "Find a city"
   %>
+
+  Réseau
   <%= select_tag :media, options_for_select(Influencer.pluck(:media).uniq, '') %>
-  <%= submit_tag 'Validate' %>
 
+  Âge
   <%= select_tag :community_age, options_for_select(Influencer.pluck(:community_age).uniq, '') %>
-  <%= submit_tag 'Validate' %>
 
+  Taille de la communauté
   <%= select_tag :community_size, options_for_select(Influencer.pluck(:community_size).uniq, '') %>
-  <%= submit_tag 'Validate' %>
 
+  Genre
   <%= select_tag :men_stats, options_for_select(Influencer.pluck(:men_stats).uniq, '') %>
-  <%= submit_tag 'Validate' %>
 
+  Taux d'engagement
   <%= select_tag :engagement_rate, options_for_select(Influencer.pluck(:engagement_rate).uniq, '') %>
   <%= submit_tag 'Validate' %>
 <% end %>
