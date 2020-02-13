@@ -7,7 +7,7 @@ class CampaignsController < ApplicationController
 
   def show
     @campaign = Campaign.find(params[:id])
-    @influencers = Influencer.all
+    @influencers = @campaign.influencers
   end
 
   def new
