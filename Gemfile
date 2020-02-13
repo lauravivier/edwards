@@ -18,7 +18,6 @@ gem 'webpacker'
 gem 'devise'
 gem 'cloudinary', '~> 1.12.0'
 gem 'chartkick'
-gem 'ahoy_matey'
 
 group :development do
   gem 'web-console', '>= 3.3.0'
