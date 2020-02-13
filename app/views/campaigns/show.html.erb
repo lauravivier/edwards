@@ -1,12 +1,14 @@
 <!-- <h1> TEST </h1> -->
-<div class="container ">
+
+
+<div class="container3 mt-6">
     <h1> Nom de la campagne : <strong> <%= @campaign.name %> </strong> </h1>
     <h2> Descriptif : <%= @campaign.message %> </h2>
     <h2> Hashtags associés <%= @campaign.hashtag %> </h2>
     <p> *** </p>
 </div>
 
-
+<!--
 <div class="container">
   <div class="row">
     <div class="col-sm-8 offset-sm-2">
@@ -18,4 +20,19 @@
       </div>
     </div>
   </div>
+</div> -->
+
+
+<div class="container">
+  <%= simple_form_for(@campaign) do |f| %>
+    <%= f.input :name %>
+
+    <%= simple_fields_for :selection do |x| %>
+      <% @influencers.each do |i| %>
+        <%= render 'influencer_card', influencer: i %>
+        <%= x.input i.name.to_sym, as: :boolean, input_html: { id: "checkbox-#{i.id}" } %>
+      <% end %>
+    <% end %>
+    <%= f.submit %>
+  <% end %>
 </div>
