@@ -55,7 +55,7 @@ influencer_03.save!
 influencer_04 = Influencer.new(name: "Jeremy", community_location: "Belgique", community_age: "35-44", community_size: 10500, women_stats: 12, men_stats: 88, engagement_rate: "7,45%", media: "pinterest")
 influencer_04.save!
 
-influencer_05 = Influencer.new(name: "Alice", community_location: "France", community_age: "25-34", community_size: 50500, women_stats: 76, men_stats: 24, engagement_rate: "6,45%", media: "instagram")
+influencer_05 = Influencer.new(name: "Alicee", community_location: "France", community_age: "25-34", community_size: 50500, women_stats: 76, men_stats: 24, engagement_rate: "6,45%", media: "instagram")
 influencer_05.save!
 
 influencer_06 = Influencer.new(name: "Eleanore", community_location: "Espagne", community_age: "18-24", community_size: 100500, women_stats: 66, men_stats: 34, engagement_rate: "5,45%", media: "twitter")
