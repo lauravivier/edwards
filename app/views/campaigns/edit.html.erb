@@ -4,7 +4,7 @@
   <%= text_field_tag :community_location,
   params[:community_location],
   class: "form-control",
-  placeholder: "Find a city"
+  placeholder: "Sélectionner un Pays"
   %>
   <%= select_tag :media, options_for_select(Influencer.pluck(:media).uniq, '') %>
   <%= submit_tag 'Validate' %>
@@ -23,15 +23,19 @@
 <% end %>
 
 <div class="container">
+
   <%= simple_form_for(@campaign) do |f| %>
     <%= f.input :name %>
 
     <%= simple_fields_for :selection do |x| %>
       <% @influencers.each do |i| %>
+        <div class="card-campaigns">
         <%= render 'influencer_card', influencer: i %>
         <%= x.input i.name.to_sym, as: :boolean, input_html: { id: "checkbox-#{i.id}" } %>
+          </div>
       <% end %>
     <% end %>
+
     <%= f.submit %>
   <% end %>
 </div>
