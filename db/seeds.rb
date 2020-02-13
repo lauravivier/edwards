@@ -148,9 +148,14 @@ InfluencerTag.create(influencer: influencer_08, tag: tag_06)
 # csv_options = { col_sep: ';', quote_char: '"', headers: :first_row }
 # CSV.foreach(filepath, csv_options) do |row|
 #   # Here, row is an array of columns
+<<<<<<< HEAD
+#   Metric.create!(
+#     entity: row[0],
+=======
 
 #   Metric.create!
 #   (entity: row[0],
+>>>>>>> bf1a52f4c58146a6c1b1edc4d244083dd2740d6b
 #     department: row[9],
 #     traveller_first_name: first_name,
 #     traveller_last_name: last_name,
@@ -161,6 +166,8 @@ InfluencerTag.create(influencer: influencer_08, tag: tag_06)
 #     transaction_type: row[5],
 #     report: report
 #   )
+<<<<<<< HEAD
+=======
 
 #   t.date :post_date
 #       t.string :social_media
@@ -172,6 +179,7 @@ InfluencerTag.create(influencer: influencer_08, tag: tag_06)
 #       t.integer :comment
 #       t.float :engagement
 #       t.float :emv
+>>>>>>> bf1a52f4c58146a6c1b1edc4d244083dd2740d6b
 # end
 
 puts 'Seed is Finished!'

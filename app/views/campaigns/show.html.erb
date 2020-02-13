@@ -8,24 +8,18 @@
     <p> *** </p>
 </div>
 
-<!--
 <div class="container">
   <div class="row">
     <div class="col-sm-8 offset-sm-2">
       <div id="campaigns">
-        <%= @influencers.each do |influencer| %>
+        <% @influencers.each do |influencer| %>
           <h4><%= influencer.name %></h4>
           <p><%= influencer.community_location %></p>
         <% end %>
       </div>
     </div>
   </div>
-</div> -->
-
-
-<div class="container">
-  <%= simple_form_for(@campaign) do |f| %>
-    <%= f.input :name %>
+</div>
 
     <%= simple_fields_for :selection do |x| %>
       <% @influencers.each do |i| %>
@@ -38,3 +32,4 @@
     <%= f.submit %>
   <% end %>
 </div>
+
