@@ -6,7 +6,7 @@ class InfluencersController < ApplicationController
       "
       @influencers = Influencer.joins(:tag).where(sql_query, query: "%#{params[:query]}%")
     else
-      @influencers = []
+      @influencers = Influencer.all
     end
   end
 end

@@ -19,7 +19,6 @@ gem 'devise'
 gem 'cloudinary', '~> 1.12.0'
 gem 'chartkick'
 
-
 group :development do
   gem 'web-console', '>= 3.3.0'
 end
