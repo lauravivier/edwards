@@ -29,8 +29,10 @@
 
     <%= simple_fields_for :selection do |x| %>
       <% @influencers.each do |i| %>
+            <div class="card-campaigns">
         <%= render 'influencer_card', influencer: i %>
         <%= x.input i.name.to_sym, as: :boolean, input_html: { id: "checkbox-#{i.id}" } %>
+          </div>
       <% end %>
     <% end %>
     <%= f.submit %>
