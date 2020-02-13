@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_02_08_140047) do
+ActiveRecord::Schema.define(version: 2020_02_11_200545) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -56,6 +56,21 @@ ActiveRecord::Schema.define(version: 2020_02_08_140047) do
     t.integer "men_stats"
     t.string "engagement_rate"
     t.string "media"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "metrics", force: :cascade do |t|
+    t.date "post_date"
+    t.string "social_media"
+    t.string "media_type"
+    t.string "hashtag"
+    t.integer "impression"
+    t.integer "click"
+    t.integer "like"
+    t.integer "comment"
+    t.float "engagement"
+    t.float "emv"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
