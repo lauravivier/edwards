@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   root to: 'pages#home'
 
   resources :campaigns, only: [:index, :new, :edit, :create, :show, :update]
-  resources :influencers, only: [:index, :new, :update, :create, :show]
+  resources :influencers
 
   resources :profiles
 end
