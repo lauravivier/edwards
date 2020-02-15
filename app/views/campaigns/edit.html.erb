@@ -9,25 +9,18 @@
 
   Réseau
   <%= select_tag :media, options_for_select(Influencer.pluck(:media).uniq, '') %>
-
   <%= submit_tag 'medias' %>
-
 
   Âge
   <%= select_tag :community_age, options_for_select(Influencer.pluck(:community_age).uniq, '') %>
-
   <%= submit_tag 'Age' %>
-
 
   Taille de la communauté
   <%= select_tag :community_size, options_for_select(Influencer.pluck(:community_size).uniq, '') %>
-
   <%= submit_tag 'Nombre de followers' %>
-
 
   Genre
   <%= select_tag :men_stats, options_for_select(Influencer.pluck(:men_stats).uniq, '') %>
-
   <%= submit_tag 'Genre' %>
 
 
@@ -37,30 +30,20 @@
 <% end %>
 
 <div class="container">
-
   <%= simple_form_for(@campaign) do |f| %>
-
-
     <%= simple_fields_for :selection do |x| %>
       <% @influencers.each do |i| %>
         <div class="card-campaigns">
         <%= render 'influencer_card', influencer: i %>
-        <%= x.input i.name.to_sym, as: :boolean, input_html: { id: "checkbox-#{i.id}" } %>
+        <%= x.input i.name.to_sym, as: :boolean, input_html: {id: "checkbox-#{i.id}" } %>
 
-        <script>
-
-
-        </script>
-
-
-          </div>
-
-
-
-
+        </div>
       <% end %>
     <% end %>
-
-    <%= f.submit %>
   <% end %>
 </div>
+  <input type="submit" name="commit" value="Valider">
+
+  <%= button_to "Campagne", campaigns_path, method: :get %>
+
+
