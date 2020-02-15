@@ -1,3 +1,4 @@
 class Metric < ApplicationRecord
-  has_many :campaigns
+  belongs_to :campaign
+  belongs_to :influencer
 end

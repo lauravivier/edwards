@@ -1,8 +1,8 @@
 class Campaign < ApplicationRecord
   has_many :campaign_influencers
+  has_many :metrics
   has_many :influencers, through: :campaign_influencers
   belongs_to :user
-  # belongs_to :metric
 
   HASHTAGS = ["#cravache", "#sm", "#partenariat", "#poney", "#fiftyshadesofgrey"]
   GOALS = ["Renforcer son image", "Accroître l'engagement", "Améliorer la conversion", "Récolter des informations"]

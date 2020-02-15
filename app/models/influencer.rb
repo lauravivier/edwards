@@ -1,6 +1,7 @@
 class Influencer < ApplicationRecord
   include PgSearch::Model
   has_many :campaign_influencers
+  has_many :metrics
   has_many :campaigns, through: :campaign_influencers
   has_many :tags, through: :influencer_tags
 

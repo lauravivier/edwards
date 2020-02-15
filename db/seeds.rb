@@ -1,24 +1,24 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
+# This file should contain all the record creation needed to seed the
+#database with its default values. # The data can then be loaded with
+#the rails db:seed command (or created alongside the database with
+#db:setup). # # Examples: # #   movies = Movie.create([{ name: 'Star
+#Wars' }, { name: 'Lord of the Rings' }]) #   Character.create(name:
+#'Luke', movie: movies.first)
 
 #Campaign.destroy_all
 #User.destroy_all
 
 puts 'Seed is coming...'
 
-# puts 'Detele old data'
-# CampaignInfluencer.destroy_all
-# InfluencerTag.destroy_all
-# Influencer.destroy_all
-# Campaign.destroy_all
-# Tag.destroy_all
-# User.destroy_all
+puts 'Delete old data'
 
+InfluencerTag.destroy_all
+Tag.destroy_all
+Metric.destroy_all
+CampaignInfluencer.destroy_all
+Influencer.destroy_all
+Campaign.destroy_all
+User.destroy_all
 
 puts 'Creating User...'
 user_01 = User.new(name: "Cyrille", email: "cyrille@decathlon.com", password: "helloo")
@@ -32,13 +32,16 @@ user_03.save!
 
 
 puts 'Creating Campaign...'
-campaign_01 = Campaign.new(name: "Cravache Time", user_id: user_01.id, starts_at: Date.new(2020,03,02), ends_at: Date.new(2020,02,03), goal: "Accroître l'engagement", target: "18-24ans", message: "achetez mes cravaches", hashtag: ["#sm", "#fiftyshadesofgrey"])
+
+campaign_01 = Campaign.new(name: "Cravache Time", user_id: user_01.id, starts_at: Date.new(2020,03,02), ends_at: Date.new(2020,02,03), goal: Campaign::GOALS.sample, target: "18-24ans", message: "achetez mes cravaches", hashtag: ["#sm", "#fiftyshadesofgrey"])
 campaign_01.save!
 
-campaign_02 = Campaign.new(name: "Chez Gladines", user_id: user_02.id, starts_at: Date.new(2020,02,02), ends_at: Date.new(2020,02,03), goal: "Accroître l'engagement", target: "18-24ans", message: "achetez mes cravaches", hashtag: ["#sm", "#fiftyshadesofgrey"])
+campaign_02 = Campaign.new(name: "Chez Gladines", user_id: user_02.id,
+starts_at: Date.new(2020,02,02), ends_at: Date.new(2020,02,03), goal: Campaign::GOALS.sample, target: "18-24ans", message: "achetez mes cravaches", hashtag:
+["#sm", "#fiftyshadesofgrey"])
 campaign_02.save!
 
-campaign_03 = Campaign.new(name: "Voyages", user_id: user_03.id, starts_at: Date.new(2020,02,02), ends_at: Date.new(2020,02,03), goal: "Accroître l'engagement", target: "18-24ans", message: "achetez mes cravaches", hashtag: ["#sm", "#fiftyshadesofgrey"])
+campaign_03 = Campaign.new(name: "Voyages", user_id: user_03.id, starts_at: Date.new(2020,02,02), ends_at: Date.new(2020,02,03), goal: Campaign::GOALS.sample, target: "18-24ans", message: "achetez mes cravaches", hashtag: ["#sm", "#fiftyshadesofgrey"])
 campaign_03.save!
 
 
@@ -81,32 +84,36 @@ CampaignInfluencer.create(campaign: campaign_03, influencer: influencer_07)
 CampaignInfluencer.create(campaign: campaign_03, influencer: influencer_08)
 CampaignInfluencer.create(campaign: campaign_03, influencer: influencer_01)
 
+
+
 puts 'Creating Tag...'
-tag_01 = Tag.new(name: "foodporn")
+
+tag_01 = Tag.new(name: "foodporn", color: "red")
 tag_01.save!
 
-tag_02 = Tag.new(name: "style")
+tag_02 = Tag.new(name: "style", color: "blue")
 tag_02.save!
 
-tag_03 = Tag.new(name: "love")
+tag_03 = Tag.new(name: "love", color: "red")
 tag_03.save!
 
-tag_04 = Tag.new(name: "money")
+tag_04 = Tag.new(name: "money", color: "green")
 tag_04.save!
 
-tag_05 = Tag.new(name: "life")
+tag_05 = Tag.new(name: "life", color: "red")
 tag_05.save!
 
-tag_06 = Tag.new(name: "wallpaper")
+tag_06 = Tag.new(name: "wallpaper", color: "red")
 tag_06.save!
 
-tag_07 = Tag.new(name: "phone")
+tag_07 = Tag.new(name: "phone", color: "red")
 tag_07.save!
 
-tag_08 = Tag.new(name: "brand")
+tag_08 = Tag.new(name: "brand", color: "yellow")
 tag_08.save!
 
 puts 'Creating Influencer_tag...'
+
 InfluencerTag.create(influencer: influencer_01, tag: tag_01)
 InfluencerTag.create(influencer: influencer_01, tag: tag_02)
 InfluencerTag.create(influencer: influencer_01, tag: tag_03)
@@ -139,45 +146,27 @@ InfluencerTag.create(influencer: influencer_08, tag: tag_04)
 InfluencerTag.create(influencer: influencer_08, tag: tag_05)
 InfluencerTag.create(influencer: influencer_08, tag: tag_06)
 
-# puts 'Creating Influencer_data...'
 
-# metric = Metric.create(company: company, user: User.first, format: 'csv', submission_date: Date.today, source: 'Arval')
+puts 'Creating Metrics...'
 
-# require 'csv'
-# filepath = File.join(Rails.root, 'db', 'metrics_seed.csv')
-# csv_options = { col_sep: ';', quote_char: '"', headers: :first_row }
-# CSV.foreach(filepath, csv_options) do |row|
-#   # Here, row is an array of columns
+require 'csv'
+filepath = File.join(Rails.root, 'db', 'metrics_seed.csv')
+csv_options = { col_sep: ';', quote_char: '"', headers: :first_row }
+CSV.foreach(filepath, csv_options) do |row|
+Metric.create!(
+  post_date: row[0],
+  social_media: row[1],
+  media_type: row[2],
+  hashtag: row[3],
+  impression: row[4],
+  click: row[5],
+  comment: row[6],
+  engagement: row [7],
+  emv: row[8],
+  campaign: Campaign.find(row[9].to_i),
+  influencer: Influencer.find(row[10].to_i)
+)
+end
 
-#   Metric.create!(
-#     entity: row[0],
-
-
-#   Metric.create!
-#   (entity: row[0],
-
-#     department: row[9],
-#     traveller_first_name: first_name,
-#     traveller_last_name: last_name,
-#     traveller_email: "#{last_name}@heineken.com",
-#     amount: row[7],
-#     reservation_mode: row[8],
-#     supplier: row[10],
-#     transaction_type: row[5],
-#     report: report
-#   )
-
-#   t.date :post_date
-#       t.string :social_media
-#       t.string :media_type
-#       t.string :hashtag
-#       t.integer :impression
-#       t.integer :click
-#       t.integer :like
-#       t.integer :comment
-#       t.float :engagement
-#       t.float :emv
-
-# end
 
 puts 'Seed is Finished!'
