@@ -10,31 +10,54 @@
   Réseau
   <%= select_tag :media, options_for_select(Influencer.pluck(:media).uniq, '') %>
 
+  <%= submit_tag 'medias' %>
+
+
   Âge
   <%= select_tag :community_age, options_for_select(Influencer.pluck(:community_age).uniq, '') %>
+
+  <%= submit_tag 'Age' %>
+
 
   Taille de la communauté
   <%= select_tag :community_size, options_for_select(Influencer.pluck(:community_size).uniq, '') %>
 
+  <%= submit_tag 'Nombre de followers' %>
+
+
   Genre
   <%= select_tag :men_stats, options_for_select(Influencer.pluck(:men_stats).uniq, '') %>
 
+  <%= submit_tag 'Genre' %>
+
+
   Taux d'engagement
   <%= select_tag :engagement_rate, options_for_select(Influencer.pluck(:engagement_rate).uniq, '') %>
-  <%= submit_tag 'Validate' %>
+  <%= submit_tag 'Engagement Rate' %>
 <% end %>
 
 <div class="container">
 
   <%= simple_form_for(@campaign) do |f| %>
-    <%= f.input :name %>
+
 
     <%= simple_fields_for :selection do |x| %>
       <% @influencers.each do |i| %>
         <div class="card-campaigns">
         <%= render 'influencer_card', influencer: i %>
         <%= x.input i.name.to_sym, as: :boolean, input_html: { id: "checkbox-#{i.id}" } %>
+
+        <script>
+
+
+        </script>
+
+
           </div>
+
+
+
+
       <% end %>
     <% end %>
 
