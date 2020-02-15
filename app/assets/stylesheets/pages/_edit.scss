@@ -1,6 +1,5 @@
 
 
-
 body {
   font-family: 'Lato';
 }
@@ -119,3 +118,8 @@ svg {
   stroke-dashoffset: 100;
   transition: 0.6s ease-out;
 }
+
+.card.card-selected {
+   background-color: #52476a;
+}
+
