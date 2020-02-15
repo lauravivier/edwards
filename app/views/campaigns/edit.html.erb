@@ -36,14 +36,12 @@
         <div class="card-campaigns">
         <%= render 'influencer_card', influencer: i %>
         <%= x.input i.name.to_sym, as: :boolean, input_html: {id: "checkbox-#{i.id}" } %>
-
         </div>
       <% end %>
     <% end %>
+    <%= f.submit %>
   <% end %>
 </div>
-  <input type="submit" name="commit" value="Valider">
-
-  <%= button_to "Campagne", campaigns_path, method: :get %>
+<%= link_to "lien vers la campagne en cours", campaign_path(@campaign) %>
 
 

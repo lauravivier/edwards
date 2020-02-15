@@ -1,5 +1,5 @@
 class CampaignsController < ApplicationController
-  before_action :set_campaign, only: [:show]
+  before_action :set_campaign, only: [:show, :update]
 
   def index
     @campaigns = Campaign.all
@@ -26,12 +26,9 @@ class CampaignsController < ApplicationController
     if params[:media]
       @influencers = @influencers.where(media: params[:media])
     end
-
-
   end
 
   def update
-    @campaign = Campaign.find(params[:id])
     @campaign.update(campaign_params)
 
     params[:selection].select { |k, v| v == '1'}.keys.each do |influencer|
@@ -54,9 +51,8 @@ class CampaignsController < ApplicationController
 
   private
 
-
   def campaign_params
-    params.require(:campaign).permit(:name, :starts_at, :ends_at, :goal, :target, :message, :hashtag => [])
+    params.permit(:name, :starts_at, :ends_at, :goal, :target, :message, :hashtag => [])
   end
 
 
