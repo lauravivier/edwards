@@ -1,0 +1,11 @@
+Tableau 1
+Post_date;Social_media;Media_type;Hashtag;Impression;Clicks;Likes;Comments;Engagement;EMV
+15/02/2020;instagram;galery;poney;100;10;30;1;0,02;1,2
+15/02/2020;instagram;galery;poney;200;20;25;2;0,02;1,2
+15/02/2020;instagram;galery;poney;250;30;50;0;0,02;1,2
+15/02/2020;instagram;Image;poney;100;40;10;10;0,02;1,2
+15/02/2020;instagram;Image;poney;200;50;20;20;0,02;1,2
+16/02/2020;instagram;Image;poney;250;60;10;1;0,02;1,2
+16/02/2020;instagram;Video;cravache;100;70;20;2;0,02;1,2
+16/02/2020;instagram;Video;cravache;200;80;50;0;0,02;1,2
+16/02/2020;instagram;Video;cravache;250;90;10;10;0,02;1,2

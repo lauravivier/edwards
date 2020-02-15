@@ -11,13 +11,14 @@
 
 puts 'Seed is coming...'
 
-# puts 'Detele old data'
-# CampaignInfluencer.destroy_all
-# InfluencerTag.destroy_all
-# Influencer.destroy_all
-# Campaign.destroy_all
-# Tag.destroy_all
-# User.destroy_all
+puts 'Detele old data'
+CampaignInfluencer.destroy_all
+InfluencerTag.destroy_all
+Influencer.destroy_all
+Campaign.destroy_all
+Tag.destroy_all
+User.destroy_all
+Metric.destroy_all
 
 
 puts 'Creating User...'
@@ -30,15 +31,30 @@ user_02.save!
 user_03 = User.new(name: "Laura", email: "lau@decathlon.com", password: "helloo")
 user_03.save!
 
+puts 'Creating Metrics...'
+
+
+require 'csv'
+filepath = File.join(Rails.root, 'db', 'metrics_seed.csv')
+csv_options = { col_sep: ';', quote_char: '"', headers: :first_row }
+CSV.foreach(filepath, csv_options) do |row|
+
+Metric.create!(post_date: row[0],
+social_media: row[1], media_type: row[2],
+hashtag: row[3],impression: row[4],
+click: row[5], comment: row[6],
+engagement: row [7], emv: row[8])
+end
+
 
 puts 'Creating Campaign...'
-campaign_01 = Campaign.new(name: "Cravache Time", user_id: user_01.id, starts_at: Date.new(2020,03,02), ends_at: Date.new(2020,02,03), goal: "Accroître l'engagement", target: "18-24ans", message: "achetez mes cravaches", hashtag: ["#sm", "#fiftyshadesofgrey"])
+campaign_01 = Campaign.new(name: "Cravache Time", user_id: user_01.id, starts_at: Date.new(2020,03,02), ends_at: Date.new(2020,02,03), goal: "Accroître l'engagement", target: "18-24ans", message: "achetez mes cravaches", hashtag: ["#sm", "#fiftyshadesofgrey"], metric_id: metric_01.id)
 campaign_01.save!
 
-campaign_02 = Campaign.new(name: "Chez Gladines", user_id: user_02.id, starts_at: Date.new(2020,02,02), ends_at: Date.new(2020,02,03), goal: "Accroître l'engagement", target: "18-24ans", message: "achetez mes cravaches", hashtag: ["#sm", "#fiftyshadesofgrey"])
+campaign_02 = Campaign.new(name: "Chez Gladines", user_id: user_02.id, starts_at: Date.new(2020,02,02), ends_at: Date.new(2020,02,03), goal: "Accroître l'engagement", target: "18-24ans", message: "achetez mes cravaches", hashtag: ["#sm", "#fiftyshadesofgrey"]), metric_id: metric_01.id
 campaign_02.save!
 
-campaign_03 = Campaign.new(name: "Voyages", user_id: user_03.id, starts_at: Date.new(2020,02,02), ends_at: Date.new(2020,02,03), goal: "Accroître l'engagement", target: "18-24ans", message: "achetez mes cravaches", hashtag: ["#sm", "#fiftyshadesofgrey"])
+campaign_03 = Campaign.new(name: "Voyages", user_id: user_03.id, starts_at: Date.new(2020,02,02), ends_at: Date.new(2020,02,03), goal: "Accroître l'engagement", target: "18-24ans", message: "achetez mes cravaches", hashtag: ["#sm", "#fiftyshadesofgrey"], metric_id: metric_01.id)
 campaign_03.save!
 
 
@@ -139,47 +155,6 @@ InfluencerTag.create(influencer: influencer_08, tag: tag_04)
 InfluencerTag.create(influencer: influencer_08, tag: tag_05)
 InfluencerTag.create(influencer: influencer_08, tag: tag_06)
 
-# puts 'Creating Influencer_data...'
 
-# metric = Metric.create(company: company, user: User.first, format: 'csv', submission_date: Date.today, source: 'Arval')
-
-# require 'csv'
-# filepath = File.join(Rails.root, 'db', 'metrics_seed.csv')
-# csv_options = { col_sep: ';', quote_char: '"', headers: :first_row }
-# CSV.foreach(filepath, csv_options) do |row|
-#   # Here, row is an array of columns
-<<<<<<< HEAD
-#   Metric.create!(
-#     entity: row[0],
-=======
-
-#   Metric.create!
-#   (entity: row[0],
->>>>>>> bf1a52f4c58146a6c1b1edc4d244083dd2740d6b
-#     department: row[9],
-#     traveller_first_name: first_name,
-#     traveller_last_name: last_name,
-#     traveller_email: "#{last_name}@heineken.com",
-#     amount: row[7],
-#     reservation_mode: row[8],
-#     supplier: row[10],
-#     transaction_type: row[5],
-#     report: report
-#   )
-<<<<<<< HEAD
-=======
-
-#   t.date :post_date
-#       t.string :social_media
-#       t.string :media_type
-#       t.string :hashtag
-#       t.integer :impression
-#       t.integer :click
-#       t.integer :like
-#       t.integer :comment
-#       t.float :engagement
-#       t.float :emv
->>>>>>> bf1a52f4c58146a6c1b1edc4d244083dd2740d6b
-# end
 
 puts 'Seed is Finished!'
