@@ -35,6 +35,8 @@ ActiveRecord::Schema.define(version: 2020_02_15_093553) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.text "hashtag", default: [], array: true
+    t.bigint "metric_id"
+    t.index ["metric_id"], name: "index_campaigns_on_metric_id"
     t.index ["user_id"], name: "index_campaigns_on_user_id"
   end
 

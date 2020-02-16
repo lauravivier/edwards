@@ -8,6 +8,7 @@ class CampaignsController < ApplicationController
   def show
     @campaign = Campaign.find(params[:id])
     @influencers = @campaign.influencers
+    @influencers = @campaign.influencers.count
   end
 
   def new
@@ -29,9 +30,8 @@ class CampaignsController < ApplicationController
   end
 
   def update
-    @campaign.update(campaign_params)
-
-    params[:selection].select { |k, v| v == '1'}.keys.each do |influencer|
+      @campaign.update(update_params)
+      params[:selection].select { |k, v| v == '1'}.keys.each do |influencer|
       CampaignInfluencer.create(campaign: @campaign, influencer: Influencer.find_by(name: influencer))
     end
 
@@ -39,9 +39,9 @@ class CampaignsController < ApplicationController
   end
 
   def create
-    @campaign = Campaign.new(campaign_params)
-    @campaign.user = current_user
-    @campaign.hashtag = campaign_params["hashtag"].reject(&:blank?)
+      @campaign = Campaign.new(campaign_params)
+      @campaign.user = current_user
+      #@campaign.hashtag = campaign_params["hashtag"].reject(&:blank?)
     if @campaign.save
       redirect_to edit_campaign_path(@campaign)
     else
@@ -52,13 +52,14 @@ class CampaignsController < ApplicationController
   private
 
   def campaign_params
-    params.permit(:name, :starts_at, :ends_at, :goal, :target, :message, :hashtag => [])
+    params.require(:campaign).permit(:name, :starts_at, :ends_at, :goal, :target, :message, :hashtag, :engagement_rate, :men_stats => [])
   end
 
+  def update_params
+    params.permit(:name, :starts_at, :ends_at, :goal, :target, :message, :hashtag => [])
+  end
 
   def set_campaign
     @campaign = Campaign.find(params[:id])
   end
 end
-
-

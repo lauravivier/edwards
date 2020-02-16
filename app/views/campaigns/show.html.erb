@@ -1,23 +1,36 @@
-<!-- <h1> TEST </h1> -->
+<header>
+  <div class="overlay list-group">
 
+    <div class= "list-group hname">
+      <hname> Campagne #<%= @campaign.name %> </hname>
+    </div>
 
-<div class="container3 mt-6">
-    <h1> Nom de la campagne : <strong> <%= @campaign.name %> </strong> </h1>
-    <h2> Descriptif : <%= @campaign.message %> </h2>
-    <h2> Hashtags associés <%= @campaign.hashtag %> </h2>
-    <p> *** </p>
-</div>
-
-<div class="container">
-  <div class="row">
-    <div class="col-sm-8 offset-sm-2">
-      <div id="campaigns">
-        <% @influencers.each do |influencer| %>
-          <h4><%= influencer.name %></h4>
-          <p><%= influencer.community_location %></p>
-        <% end %>
+    <div class= "list-group hshow">
+      <hshow> Du <%= @campaign.starts_at %> au <%= @campaign.ends_at %></hshow>
+      <hshow> Objectif : <%= @campaign.goal%></hshow>
+      <hshow> Brief : <%= @campaign.message %></hshow>
+      <hshow> Hashtags associés <%= @campaign.hashtag %></hshow>
+      <br>
       </div>
     </div>
-  </div>
-</div>
 
+</header>
+
+
+<container>
+   <div class="whitecard container showc">
+      <div class="row">
+            <div class="col-sm list-group">
+            <fatnombre> <%=@campaign.influencers.count %> </fatnombre>
+          <txtbil>influenceurs</txttbil>
+        </div>
+
+
+    <div class="col-sm list-group">
+      <hshow> Du <%= @campaign.starts_at %> au <%= @campaign.ends_at %></hshow>
+      <hshow> Objectif : <%= @campaign.goal%></hshow>
+      <hshow> Brief : <%= @campaign.message %></hshow>
+      <hshow> Hashtags associés <%= @campaign.hashtag %></hshow>
+    </div>
+
+</container>
