@@ -9,6 +9,7 @@ class CampaignsController < ApplicationController
     @campaign = Campaign.find(params[:id])
     @influencers = @campaign.influencers
     @influencers = @campaign.influencers.count
+    @influencers = @community_location
   end
 
   def new
@@ -63,3 +64,5 @@ class CampaignsController < ApplicationController
     @campaign = Campaign.find(params[:id])
   end
 end
+
+

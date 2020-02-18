@@ -13,21 +13,30 @@
       <br>
       </div>
     </div>
-
 </header>
 
-
-<container>
-   <div class="whitecard container showc">
-      <div class="row">
-            <div class="col-sm list-group">
-            <fatnombre> <%=@campaign.influencers.count %> </fatnombre>
-          <txtbil>influenceurs</txttbil>
-        </div>
-
-    <div class="col-sm list-group">
-       <hshow> <%= @community_location %> </hshow>
-      <hshow> <%= @mens_rate %> </hshow>
-      <hshow> <%= @community_size %> </hshow>
-    </div>
 </container>
+
+<div>
+  <div class="container4 m-5">
+    <div class="one">
+      <fatnombre> <%=@campaign.influencers.count %> </fatnombre>
+      <txtbil>INFLUENCEURS</txttbil>
+    </div>
+    <div class="two">
+      <br><txtbil> 25 - 35 ans  </txtbil><br/>
+      <br><txtbil> Espagne </txtbil><br/>
+      <br><txtbil> <%= @community_location %> </txtbil><br/>
+    </div>
+    <div class="three">
+      <txtbil>PRÉVISIONS</txttbil>
+    </div>
+    <div class="four">
+      <br><txtbil> 1 million de vues</txttbil><br/>
+      <br><txtbil> 30 000 engagements</txttbil><br/>
+    </div>
+  </div>
+</div>
+
+
+
