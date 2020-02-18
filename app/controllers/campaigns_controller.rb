@@ -52,11 +52,11 @@ class CampaignsController < ApplicationController
   private
 
   def campaign_params
-    params.require(:campaign).permit(:name, :starts_at, :ends_at, :goal, :target, :message, :hashtag, :engagement_rate, :men_stats => [])
+    params.require(:campaign).permit(:name, :starts_at, :ends_at, :goal, :target, :message, :hashtag, :engagement_rate, :men_stats, :community_size => [])
   end
 
   def update_params
-    params.permit(:name, :starts_at, :ends_at, :goal, :target, :message, :hashtag => [])
+    params.permit(:name, :starts_at, :ends_at, :goal, :target, :message, :hashtag, :men_stats, :engagement_rate, :community_size => [])
   end
 
   def set_campaign
