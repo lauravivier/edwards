@@ -3,12 +3,25 @@ class CampaignsController < ApplicationController
 
   def index
     @campaigns = Campaign.all
+
+    if params ["search"]
+    @filter = params ["search"] [" locations "] [ "sizes"]  [ "medias"].concat (params ["search"] ["forces"]).flatten.reject (&: empty?)
+    @campaign= Campaign.all.global_search ("# { @filter }")
+      else
+    @influencers= Influencer.all
+    end
+      respond_to do | format |
+      format.html
+      format.js
+      end
+    end
   end
 
   def show
     @campaign = Campaign.find(params[:id])
     @influencers = @campaign.influencers
-    @influencers = @campaign.influencers.count
+    @number_of_influencers = @campaign.influencers.count
+    # @geoloc_influencers = @community_location
   end
 
   def new
@@ -17,16 +30,19 @@ class CampaignsController < ApplicationController
   end
 
   def edit
-    @influencers = Influencer.all
     @campaign = Campaign.find(params[:id])
-
-    if params[:community_location]
-      @influencers = @influencers.global_search(params[:community_location])
+    if params["search"]
+      @filter = params["search"]["ages"].concat(params["search"]["medias"]).concat(params["search"]["sizes"]).concat(params["search"]["locations"]).flatten.reject(&:blank?)
+      @influencers = @filter.empty? ? Influencer.all : Influencer.all.tagged_with(@filter, any: true)
+    else
+      @influencers = Influencer.all
     end
 
-    if params[:media]
-      @influencers = @influencers.where(media: params[:media])
-    end
+    # if params[:query].present?
+    #   @influencers = Influencer.global_search(params[:query])
+    # else
+    #   @influencers = Influencer.all
+    # end
   end
 
   def update
@@ -63,3 +79,5 @@ class CampaignsController < ApplicationController
     @campaign = Campaign.find(params[:id])
   end
 end
+
+
