@@ -3,18 +3,6 @@ class CampaignsController < ApplicationController
 
   def index
     @campaigns = Campaign.all
-
-    if params ["search"]
-    @filter = params ["search"] [" locations "] [ "sizes"]  [ "medias"].concat (params ["search"] ["forces"]).flatten.reject (&: empty?)
-    @campaign= Campaign.all.global_search ("# { @filter }")
-      else
-    @influencers= Influencer.all
-    end
-      respond_to do | format |
-      format.html
-      format.js
-      end
-    end
   end
 
   def show
