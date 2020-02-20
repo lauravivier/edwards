@@ -4,6 +4,6 @@ Rails.application.routes.draw do
 
   resources :campaigns, only: [:index, :new, :edit, :create, :show, :update]
   resources :influencers, only: [:index, :new, :update, :create, :show]
-
+  resources :metrics, only: [:show]
   resources :profiles
 end
