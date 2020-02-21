@@ -65,7 +65,7 @@ border-radius: 20px;
   font-size: 25px;
   line-height: 30px;
   color: #0047FE;
-
+  }
 
 .fatnombre {
   position: center;
@@ -121,11 +121,11 @@ border-radius: 20px;
   color: #FFFFFF;
 }
 
-@media screen and (max-width: 600px) {
- .container {
-    display: block;
-  }
- .container > div {
-    width: 100%;
-  }
-}
+// @media screen and (max-width: 600px) {
+//  .container {
+//     display: block;
+//   }
+//  .container > div {
+//     width: 100%;
+//   }
+// }
