@@ -1,10 +1,3 @@
-<header>
-  <div class="overlay list-group">
-
-    <div class= "list-group hname">
-      <hname> Campagne #<%= @campaign.name %> </hname>
-    </div>
-
     <div class= "list-group hshow">
       <hshow> Du <%= @campaign.starts_at %> au <%= @campaign.ends_at %></hshow>
       <hshow> Objectif : <%= @campaign.goal%> </hshow>
@@ -36,6 +29,21 @@
       <br><txtbil> 30 000 engagements</txttbil><br/>
     </div>
   </div>
+</div>
+
+
+<div class="container">
+<h2> Le bilan brut de la campagne est le suivant :</h2>
+ <p> Nombre de personne engagées : <%= @nbr_engagement %></p>
+  <p> le nombre total de posts est (calcul à vérifier) : <%= @nbr_post %></p>
+  <p> le nombre total d'impression est : <%= @nbr_impression %></p>
+  <p> le nombre total de likes est : <%= @nbr_like %></p>
+  <p> le nombre total de commentaires est : <%= @nbr_comment %></p>
+
+  <h2> Le bilan par influencer de la campagne est le suivant </h2>
+  <p> le nombre d'impression est : <%= @impression_by_influencer %></p>
+  <p> le nombre de likes est : <%= @like_by_influencer %></p>
+  <p> le nombre de commentaires est : <%= @comment_by_influencer %></p>
 </div>
 
 

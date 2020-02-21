@@ -1,0 +1,36 @@
+<div class="container">
+<%#= pie_chart @media_type %>
+<div id="containerTest" style="width:100%; height:400px;"></div>
+
+</div>
+
+<script>
+console.log("<%= @metric.post_date%>")
+
+console.log("test")
+
+document.addEventListener('DOMContentLoaded', function () {
+        var myChart = Highcharts.chart('containerTest', {
+            chart: {
+                type: 'bar'
+            },
+            title: {
+                text: 'Fruit Consumption'
+            },
+            xAxis: {
+                categories: ['Apples', 'Bananas', 'Oranges']
+            },
+            yAxis: {
+                title: {
+                    text: 'Fruit eaten'
+                }
+            },
+            series: [{
+                name: <%= @impression_influencer.key %>
+                data: <%= @impression_influencer.value %>
+            }]
+        });
+    });
+
+
+</script>
