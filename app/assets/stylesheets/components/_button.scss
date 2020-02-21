@@ -1,24 +1,110 @@
 .btn-ghost {
   color: #0047FE;
-  border: 1px solid #0047FE;
+  border: 2px solid #0047FE;
+  font-weight:600;
   padding: 8px 24px;
-  border-radius: 50px;
-  font-weight: lighter;
+  border-radius: 12px !important;
   transition: background 0.3s ease;
   justify-content: flex-end;
 }
 
 .btn-ghost:hover {
   color:white;
-  font-weight:normal;
+  font-weight:700;
   background-color: #0047FE;
+  transform: scale(0.95) !important;
+        transition: transform 0.4s cubic-bezier(0,0,.2,1);
 }
 
-.head_logo {
-  width: 100px;
+.btn-ghost-nav {
+  color: #d6249f;
+  border: 2px solid #d6249f;
+  font-weight:600;
+  margin-left: 8px;
+  margin-right: 8px;
+  padding: 8px 24px;
+  border-radius: 12px !important;
+  transition: background 0.3s ease;
+  justify-content: flex-end;
 }
+
+.btn-ghost-nav:hover {
+  color:white;
+  font-weight:700;
+  background-color: #d6249f;
+  transform: scale(0.95) !important;
+        transition: transform 0.4s cubic-bezier(0,0,.2,1);
+
+}
+
+.btn-white {
+ color:white;
+ background-color: #F04867;
+  border: 2px solid #F04867;
+  font-weight:600;
+  padding: 8px 24px;
+  border-radius: 12px !important;
+  transition: background 0.3s ease;
+  justify-content: flex-end;
+}
+
+.btn-white:hover {
+    color: #F04867;
+  border: 2px solid #F04867;
+  background-color:white;
+  font-weight:700;
+
+  transform: scale(0.95) !important;
+        transition: transform 0.4s cubic-bezier(0,0,.2,1);
+
+}
+
+
+.btn-ghost2 {
+  color: #0047FE;
+  border: 2px solid #0047FE;
+  font-weight:600;
+  width: 160px;
+  padding: 8px 24px;
+  border-radius: 12px !important;
+  transition: background 0.3s ease;
+  justify-content: flex-end;
+}
+
+.btn-ghost2:hover {
+  color:white;
+  font-weight:700;
+  text-decoration:none;
+  background-color: #0047FE;
+  transform: scale(0.95) !important;
+        transition: transform 0.4s cubic-bezier(0,0,.2,1);
+
+}
+
+
+.btn-ghost3 {
+  color: #0047FE;
+  border: 1px solid #0047FE;
+  padding: 4px 24px;
+  border-radius: 12px !important;
+  font-weight: lighter;
+  transition: background 0.3s ease;
+  justify-content: flex-end;
+
+}
+
+.btn-ghost3:hover {
+  color:white;
+  font-weight:normal;
+  text-decoration:none;
+  background-color: #0047FE;
+  transform: scale(0.95) !important;
+        transition: transform 0.4s cubic-bezier(0,0,.2,1);
+
+}
+
 .form-button {
-  border-radius: 25px;
+  border-radius: 12px !important;
   background-color: #33CC33;
   width: 200px;
 }

@@ -1,32 +1,15 @@
 <br>
 
-<%= form_tag edit_campaign_path, method: :get do %>
-  <%= text_field_tag :community_location,
-  params[:community_location],
-  class: "form-control",
-  placeholder: "Sélectionner un Pays"
-  %>
-
-  Réseau
-  <%= select_tag :media, options_for_select(Influencer.pluck(:media).uniq, '') %>
-  <%= submit_tag 'medias' %>
-
-  Âge
-  <%= select_tag :community_age, options_for_select(Influencer.pluck(:community_age).uniq, '') %>
-  <%= submit_tag 'Age' %>
-
-  Taille de la communauté
-  <%= select_tag :community_size, options_for_select(Influencer.pluck(:community_size).uniq, '') %>
-  <%= submit_tag 'Nombre de followers' %>
-
-  Genre
-  <%= select_tag :men_stats, options_for_select(Influencer.pluck(:men_stats).uniq, '') %>
-  <%= submit_tag 'Genre' %>
-
-
-  Taux d'engagement
-  <%= select_tag :engagement_rate, options_for_select(Influencer.pluck(:engagement_rate).uniq, '') %>
-  <%= submit_tag 'Engagement Rate' %>
+<%= simple_form_for :query, url: edit_campaign_path(@campaign), method: :get do |f| %>
+ <%= f.input :ages, label: "Ages", collection: $ages,
+ as: :check_boxes %>
+ <%= f.input :medias, label: "Medias", collection: $medias,
+ as: :check_boxes %>
+ <%= f.input :sizes, label: "Taille de Communauté", collection: $sizes,
+ as: :check_boxes %>
+  <%= f.input :sizes, label: "Localisation", collection: $locations,
+  as: :check_boxes %>
+  <%= f.submit "Filter", class: "btn btn-primary" %>
 <% end %>
 
 <div class="container">
@@ -36,14 +19,9 @@
         <div class="card-campaigns">
         <%= render 'influencer_card', influencer: i %>
         <%= x.input i.name.to_sym, as: :boolean, input_html: {id: "checkbox-#{i.id}" } %>
-
         </div>
       <% end %>
     <% end %>
+    <%= f.submit %>
   <% end %>
 </div>
-  <input type="submit" name="commit" value="Valider">
-
-  <%= button_to "Campagne", campaigns_path, method: :get %>
-
-

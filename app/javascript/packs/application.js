@@ -1,3 +1,5 @@
+
+
 require("@rails/ujs").start()
 require("@rails/activestorage").start()
 require("channels")
@@ -14,8 +16,8 @@ if (document.querySelector(".edit_campaign")) {
     card.addEventListener("click", (event) => {
       checkbox.click();
       event.currentTarget.classList.add("card-selected");
-    });
 
-  });
+      });
+   });
 }
 
