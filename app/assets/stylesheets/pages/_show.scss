@@ -1,6 +1,6 @@
 *{padding: 0; margin: 0; box-sizing: border-box;}
 
-body{height: 900px;}
+
 
 header {
   background: url('image.png');
@@ -26,7 +26,7 @@ header .overlay {
 text-align: left;
 display: flex;
 justify-content: flex-end;
-font-family: Lato;
+font-family: 'Nunito Sans', sans-serif;
 font-style: normal;
 font-weight: 900;
 font-size: 30px;
@@ -35,7 +35,7 @@ color: #FFFFFF;
 }
 
 .hsnow {
-font-family: Lato;
+font-family: 'Nunito Sans', sans-serif;
 font-style: italic;
 font-weight: bold;
 font-size: 30px;
@@ -56,7 +56,7 @@ border-radius: 20px;
   height: 46px;
   left: 64px;
   top: 572px;
-  font-family: Lato;
+  font-family: 'Nunito Sans', sans-serif;
   font-style: normal;
   font-weight: bold;
   font-size: 25px;
@@ -66,7 +66,7 @@ border-radius: 20px;
 
 fatnombre {
   text-align: center;
-  font-family: Lato;
+  font-family: 'Nunito Sans', sans-serif;
   font-style: normal;
   font-weight: bold;
   font-size: 48px;
