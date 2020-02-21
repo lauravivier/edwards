@@ -30,7 +30,7 @@ font-family: 'Nunito Sans', sans-serif;
 font-style: normal;
 font-weight: 900;
 font-size: 30px;
-line-height: 50px;
+line-height: 40px;
 color: #FFFFFF;
 }
 
@@ -38,19 +38,20 @@ color: #FFFFFF;
 font-family: 'Nunito Sans', sans-serif;
 font-style: italic;
 font-weight: bold;
-font-size: 30px;
-line-height: 20px;
+font-size: 20px;
+line-height: 30px;
 color: #FFFFFF;
 }
 
 .whitecard {
 background: #FFFFFF;
-border: 1px solid #FFFFFF;
+border: 10px solid #FFFFFF;
 box-sizing: border-box;
 border-radius: 20px;
 }
 
  txtbil {
+
   text-align: center;
   width: 512px;
   height: 46px;
@@ -62,15 +63,17 @@ border-radius: 20px;
   font-size: 25px;
   line-height: 30px;
   color: #0047FE;
-}
 
 fatnombre {
+  position: center;
+  text-align: center;
+  margin: 15px;
   text-align: center;
   font-family: 'Nunito Sans', sans-serif;
   font-style: normal;
   font-weight: bold;
   font-size: 48px;
-  line-height: 58px;
+  line-height: 100px;
   color: #0047FE;
   }
 
@@ -78,3 +81,48 @@ fatnombre {
   height: calc(30vh - 58px);
 }
 
+.container4 {
+  position: center;
+  max-width: 1050px;
+  margin: 0 auto;         /*  will center the container on wide screen  */
+  display: flex;
+}
+.one {
+  width: 300px;
+  background-color: white;
+}
+.two {
+  width: 300px;
+  background-color: #0048fe;
+  font-family: Lato;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 15px;
+  color: #FFFFFF;
+}
+
+.three {
+  width: 300px;
+  background-color: white;
+}
+
+.four {
+  width: 300px;
+  background-color: #0048fe;
+  font-family: Lato;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 15px;
+  color: #FFFFFF;
+}
+
+@media screen and (max-width: 600px) {
+ .container {
+    display: block;
+  }
+ .container > div {
+    width: 100%;
+  }
+}

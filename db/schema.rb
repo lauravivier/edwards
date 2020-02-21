@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_02_15_093553) do
+ActiveRecord::Schema.define(version: 2020_02_18_190939) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -39,23 +39,17 @@ ActiveRecord::Schema.define(version: 2020_02_15_093553) do
   end
 
   create_table "influencer_tags", force: :cascade do |t|
-    t.bigint "influencer_id"
-    t.bigint "tag_id"
+    t.bigint "typology_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["influencer_id"], name: "index_influencer_tags_on_influencer_id"
-    t.index ["tag_id"], name: "index_influencer_tags_on_tag_id"
+    t.index ["typology_id"], name: "index_influencer_tags_on_typology_id"
   end
 
   create_table "influencers", force: :cascade do |t|
     t.string "name"
-    t.string "community_location"
-    t.string "community_age"
-    t.integer "community_size"
     t.integer "women_stats"
     t.integer "men_stats"
     t.string "engagement_rate"
-    t.string "media"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
@@ -88,7 +82,34 @@ ActiveRecord::Schema.define(version: 2020_02_15_093553) do
     t.index ["searchable_type", "searchable_id"], name: "index_pg_search_documents_on_searchable_type_and_searchable_id"
   end
 
-  create_table "tags", force: :cascade do |t|
+  create_table "taggings", id: :serial, force: :cascade do |t|
+    t.integer "tag_id"
+    t.string "taggable_type"
+    t.integer "taggable_id"
+    t.string "tagger_type"
+    t.integer "tagger_id"
+    t.string "context", limit: 128
+    t.datetime "created_at"
+    t.index ["context"], name: "index_taggings_on_context"
+    t.index ["tag_id", "taggable_id", "taggable_type", "context", "tagger_id", "tagger_type"], name: "taggings_idx", unique: true
+    t.index ["tag_id"], name: "index_taggings_on_tag_id"
+    t.index ["taggable_id", "taggable_type", "context"], name: "taggings_taggable_context_idx"
+    t.index ["taggable_id", "taggable_type", "tagger_id", "context"], name: "taggings_idy"
+    t.index ["taggable_id"], name: "index_taggings_on_taggable_id"
+    t.index ["taggable_type"], name: "index_taggings_on_taggable_type"
+    t.index ["tagger_id", "tagger_type"], name: "index_taggings_on_tagger_id_and_tagger_type"
+    t.index ["tagger_id"], name: "index_taggings_on_tagger_id"
+  end
+
+  create_table "tags", id: :serial, force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer "taggings_count", default: 0
+    t.index ["name"], name: "index_tags_on_name", unique: true
+  end
+
+  create_table "typologies", force: :cascade do |t|
     t.string "name"
     t.string "color"
     t.datetime "created_at", precision: 6, null: false
@@ -111,6 +132,6 @@ ActiveRecord::Schema.define(version: 2020_02_15_093553) do
   add_foreign_key "campaign_influencers", "campaigns"
   add_foreign_key "campaign_influencers", "influencers"
   add_foreign_key "campaigns", "users"
-  add_foreign_key "influencer_tags", "influencers"
-  add_foreign_key "influencer_tags", "tags"
+  add_foreign_key "influencer_tags", "typologies"
+  add_foreign_key "taggings", "tags"
 end

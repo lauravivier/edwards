@@ -2,7 +2,6 @@
   <h3 class="title"><%= influencer.name %></h3>
   <div class="bar">
     <h4 class="title"> Communauté</h4>
-    <h4 class="title"> Communazuté</h4>
     <div class="emptybar"></div>
     <div class="filledbar"></div>
   </div>
@@ -11,3 +10,12 @@
     </svg>
   </div>
 </div>
+
+<%= simple_form_for :search, url: root_path, method: "GET" do |f| %>
+  <%= f.input :location, label: "Category",  collection: $categories, as: :check_boxes %>
+  <%= f.input :age, label: "Flavor", collection: $flavors, as: :check_boxes %>
+  <%= f.submit "Search", class: "btn btn-primary" %>
+  <%= link_to "Reset", root_path  %>
+<% end %>
+
+
