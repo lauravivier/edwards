@@ -17,7 +17,9 @@ gem 'uglifier'
 gem 'webpacker'
 gem 'devise'
 gem 'cloudinary', '~> 1.12.0'
+gem 'json'
 gem 'chartkick'
+gem 'acts-as-taggable-on', '~> 6.0'
 
 group :development do
   gem 'web-console', '>= 3.3.0'

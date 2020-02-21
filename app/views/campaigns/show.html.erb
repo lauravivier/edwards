@@ -1,23 +1,50 @@
-<!-- <h1> TEST </h1> -->
-
-
-<div class="container3 mt-6">
-    <h1> Nom de la campagne : <strong> <%= @campaign.name %> </strong> </h1>
-    <h2> Descriptif : <%= @campaign.message %> </h2>
-    <h2> Hashtags associés <%= @campaign.hashtag %> </h2>
-    <p> *** </p>
-</div>
-
-<div class="container">
-  <div class="row">
-    <div class="col-sm-8 offset-sm-2">
-      <div id="campaigns">
-        <% @influencers.each do |influencer| %>
-          <h4><%= influencer.name %></h4>
-          <p><%= influencer.community_location %></p>
-        <% end %>
+    <div class= "list-group hshow">
+      <hshow> Du <%= @campaign.starts_at %> au <%= @campaign.ends_at %></hshow>
+      <hshow> Objectif : <%= @campaign.goal%> </hshow>
+      <hshow> Brief : <%= @campaign.message %> </hshow>
+      <hshow> Hashtags associés <%= @campaign.hashtag %> </hshow>
+      <br>
       </div>
+    </div>
+</header>
+
+</container>
+
+<div>
+  <div class="container4 m-5">
+    <div class="one">
+      <fatnombre> <%=@campaign.influencers.count %> </fatnombre>
+      <txtbil>INFLUENCEURS</txttbil>
+    </div>
+    <div class="two">
+      <br><txtbil><%= @community_age %></txtbil><br/>
+      <br><txtbil> Espagne </txtbil><br/>
+        <br><txtbil> <%= @community_location %> </txtbil> <br/>
+    </div>
+    <div class="three">
+      <br><txtbil>PRÉVISIONS DE LA CAMPAGNE</txttbil></txtbil>
+    </div>
+    <div class="four">
+      <br><txtbil> 1 million de vues</txttbil><br/>
+      <br><txtbil> 30 000 engagements</txttbil><br/>
     </div>
   </div>
 </div>
+
+
+<div class="container">
+<h2> Le bilan brut de la campagne est le suivant :</h2>
+ <p> Nombre de personne engagées : <%= @nbr_engagement %></p>
+  <p> le nombre total de posts est (calcul à vérifier) : <%= @nbr_post %></p>
+  <p> le nombre total d'impression est : <%= @nbr_impression %></p>
+  <p> le nombre total de likes est : <%= @nbr_like %></p>
+  <p> le nombre total de commentaires est : <%= @nbr_comment %></p>
+
+  <h2> Le bilan par influencer de la campagne est le suivant </h2>
+  <p> le nombre d'impression est : <%= @impression_by_influencer %></p>
+  <p> le nombre de likes est : <%= @like_by_influencer %></p>
+  <p> le nombre de commentaires est : <%= @comment_by_influencer %></p>
+</div>
+
+
 

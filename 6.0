@@ -1,0 +1,12 @@
+When upgrading
+
+Re-run the migrations generator
+
+    rake acts_as_taggable_on_engine:install:migrations
+
+This will create any new migrations and skip existing ones
+Version 3.5.0 has a migration for mysql adapter
+Successfully installed acts-as-taggable-on-6.5.0
+Parsing documentation for acts-as-taggable-on-6.5.0
+Done installing documentation for acts-as-taggable-on after 0 seconds
+1 gem installed

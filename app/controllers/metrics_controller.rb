@@ -1,15 +1,61 @@
 class MetricsController < ApplicationController
 
-#def analytic
+  set_up
 
-#@media_metrics = @metrics.group_by { |t| t.media_type }
-                          .transform_values { |v| v.count }
-#@impression_metrics = @metrics.group_by { |t| t.impression }
-                          .transform_values { |v| v.count }
+  def show
+    @metric = Metric.find(params[:id])
+  end
 
-#@travellers = @transactions.group_by{ |t| t.traveller_last_name }
-                          .transform_values{|v| v.count }.sort_by{ |k, v| -v }[0..4].to_h
 
-#end
 
+  def impression_influencer(campaign_id)
+    @metrics2 = @metrics.where('campaign_id' == campaign_id)
+    @metrics2.each do |metric|
+      t[:name] = metric.influencer_id.name
+      t[:impressions] = metric.impression
+    end
+  end
+
+
+  def impression_count(campaign_id)
+    t = 0
+    impression_influencer(campaign_id).each do |v| t =+ v.value
+    end
+  end
+
+  def like(campaign_id)
+    t = 0
+    metrics.select_with_index do |v| v.row[9] == 'campaign_id'
+      t =+ v.row[5]
+    end
+  end
+
+  def comment(campaign_id)
+    t = 0
+    metrics.select_with_index do |v| v.row[9] == 'campaign_id'
+      t =+ v.row[6]
+    end
+  end
+
+  def engagement(campaign_id)
+    metrics.select_with_index do |v| v.row[9] == 'campaign_id'
+      t.key = v.row[10]
+      t.value = v.row[7]
+      end
+  end
+
+  def engagement_rate(campaign_id)
+    rate, t = 0
+    engagement(campaign_id).each do |v| t =+ v.value
+      rate = t / v
+    end
+  end
+
+private
+  def set_up
+  @influencer = Influencer.find(params[:influencer_id])
+  @metric.influencer_id = @influencer
+  @campaign = Campaign.find(params[:id])
+  end
 end
+

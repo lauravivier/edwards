@@ -1,10 +1,12 @@
+.txt-image{
+  font-family: 'Playfair Display';
+  font-weight: 900;
+  font-size: 64px;
+}
+
+
 .s {
-padding-top: 100px;
-width: 216px;
-height: 26px;
-left: 249px;
-top: 174px;
-font-family: Lato;
+font-family: 'Nunito Sans', sans-serif;
 font-style: normal;
 font-weight: bold;
 font-size: 35px;
@@ -21,9 +23,30 @@ color: rgba(40, 47, 51, 0.69);
    }
 
  .image-form {
-  padding-top: 10px;
-  padding-right: 0px;
+padding: 0;
+width:100%;
+position: relative;
+opacity:0.9;
+
+.image-text{
+  width:100%;
+  height:100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: column;
+  color:white;
+  font-size:24px;
+  font-weight: 900;
+  position: absolute;
+  top:0;
+  left:0;
+}
+
+  img {
+    width:100%;
   }
+}
 
 // .img{
 // position: absolute;
@@ -39,8 +62,8 @@ width: 399px;
 height: 79px;
 left: 152px;
 top: 307px;
-background: #F5F6F7;
-border-radius: 30px;
+background: none !important;
+border-radius: 12px !important;
 }
 
 .flexf {
@@ -49,27 +72,12 @@ border-radius: 30px;
 }
 
 .form-control {
-background: #F5F6F7;
-border-radius: 30px;
+background: none !important;
+border-radius: 12px !important;
 }
 
 .signup-form {
-  padding-top: 100px;
+  padding-top: 60px;
 }
 
-.txtbtn {
-font-family: Lato;
-font-style: normal;
-font-weight: 300;
-font-size: 15px;
-line-height: 29px;
-color: white;
-}
 
-.txtform {
-font-family: Lato;
-font-style: normal;
-font-weight: 300;
-font-size: 15px;
-line-height: 29px;
-}
