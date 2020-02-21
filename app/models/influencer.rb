@@ -19,7 +19,6 @@ class Influencer < ApplicationRecord
   acts_as_taggable_on :sizes
   acts_as_taggable_on :medias
 
-
   $ages =[25-34, 18-24, 35-44]
   $medias = ["Instagram", "Facebook", "Pinterest", "Twitter"]
   $locations = ["France", "Espagne", "Italie", "Belgique", "Portugal", "Angleterre"]
