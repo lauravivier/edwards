@@ -1,14 +1,4 @@
 class Influencer < ApplicationRecord
-  include PgSearch::Model
-  pg_search_scope :global_influencersearch,
-    against: [:ages, :locations, :sizes, :medias],
-    associated_against: {
-      sizes: [:name],
-      medias: [:name]
-    },
-    using: {
-      tsearch: {any_word: true}
-    }
 
   has_many :campaign_influencers
   has_many :metrics
@@ -19,11 +9,25 @@ class Influencer < ApplicationRecord
   acts_as_taggable_on :sizes
   acts_as_taggable_on :medias
 
-  $ages =[25-34, 18-24, 35-44]
+  $ages =["25-34", "18-24", "35-44"]
   $medias = ["Instagram", "Facebook", "Pinterest", "Twitter"]
   $locations = ["France", "Espagne", "Italie", "Belgique", "Portugal", "Angleterre"]
   $sizes = [100, 1500, 5500, 10500, 50500, 100500, 500500, 1000500]
 
+  include PgSearch::Model
+
+
+  pg_search_scope :global_influencer_search,
+    against: [:name],
+    associated_against: {
+      ages: [:name],
+      locations: [:name],
+      sizes: [:name],
+      medias: [:name]
+    },
+    using: {
+      tsearch: {prefix: true}
+    }
   # validates: name, presence: true
   # validates: community_location, presence: true
   # validates: community_age, presence: true

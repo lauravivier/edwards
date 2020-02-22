@@ -1,0 +1,13 @@
+  <div class="d-flex flex-row flex-wrap">
+    <% influencers.each do |infuencer| %>
+    <div class="card" id="influencer">>
+        <h3 class="title"><%= infuencer.name %></h3>
+        <div class="bar">
+          <h4 class="title"> Communauté</h4>
+          <div class="emptybar"></div>
+          <div class="filledbar"></div>
+        </div>
+    </div>
+    <% end %>
+  </div>
+

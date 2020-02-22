@@ -1,0 +1,5 @@
+function replaceInfluencers (innerHTML) {
+  const influencers = document.getElementById('influencers');
+  influencers.innerHTML = innerHTML;
+}
+replaceInfluencers("<%= j render 'influencer', influencers: @influencers %>");

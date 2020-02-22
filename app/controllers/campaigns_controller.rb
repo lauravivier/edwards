@@ -121,22 +121,21 @@ class CampaignsController < ApplicationController
     @influencers = Influencer.all
   end
 
+
   def edit
     @campaign = Campaign.find(params[:id])
-    if params["search"]
-      @filter = params["search"]["ages"].concat(params["search"]["medias"]).concat(params["search"]["sizes"]).concat(params["search"]["locations"]).flatten.reject(&:blank?)
-      @influencers = @filter.empty? ? Influencer.all : Influencer.all.tagged_with(@filter, any: true)
-    else
-      @influencers = Influencer.all
-    end
 
-    # if params[:query].present?
-    #   @influencers = Influencer.global_search(params[:query])
-    # else
-    #   @influencers = Influencer.all
-    # end
+      if params["query"]
+        @filter = params["query"]["ages"].concat(params["query"]["medias"]).concat(params["query"]["sizes"]).concat(params["query"]["locations"]).flatten.reject(&:blank?)
+        @influencers = Influencer.all.global_search("#{@filter}").order(name: :asc)
+      else
+        @influencers = Influencer.all.order(name: :asc)
+      end
+      respond_to do |format|
+        format.html
+        format.js
+      end
   end
-
   def update
       @campaign.update(update_params)
       params[:selection].select { |k, v| v == '1'}.keys.each do |influencer|

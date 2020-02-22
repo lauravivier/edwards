@@ -21,9 +21,6 @@ h4 {
   margin-bottom: 24px;
 }
 
-.card-campaigns {
-    display: inline-block !important;
-    }
 
 .card-campaigns .form-group {
   display: none;
@@ -44,7 +41,6 @@ h4 {
 }
 
 .card:not(:first-child) {
-  margin-left: -50px;
 }
 
 .card:hover {
