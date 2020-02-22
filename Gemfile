@@ -20,6 +20,8 @@ gem 'cloudinary', '~> 1.12.0'
 gem 'json'
 gem 'chartkick'
 gem 'acts-as-taggable-on', '~> 6.0'
+gem 'dotenv-rails', groups: [:development, :test]
+
 
 group :development do
   gem 'web-console', '>= 3.3.0'
