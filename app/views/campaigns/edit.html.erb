@@ -8,11 +8,10 @@
        <%= f.input :sizes, label: "Taille de Communauté", collection: $sizes, as: :check_boxes %>
         <%= f.input :sizes, label: "Localisation", collection: $locations, as: :check_boxes %>
         <%= f.submit "Filter", class: "btn btn-primary" %>
-      <% end %>
+        <% end %>
     </div>
 
     <div class="d-flex flex-row flex-wrap align-items-middle mt-4" id="influencers">
       <%= render 'influencer', influencers: @influencers %>
     </div>
-  </div>
 </div>

@@ -31,12 +31,6 @@ LOCATIONS = ["France", "Espagne", "Italie", "Belgique", "Portugal", "Angleterre"
 SIZES = ["100", "1500", "5500", "10500", "50500", "100500", "500500", "1000500"]
 MEDIAS = ["Instagram", "Facebook", "Pinterest", "Twitter"]
 
-puts "Creating Tags"
-AGES.each do |tag|
-  puts "-> #{tag}"
-  ActsAsTaggableOn::Tag.create!(name: tag)
-end
-
 puts 'Creating User...'
 user_01 = User.new(name: "Cyrille", email: "cyrille@decathlon.com", password: "helloo")
 user_01.save!
@@ -120,7 +114,6 @@ CampaignInfluencer.create(campaign: campaign_01, influencer: influencer_01)
 # CampaignInfluencer.create(campaign: campaign_03, influencer: influencer_07)
 # CampaignInfluencer.create(campaign: campaign_03, influencer: influencer_08)
 # CampaignInfluencer.create(campaign: campaign_03, influencer: influencer_01)
-
 
 
 # puts 'Creating Tag...'

@@ -1,9 +1,9 @@
 class Influencer < ApplicationRecord
 
   has_many :campaign_influencers
-  has_many :metrics
   has_many :campaigns, through: :campaign_influencers
-
+  has_many :metrics
+  has_one_attached :photo
   acts_as_taggable_on :ages
   acts_as_taggable_on :locations
   acts_as_taggable_on :sizes

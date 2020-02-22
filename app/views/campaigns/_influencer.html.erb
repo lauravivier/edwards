@@ -6,6 +6,14 @@
           <h4 class="title"> Communauté</h4>
           <div class="emptybar"></div>
           <div class="filledbar"></div>
+
+          <div>
+            <% if influencer.photo.attached?  %>
+              <%= cl_image_tag influencer.photo.key, width: 100 %>
+            <% else %>
+              <!-- placeholder -->
+            <% end %>
+          </div>
         </div>
     </div>
     <% end %>
