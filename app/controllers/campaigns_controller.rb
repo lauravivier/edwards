@@ -8,7 +8,6 @@ class CampaignsController < ApplicationController
   def show
     @campaign = Campaign.find(params[:id])
     @influencers = @campaign.influencers
-
     @metrics = @campaign.metrics
     @sum = sum_impression_metrics
     @impression_by_influencer = sum_influencer_impression
@@ -121,22 +120,22 @@ class CampaignsController < ApplicationController
     @influencers = Influencer.all
   end
 
+
   def edit
     @campaign = Campaign.find(params[:id])
-    if params["search"]
-      @filter = params["search"]["ages"].concat(params["search"]["medias"]).concat(params["search"]["sizes"]).concat(params["search"]["locations"]).flatten.reject(&:blank?)
-      @influencers = @filter.empty? ? Influencer.all : Influencer.all.tagged_with(@filter, any: true)
-    else
-      @influencers = Influencer.all
-    end
 
-    # if params[:query].present?
-    #   @influencers = Influencer.global_search(params[:query])
-    # else
-    #   @influencers = Influencer.all
-    # end
+      if params["query"]
+        @filter = params["query"]["ages"].concat(params["query"]["medias"]).concat(params["query"]["sizes"]).flatten.reject(&:blank?)
+        @influencers = Influencer.all.global_influencer_search("#{@filter}").order(name: :asc)
+      else
+        @influencers = Influencer.all.order(name: :asc)
+      end
+
+      respond_to do |format|
+        format.html
+        format.js
+      end
   end
-
   def update
       @campaign.update(update_params)
       params[:selection].select { |k, v| v == '1'}.keys.each do |influencer|

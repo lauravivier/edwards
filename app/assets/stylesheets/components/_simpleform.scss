@@ -1,24 +1,24 @@
 .form-campaign {
   margin :0 auto !important;
+  padding: 20px;
   display: block;
   background: white;
-  padding: 20px;
-  border-radius: 5px;
-  border: 1px solid #0047FE;
+  padding: px;
   margin-top: 50px;
   margin-bottom: 20px !important;
-  h1 {
-    text-align: center;
-    font-weight: bolder;
-    font-size: 20px;
-    color: #0047FE;
+
+h1 {
+  text-align: center;
+  font-weight: bolder;
+  font-size: 20px;
+  color: #0047FE;
   }
-  h2 {
-    text-align: center;
-    font-weight: lighter;
-    font-size: 20px;
-    color: #0047FE;
-    margin-bottom: 10px;
+h2 {
+  text-align: center;
+  font-weight: lighter;
+  font-size: 20px;
+  color: #0047FE;
+  margin-bottom: 10px;
   }
 }
 
@@ -26,7 +26,6 @@ input[type=text] {
   border-left: 5px solid #0047FE;
   padding: 3px;
   box-sizing: border-box;
-  border-radius: 3px;
 }
 
 // brief
@@ -35,7 +34,7 @@ input[type=text] {
 }
 
 .campaign_message {
-    width: 100%;
+  width: 100%;
 }
 
 .campaign_message > input {
@@ -67,7 +66,6 @@ input[type=text] {
 .hashtag-choice {
   background: #0047FE;
   padding: 5px;
-  border-radius: 3px;
   opacity: .4;
   flex: 0 0 30%;
   text-align: center;
@@ -81,3 +79,59 @@ input[type=text] {
   opacity: 1;
   }
 }
+
+/*-----
+[ Input ]*/
+
+.wrap-input100 {
+  width: 100%;
+  position: relative;
+  border: 1px solid #e6e6e6;
+  margin-bottom: 15px
+}
+
+.label-input100 {
+  font-size: 18px;
+  color: #999999;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  width: 60px;
+  height: 100%;
+  top: 0;
+  left: 2px;
+}
+
+.label-input100.rs1 {
+  height: 60px;
+}
+
+.input100 {
+  display: block;
+  width: 100%;
+  background: transparent;
+  font-family: Montserrat-Regular;
+  font-size: 15px;
+  color: #333333;
+  line-height: 1.2;
+  padding: 0 25px 0 60px;
+}
+
+input.input100 {
+  height: 55px;
+}
+
+textarea.input100 {
+  min-height: 162px;
+  padding-top: 22px;
+  padding-bottom: 15px;
+}
+
+/*---------------------INPUT DU FOMRUMAIRE------------------------*/
+
+
