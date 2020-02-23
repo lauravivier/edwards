@@ -8,7 +8,6 @@ class CampaignsController < ApplicationController
   def show
     @campaign = Campaign.find(params[:id])
     @influencers = @campaign.influencers
-
     @metrics = @campaign.metrics
     @sum = sum_impression_metrics
     @impression_by_influencer = sum_influencer_impression
@@ -126,11 +125,12 @@ class CampaignsController < ApplicationController
     @campaign = Campaign.find(params[:id])
 
       if params["query"]
-        @filter = params["query"]["ages"].concat(params["query"]["medias"]).concat(params["query"]["sizes"]).concat(params["query"]["locations"]).flatten.reject(&:blank?)
-        @influencers = Influencer.all.global_search("#{@filter}").order(name: :asc)
+        @filter = params["query"]["ages"].concat(params["query"]["medias"]).concat(params["query"]["sizes"]).flatten.reject(&:blank?)
+        @influencers = Influencer.all.global_influencer_search("#{@filter}").order(name: :asc)
       else
         @influencers = Influencer.all.order(name: :asc)
       end
+
       respond_to do |format|
         format.html
         format.js

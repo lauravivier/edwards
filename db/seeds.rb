@@ -43,7 +43,7 @@ user_03.save!
 
 puts 'Creating Campaign...'
 
-campaign_01 = Campaign.new(name: "Cravache Time", user_id: user_01.id, starts_at: Date.new(2020,03,02), ends_at: Date.new(2020,02,03), goal: Campaign::GOALS.sample, target: "18-24ans", message: "achetez mes cravaches", hashtag: ["#sm", "#fiftyshadesofgrey"])
+campaign_01 = Campaign.new(name: "Cravache Time", user_id: user_01.id, starts_at: Date.new(2020,03,02), ends_at: Date.new(2020,02,03), goal: Campaign::GOALS.sample, target: "18-24ans", message: "acheteSIZES mes cravaches", hashtag: ["#sm", "#fiftyshadesofgrey"])
 campaign_01.save!
 
 campaign_02 = Campaign.new(name: "Chez Gladines", user_id: user_02.id,
@@ -61,46 +61,46 @@ influencer_01 =   Influencer.create!(name: "lolo",
                   women_stats: 30,
                   men_stats: 70,
                   engagement_rate: "10,45%",
-                  age_list: AGES.sample,
-                  location_list: "France",
-                  size_list: "100",
-                  media_list: "Instagram")
+)
+
+
+influencer_01.age_list.add(AGES.sample)
 
 p 'Influencer1 created'
 
 #                    flavor_list: flavors.sample)
-# influencer_01 = Influencer.create!(name: "Jean", women_stats: 30, men_stats: 70, engagement_rate: "10,45%")
+influencer_01 = Influencer.create!(name: "Jean", women_stats: 30, men_stats: 70, engagement_rate: "10,45%")
 
-# puts 'Creating Influencer2...'
+puts 'Creating Influencer2...'
 
-# influencer_02 = Influencer.create!(name: "Michel", location_list: locations.sample, age_list:  ages.sample, size_list:sizes.sample, women_stats: 55, men_stats: 45, engagement_rate: "9,45%", media_list: medias.sample)
+influencer_02 = Influencer.create!(name: "Michel", location_list: LOCATIONS.sample, age_list:  AGES.sample, size_list:SIZES.sample, women_stats: 55, men_stats: 45, engagement_rate: "9,45%", media_list: MEDIAS.sample)
 
-# puts 'Creating Influencer3...'
-# influencer_03 = Influencer.create!(name: "Patricia Ka", location_list: locations.sample, age_list:  ages.sample, size_list:sizes.sample, women_stats: 80, men_stats: 20, engagement_rate: "8,45%", media_list: medias.sample)
+puts 'Creating Influencer3...'
+influencer_03 = Influencer.create!(name: "Patricia Ka", location_list: LOCATIONS.sample, age_list:  AGES.sample, size_list:SIZES.sample, women_stats: 80, men_stats: 20, engagement_rate: "8,45%", media_list: MEDIAS.sample)
 
-# puts 'Creating Influencer4...'
+puts 'Creating Influencer4...'
 
-# influencer_04 = Influencer.create!(name: "Jeremy ", location_list: locations.sample, age_list:  ages.sample, size_list:sizes.sample, women_stats: 12, men_stats: 88, engagement_rate: "7,45%", media_list: medias.sample)
+influencer_04 = Influencer.create!(name: "Jeremy ", location_list: LOCATIONS.sample, age_list:  AGES.sample, size_list:SIZES.sample, women_stats: 12, men_stats: 88, engagement_rate: "7,45%", media_list: MEDIAS.sample)
 
-# puts 'Creating Influencer5...'
-# influencer_05 = Influencer.create!(name: "Alice Rocher", location_list: locations.sample, age_list:  ages.sample, size_list:sizes.sample,  women_stats: 76, men_stats: 24, engagement_rate: "6,45%", media_list: medias.sample)
-# puts 'Creating Influencer6...'
-# influencer_06 = Influencer.create!(name: "Eleanore Suez", location_list: locations.sample, age_list:  ages.sample, size_list:sizes.sample , women_stats: 66, men_stats: 34, engagement_rate: "5,45%", media_list: medias.sample)
-# puts 'Creating Influencer7...'
-# influencer_07 = Influencer.create!(name: "Franck", location_list: locations.sample, age_list:  ages.sample, size_list:sizes.sample , women_stats: 100, men_stats: 0, engagement_rate: "4,45%", media_list: medias.sample)
-# puts 'Creating Influencer8...'
-# influencer_08 = Influencer.create!(name: "Helene Roger", location_list: locations.sample, age_list:  ages.sample, size_list:sizes.sample , women_stats: 0, men_stats: 100, engagement_rate: "3,45%", media_list: medias.sample)
-# puts 'Creating Influencer9...'
-# influencer_09 = Influencer.create!(name: "Mylene Dupont", location_list: locations.sample, age_list:  ages.sample, size_list:sizes.sample , women_stats: 0, men_stats: 100, engagement_rate: "3,45%", media_list: medias.sample)
-# puts 'Creating Influencer10...'
-# influencer_25  = Influencer.create!(name: "Veronica Eliot", location_list: locations.sample, age_list:  ages.sample, size_list: sizes.sample , women_stats: 0, men_stats: 100, engagement_rate: "3,45%", media_list: medias.sample)
+puts 'Creating Influencer5...'
+influencer_05 = Influencer.create!(name: "Alice Rocher", location_list: LOCATIONS.sample, age_list:  AGES.sample, size_list:SIZES.sample,  women_stats: 76, men_stats: 24, engagement_rate: "6,45%", media_list: MEDIAS.sample)
+puts 'Creating Influencer6...'
+influencer_06 = Influencer.create!(name: "Eleanore Suez", location_list: LOCATIONS.sample, age_list:  AGES.sample, size_list:SIZES.sample , women_stats: 66, men_stats: 34, engagement_rate: "5,45%", media_list: MEDIAS.sample)
+puts 'Creating Influencer7...'
+influencer_07 = Influencer.create!(name: "Franck", location_list: LOCATIONS.sample, age_list:  AGES.sample, size_list:SIZES.sample , women_stats: 100, men_stats: 0, engagement_rate: "4,45%", media_list: MEDIAS.sample)
+puts 'Creating Influencer8...'
+influencer_08 = Influencer.create!(name: "Helene Roger", location_list: LOCATIONS.sample, age_list:  AGES.sample, size_list:SIZES.sample , women_stats: 0, men_stats: 100, engagement_rate: "3,45%", media_list: MEDIAS.sample)
+puts 'Creating Influencer9...'
+influencer_09 = Influencer.create!(name: "Mylene Dupont", location_list: LOCATIONS.sample, age_list:  AGES.sample, size_list:SIZES.sample , women_stats: 0, men_stats: 100, engagement_rate: "3,45%", media_list: MEDIAS.sample)
+puts 'Creating Influencer10...'
+influencer_10  = Influencer.create!(name: "Veronica Eliot", location_list: LOCATIONS.sample, age_list:  AGES.sample, size_list: SIZES.sample , women_stats: 0, men_stats: 100, engagement_rate: "3,45%", media_list: MEDIAS.sample)
 
-# p 'Creating Influencer11'
-# influencer_11 = Influencer.create!(name: "Jean Michel", location_list: locations.sample, age_list:  ages.sample, size_list:sizes.sample , women_stats: 0, men_stats: 100, engagement_rate: "3,45%", media_list: medias.sample)
-# p 'now asaving'
+p 'Creating Influencer11'
+influencer_11 = Influencer.create!(name: "Jean Michel", location_list: LOCATIONS.sample, age_list:  AGES.sample, size_list:SIZES.sample , women_stats: 0, men_stats: 100, engagement_rate: "3,45%", media_list: MEDIAS.sample)
+p 'now asaving'
 
-# p 'Creating Influencer12'
-# influencer_12 = Influencer.create!(name: "Jean Robert", location_list: locations.sample, age_list:  ages.sample, size_list:sizes.sample , women_stats: 0, men_stats: 100, engagement_rate: "3,45%", media_list: medias.sample)
+p 'Creating Influencer12'
+influencer_12 = Influencer.create!(name: "Jean Robert", location_list: LOCATIONS.sample, age_list:  AGES.sample, size_list: SIZES.sample , women_stats: 0, men_stats: 100, engagement_rate: "3,45%", media_list: MEDIAS.sample)
 
 puts 'Creating Campaign_influencer...'
 CampaignInfluencer.create(campaign: campaign_01, influencer: influencer_01)

@@ -4,6 +4,8 @@ require("@rails/ujs").start()
 require("@rails/activestorage").start()
 require("channels")
 
+
+
 import "bootstrap";
 
 if (document.querySelector(".edit_campaign")) {
@@ -20,4 +22,3 @@ if (document.querySelector(".edit_campaign")) {
       });
    });
 }
-

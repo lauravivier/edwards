@@ -4,26 +4,24 @@
        <div class="progress-bar role nav ="progressbar" style="width: 25%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"> ETAPE 1</div>
 </div> -->
 
-<div class="container">
-  <div class="row">
+<div class="container-fluid" style="padding: 0">
+  <div class="h-5 bg-white">
+    <div class="col-xs-12">
+      <div class="flexf">
 
+        <div class="image-form col-6">
+          <%= image_tag "kayak.jpg"%>
+         </div>
 
-  <div class="bg-container-contact100"
-    <div class="contact100-header flex-sb-m">
-      <a href="#" class="contact100-header-logo">
-        <img src="images/icons/logo.png" alt="LOGO">
-
-
-      <div class="form-campaign">
-        <h1>Créer votre campagne d'influence en trois clics
-             <i class="fas fa-plus-circle fa-2x fa-fw"></i>
-           </h1>
-        <h2> Renseigner votre brief créatif </h2>
-
-          <%= simple_form_for(@campaign) do |f| %>
+          <div class="bg-container col-6 flex-sb-m">
+              <div class="form-campaign ">
+                <h1>Créer votre campagne d'influence en trois clics</h1>
+                <h2> Étape 1 : Renseigner votre brief créatif </h2>
+                <div class="form-campaign ">
+                <%= simple_form_for(@campaign) do |f| %>
                 <%= f.input :name, label: false, placeholder: 'Nom de votre campagne' %>
                 <div class= "goal-campaign">
-                  <%= f.input :goal, label: "Quel est votre objectif principal ?", as: :radio_buttons, collection: Campaign::GOALS, wrapper: :vertical_collection_inline %>
+                  <%= f.input :goal, label:"Quel est votre objectif principal ?", as: :radio_buttons, collection: Campaign::GOALS, wrapper: :vertical_collection_inline %>
                 </div>
                 <%= f.input :starts_at, label: 'Date de début' %>
                 <%= f.input :ends_at, label: 'Date de fin' %>
@@ -33,9 +31,11 @@
                 <%= f.input :hashtag, label: "Quels sont les hashtags associés ?", as: :check_boxes, collection: Campaign::HASHTAGS, wrapper: :vertical_collection_inline %>
 
                 <%= f.submit "Sélectionner des influencers", class: "btn-ghost" %>
-            </div>
-          <% end %>
-
+                 </div>
+                  <% end %>
+             </div>
+        </div>
       </div>
-
+    </div>
   </div>
+</div>
