@@ -15,5 +15,3 @@ environment.plugins.prepend('Provide',
 )
 
 module.exports = environment
-import Rails from 'rails-ujs';
-Rails.start();
