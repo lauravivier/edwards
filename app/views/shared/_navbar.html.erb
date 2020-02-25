@@ -38,35 +38,24 @@
 
       <div class="button3">
       <li class="nav-item active box-e">
-        <%= link_to "#", class: "nav-link navbar-brand icons3 navbar-color3 custom-underline3" do %>
-        <i class="fas fa-trophy fa-2x fa-fw icon-default3"></i>
-       <i class="fas fa-chart-pie fa-2x fa-fw icon-hover3"></i>
-       <span>Bilan des Campagnes</span>
+        <%= link_to campaigns_path, class: "nav-link navbar-brand icons3 navbar-color3 custom-underline3" do %>
+          <i class="fas fa-trophy fa-2x fa-fw icon-default3"></i>
+          <i class="fas fa-chart-pie fa-2x fa-fw icon-hover3"></i>
+          <span>Bilan des Campagnes</span>
         </div>
         <% end %>
       </li>
 
-<!--      <div class="button4">
-      <li class="nav-item active box-e">
-        <%= link_to "#", class: "nav-link navbar-brand icons4 navbar-color4 custom-underline4" do %>
-        <i class="fas fa-desktop fa-2x fa-fw icon-default4"></i>
-       <i class="fas fa-chart-line fa-2x fa-fw icon-hover4"></i>
-       <span>Dashboard</span>
+      <li class="nav-item dropdown">
+        <%= image_tag "logo-decathlon.png", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
+        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+          <%= link_to "Mon profil", "#", class: "dropdown-item" %>
+          <%= link_to "Another action", "#", class: "dropdown-item" %>
+          <%= link_to destroy_user_session_path, method: :delete do %>
+            <i class="fa fa-sign-out"></i><p class="dropdown-item">Log out</p>
+          <% end %>
         </div>
-        <% end %>
-      </li> -->
-
-
-        <li class="nav-item dropdown">
-          <%= image_tag "logo-decathlon.png", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
-          <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-            <%= link_to "Mon profil", "#", class: "dropdown-item" %>
-            <%= link_to "Another action", "#", class: "dropdown-item" %>
-            <%= link_to destroy_user_session_path, method: :delete do %>
-              <i class="fa fa-sign-out"></i><p class="dropdown-item">Log out</p>
-            <% end %>
-          </div>
-        </li>
+      </li>
       <% else %>
         <li class="nav-item active box-e">
           <%= link_to "Nous connaître", "#", class: "nav-link navbar-brand2 navbar-color5 custom-underline5 text-nav" %>

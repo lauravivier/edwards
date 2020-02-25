@@ -37,12 +37,3 @@
     <!-- </svg> -->
   </div>
 </div>
-
-<%= simple_form_for :search, url: root_path, method: "GET" do |f| %>
-  <%= f.input :location, label: "Category",  collection: $categories, as: :check_boxes %>
-  <%= f.input :age, label: "Flavor", collection: $flavors, as: :check_boxes %>
-  <%= f.submit "Search", class: "btn-ghostinverse2" %>
-  <%= link_to "Reset", root_path, class: "btn-ghostinverse" %>
-<% end %>
-
-

@@ -9,9 +9,16 @@ class CampaignsController < ApplicationController
     @campaign = Campaign.find(params[:id])
     @influencers = @campaign.influencers
 
+    @impression_by_influencer = sum_influencer_impression
+
+    #@influencer_audience = Campaign.influencer.audience.find(params[:id])
+
+    @hashtag = @campaign.metrics.pluck(:hashtag).join(',').split(',').join(', ')
+
+
     @metrics = @campaign.metrics
     @sum = sum_impression_metrics
-    @impression_by_influencer = sum_influencer_impression
+
     @like_by_influencer = sum_influencer_like
     @comment_by_influencer = sum_influencer_comment
     #@hastag_by_influencer = sum_influencer_hastag
@@ -25,6 +32,10 @@ class CampaignsController < ApplicationController
     # @geoloc_influencers = @community_location
 
   end
+
+
+
+
 
   def sum_impression
     t = 0
@@ -66,35 +77,8 @@ class CampaignsController < ApplicationController
     return hsh
   end
 
-  def sum_influencer_impression
-    hsh = Hash.new
-    @campaign.influencers.each do |influencer|
-      influencer.metrics.each do |metric|
-        hsh[influencer.name] = metric.impression
-      end
-    end
-    return hsh
-  end
 
-  def sum_influencer_like
-    hsh = Hash.new
-    @campaign.influencers.each do |influencer|
-      influencer.metrics.each do |metric|
-        hsh[influencer.name] = metric.click
-      end
-    end
-    return hsh
-  end
 
-  def sum_influencer_comment
-    hsh = Hash.new
-    @campaign.influencers.each do |influencer|
-      influencer.metrics.each do |metric|
-        hsh[influencer.name] = metric.comment
-      end
-    end
-    return hsh
-  end
 
   def sum_influencer_engagement
     hsh = Hash.new
@@ -106,35 +90,30 @@ class CampaignsController < ApplicationController
     return hsh
   end
 
-  #def sum_influencer_hastag
-    #hsh = Hash.new
-    #@campaign.influencers.each do |influencer|
-      #influencer.metrics.each do |metric|
-       # hsh[influencer.name] = metric.hastag
-      #end
-    #end
-    #return hsh
-  #end
+
 
   def new
     @campaign = Campaign.new
     @influencers = Influencer.all
   end
 
+
   def edit
     @campaign = Campaign.find(params[:id])
-    if params["search"]
-      @filter = params["search"]["ages"].concat(params["search"]["medias"]).concat(params["search"]["sizes"]).concat(params["search"]["locations"]).flatten.reject(&:blank?)
-      @influencers = @filter.empty? ? Influencer.all : Influencer.all.tagged_with(@filter, any: true)
+    if params["query"].present?
+      @filter = params["query"]["ages"].concat(params["query"]["medias"]).concat(params["query"]["sizes"]).flatten.reject(&:blank?)
+      if @filter.present?
+        @influencers = Influencer.tagged_with(@filter, any: true)
+      else
+        @influencers = Influencer.all.order(name: :asc)
+      end
     else
-      @influencers = Influencer.all
+      @influencers = Influencer.all.order(name: :asc)
     end
-
-    # if params[:query].present?
-    #   @influencers = Influencer.global_search(params[:query])
-    # else
-    #   @influencers = Influencer.all
-    # end
+    respond_to do |format|
+      format.html
+      format.js
+    end
   end
 
   def update
@@ -159,6 +138,29 @@ class CampaignsController < ApplicationController
 
   private
 
+  def sum_influencer_impression
+    hsh = Hash.new
+    @campaign.influencers.each do |influencer|
+      hsh[influencer.name] = influencer.metrics.sum(&:impression)
+      end
+    return hsh
+  end
+
+  def sum_influencer_like
+    hsh = Hash.new
+    @campaign.influencers.each do |influencer|
+      hsh[influencer.name] = influencer.metrics.sum(&:click)
+      end
+    return hsh
+  end
+
+  def sum_influencer_comment
+    hsh = Hash.new
+    @campaign.influencers.each do |influencer|
+      hsh[influencer.name] = influencer.metrics.sum(&:comment)
+      end
+    return hsh
+  end
 
   def sum_impression_metrics
     sum = 0
@@ -167,7 +169,6 @@ class CampaignsController < ApplicationController
     end
     sum
   end
-
 
   def campaign_params
     params.require(:campaign).permit(:name, :starts_at, :ends_at, :goal, :target, :message, :hashtag, :engagement_rate, :men_stats, :community_size => [])

@@ -7,9 +7,13 @@ h3 {
   font-size: 25px;
 }
 
-h2 {
-  font-size: 15px;
-}
+  h2 {
+  text-align: center;
+  font-weight: lighter;
+  font-size: 20px;
+  color: #0047FE;
+  margin-bottom: 10px;
+  }
 
 h4 {
   font-size: 10px;
@@ -58,14 +62,9 @@ h4 {
   transition: transform 0.4s cubic-bezier(0,0,.2,1);
 }
 
-// .container {
-//   margin-top: 24px;
-//   margin-bottom: 24px;
-// }
-
 .card-campaigns {
     display: inline-block !important;
-    }
+}
 
 .card-campaigns .form-group {
   display: none;
@@ -87,10 +86,6 @@ h4 {
   // left: 0px;
 }
 
-// .card:not(:first-child) {
-//   margin-left: -500px;
-// }
-
 .card:hover {
   transform: scale(0.95);
   transition: transform 0.8s cubic-bezier(0,0,.2,1);
@@ -107,13 +102,6 @@ position: absolute;
 top:40px;
 left:70px;
 }
-
-
-// .card:hover ~ .card {
-//   position: relative;
-//   left: 50px;
-//   transition: 0.4s ease-out;
-// }
 
 .title {
   color: white;
@@ -226,33 +214,3 @@ left:70px;
   width: 100%;
   transition: 0.8s ease all;
 }
-
-
-
-
-// .circle {
-//  position: absolute;
-//  top: 80px;
-//  left: calc(50% - 60px);
-// }
-
-// .stroke {
-//   stroke: white;
-//   stroke-dasharray: 360;
-//   stroke-dashoffset: 360;
-//   transition: 0.6s ease-out;
-// }
-
-// svg {
-//   fill: #17141d;
-//   stroke-width: 2px;
-// }
-
-// .card:hover .stroke {
-//   stroke-dashoffset: 100;
-//   transition: 0.6s ease-out;
-// }
-
-// .card.card-selected {
-//    background-color: #52476a;
-// }
