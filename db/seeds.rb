@@ -51,77 +51,77 @@ campaign_03 = Campaign.new(name: "Voyages", user_id: user_03.id, starts_at: Date
 campaign_03.save!
 
 
-puts 'Creating Influencer1...'
-file = URI.open('https://res.cloudinary.com/ddciebk6s/image/upload/w_1000,c_fill,ar_1:1,g_auto,r_max,bo_5px_solid_white,b_rgb:262c35/v1582367237/Influencers/Jean_Michel_sztuiz.jpg')
+puts 'Creating Influencer01...'
+file = URI.open('https://res.cloudinary.com/ddciebk6s/image/upload/w_1000,ar_1:1,c_fill,g_auto/v1582379354/Influencers/Jean_Michel_y4usdq.png')
 influencer_01 = Influencer.new(name: "Jean Michel", location_list: LOCATION.sample, age_list: AGE.sample, size_list: SIZE.sample, women_stats: 30, men_stats: 70, engagement_rate: "10,45%", media_list: MEDIA.sample)
-influencer_01.photo.attach(io: file, filename: 'Jean_Michel_sztuiz.jpg', content_type: 'image/jpg')
+influencer_01.photo.attach(io: file, filename: 'Jean_Michel_y4usdq.png', content_type: 'image/png')
 influencer_01.save!
 
-puts 'Creating Influencer2...'
-file = URI.open('https://res.cloudinary.com/ddciebk6s/image/upload/w_1000,c_fill,ar_1:1,g_auto,r_max,bo_5px_solid_white,b_rgb:262c35/v1582367240/Influencers/Michel_Berger_hrh8ub.jpg')
+puts 'Creating Influencer02...'
+file = URI.open('https://res.cloudinary.com/ddciebk6s/image/upload/w_1000,ar_1:1,c_fill,g_auto/v1582379706/Influencers/Michel_Berger_i9leqo.png')
 influencer_02 = Influencer.new(name: "Michel Berger", location_list: LOCATION.sample, age_list:  AGE.sample, size_list:SIZE.sample, women_stats: 55, men_stats: 45, engagement_rate: "9,45%", media_list: MEDIA.sample)
-influencer_02.photo.attach(io: file, filename: 'Michel_Berger_hrh8ub.jpg', content_type: 'image/jpg')
+influencer_02.photo.attach(io: file, filename: 'Michel_Berger_i9leqo.png', content_type: 'image/png')
 influencer_02.save!
 
-puts 'Creating Influencer3...'
-file = URI.open('https://res.cloudinary.com/ddciebk6s/image/upload/w_1000,c_fill,ar_1:1,g_auto,r_max,bo_5px_solid_white,b_rgb:262c35/v1582367238/Influencers/Patricia_Ka_msmq7r.jpg')
+puts 'Creating Influencer03...'
+file = URI.open('https://res.cloudinary.com/ddciebk6s/image/upload/w_1000,ar_1:1,c_fill,g_auto/v1582380121/Influencers/Patricia_Ka_yiotqa.png')
 influencer_03 = Influencer.new(name: "Patricia Ka", location_list: LOCATION.sample, age_list:  AGE.sample, size_list:SIZE.sample, women_stats: 80, men_stats: 20, engagement_rate: "8,45%", media_list: MEDIA.sample)
-influencer_03.photo.attach(io: file, filename: 'Patricia_Ka_msmq7r.jpg', content_type: 'image/jpg')
+influencer_03.photo.attach(io: file, filename: 'Patricia_Ka_yiotqa.png', content_type: 'image/png')
 influencer_03.save!
 
-puts 'Creating Influencer4...'
-file = URI.open('https://res.cloudinary.com/ddciebk6s/image/upload/w_1000,c_fill,ar_1:1,g_auto,r_max,bo_5px_solid_white,b_rgb:262c35/v1582367243/Influencers/Jeremy_Legrand_acj3st.jpg')
+puts 'Creating Influencer04...'
+file = URI.open('https://res.cloudinary.com/ddciebk6s/image/upload/w_1000,ar_1:1,c_fill,g_auto/v1582380538/Influencers/Jeremy_Legrand_y4nffz.png')
 influencer_04 = Influencer.new(name: "Jeremy Legrand", location_list: LOCATION.sample, age_list:  AGE.sample, size_list:SIZE.sample, women_stats: 12, men_stats: 88, engagement_rate: "7,45%", media_list: MEDIA.sample)
-influencer_04.photo.attach(io: file, filename: 'Jeremy_Legrand_acj3st.jpg', content_type: 'image/jpg')
+influencer_04.photo.attach(io: file, filename: 'Jeremy_Legrand_y4nffz.png', content_type: 'image/png')
 influencer_04.save!
 
-puts 'Creating Influencer5...'
-file = URI.open('https://res.cloudinary.com/ddciebk6s/image/upload/w_1000,c_fill,ar_1:1,g_auto,r_max,bo_5px_solid_white,b_rgb:262c35/v1582367237/Influencers/Alice_Rocher_g4prc1.jpg')
+puts 'Creating Influencer05...'
+file = URI.open('https://res.cloudinary.com/ddciebk6s/image/upload/w_1000,ar_1:1,c_fill,g_auto/v1582379355/Influencers/Alice_Rocher_qz3aaa.png')
 influencer_05 = Influencer.new(name: "Alice Rocher", location_list: LOCATION.sample, age_list:  AGE.sample, size_list:SIZE.sample,  women_stats: 76, men_stats: 24, engagement_rate: "6,45%", media_list: MEDIA.sample)
-influencer_05.photo.attach(io: file, filename: 'Alice_Rocher_g4prc1.jpg', content_type: 'image/jpg')
+influencer_05.photo.attach(io: file, filename: 'Alice_Rocher_qz3aaa.png', content_type: 'image/png')
 influencer_05.save!
 
-puts 'Creating Influencer6...'
-file = URI.open('https://res.cloudinary.com/ddciebk6s/image/upload/w_1000,c_fill,ar_1:1,g_auto,r_max,bo_5px_solid_white,b_rgb:262c35/v1582367245/Influencers/Eleanore_Suez_yzgqbs.jpg')
+puts 'Creating Influencer06...'
+file = URI.open('https://res.cloudinary.com/ddciebk6s/image/upload/w_1000,ar_1:1,c_fill,g_auto/v1582380049/Influencers/Eleanore_Suez_bzrkxp.png')
 influencer_06 = Influencer.new(name: "Eleanore Suez", location_list: LOCATION.sample, age_list:  AGE.sample, size_list:SIZE.sample , women_stats: 66, men_stats: 34, engagement_rate: "5,45%", media_list: MEDIA.sample)
-influencer_06.photo.attach(io: file, filename: 'Eleanore_Suez_yzgqbs.jpg', content_type: 'image/jpg')
+influencer_06.photo.attach(io: file, filename: 'Eleanore_Suez_bzrkxp.png', content_type: 'image/png')
 influencer_06.save!
 
-puts 'Creating Influencer7...'
-file = URI.open('https://res.cloudinary.com/ddciebk6s/image/upload/w_1000,c_fill,ar_1:1,g_auto,r_max,bo_5px_solid_white,b_rgb:262c35/v1582370783/Influencers/Marine_Pain_nykytv.jpg')
+puts 'Creating Influencer07...'
+file = URI.open('https://res.cloudinary.com/ddciebk6s/image/upload/w_1000,ar_1:1,c_fill,g_auto/v1582380049/Influencers/Marine_Pain_lxeudc.png')
 influencer_07 = Influencer.new(name: "Marine Pain", location_list: LOCATION.sample, age_list:  AGE.sample, size_list:SIZE.sample , women_stats: 100, men_stats: 0, engagement_rate: "4,45%", media_list: MEDIA.sample)
-influencer_07.photo.attach(io: file, filename: 'Marine_Pain_nykytv.jpg', content_type: 'image/jpg')
+influencer_07.photo.attach(io: file, filename: 'Marine_Pain_lxeudc.png', content_type: 'image/png')
 
 influencer_07.save!
 
-puts 'Creating Influencer8...'
-file = URI.open('https://res.cloudinary.com/ddciebk6s/image/upload/w_1000,c_fill,ar_1:1,g_auto,r_max,bo_5px_solid_white,b_rgb:262c35/v1582367237/Influencers/Helene_Roger_bxxsbm.jpg')
+puts 'Creating Influencer08...'
+file = URI.open('https://res.cloudinary.com/ddciebk6s/image/upload/w_1000,ar_1:1,c_fill,g_auto/v1582379354/Influencers/Helene_Roger_lseqb7.png')
 influencer_08 = Influencer.new(name: "Helene Roger", location_list: LOCATION.sample, age_list:  AGE.sample, size_list:SIZE.sample , women_stats: 0, men_stats: 100, engagement_rate: "3,45%", media_list: MEDIA.sample)
-influencer_08.photo.attach(io: file, filename: 'Helene_Roger_bxxsbm.jpg', content_type: 'image/jpg')
+influencer_08.photo.attach(io: file, filename: 'Helene_Roger_lseqb7.png', content_type: 'image/png')
 influencer_08.save!
 
-puts 'Creating Influencer9...'
-file = URI.open('https://res.cloudinary.com/ddciebk6s/image/upload/w_1000,c_fill,ar_1:1,g_auto,r_max,bo_5px_solid_white,b_rgb:262c35/v1582367238/Influencers/Mylene_Dupont_aqd3sc.jpg')
+puts 'Creating Influencer09...'
+file = URI.open('https://res.cloudinary.com/ddciebk6s/image/upload/w_1000,ar_1:1,c_fill,g_auto/v1582379353/Influencers/Mylene_Dupont_fite5e.png')
 influencer_09 = Influencer.new(name: "Mylene Dupont", location_list: LOCATION.sample, age_list:  AGE.sample, size_list:SIZE.sample , women_stats: 0, men_stats: 100, engagement_rate: "3,45%", media_list: MEDIA.sample)
-influencer_09.photo.attach(io: file, filename: 'Mylene_Dupont_aqd3sc.jpg', content_type: 'image/jpg')
+influencer_09.photo.attach(io: file, filename: 'Mylene_Dupont_fite5e.png', content_type: 'image/png')
 influencer_09.save!
 
 puts 'Creating Influencer10...'
-file = URI.open('https://res.cloudinary.com/ddciebk6s/image/upload/w_1000,c_fill,ar_1:1,g_auto,r_max,bo_5px_solid_white,b_rgb:262c35/v1582367243/Influencers/Veronica_Eliot_eadkks.jpg')
+file = URI.open('https://res.cloudinary.com/ddciebk6s/image/upload/w_1000,ar_1:1,c_fill,g_auto/v1582380515/Influencers/Veronica_Eliot_uufgbi.png')
 influencer_10  = Influencer.new(name: "Veronica Eliot", location_list: LOCATION.sample, age_list:  AGE.sample, size_list: SIZE.sample , women_stats: 0, men_stats: 100, engagement_rate: "3,45%", media_list: MEDIA.sample)
-influencer_10.photo.attach(io: file, filename: 'Veronica_Eliot_eadkks.jpg', content_type: 'image/jpg')
+influencer_10.photo.attach(io: file, filename: 'Veronica_Eliot_uufgbi.png', content_type: 'image/png')
 influencer_10 .save!
 
-puts 'Creating Influencer11'
-file = URI.open('https://res.cloudinary.com/ddciebk6s/image/upload/w_1000,c_fill,ar_1:1,g_auto,r_max,bo_5px_solid_white,b_rgb:262c35/v1582367238/Influencers/Rachel_Birk_vikgiw.jpg')
+puts 'Creating Influencer11...'
+file = URI.open('https://res.cloudinary.com/ddciebk6s/image/upload/w_1000,ar_1:1,c_fill,g_auto/v1582379353/Influencers/Rachel_Birk_qsjnuf.png')
 influencer_11 = Influencer.new(name: "Rachel Birk", location_list: LOCATION.sample, age_list:  AGE.sample, size_list:SIZE.sample , women_stats: 0, men_stats: 100, engagement_rate: "3,45%", media_list: MEDIA.sample)
-influencer_11.photo.attach(io: file, filename: 'Rachel_Birk_vikgiw.jpg', content_type: 'image/jpg')
+influencer_11.photo.attach(io: file, filename: 'Rachel_Birk_qsjnuf.png', content_type: 'image/png')
 influencer_11.save!
 
-puts 'Creating Influencer12'
-file = URI.open('https://res.cloudinary.com/ddciebk6s/image/upload/w_1000,c_fill,ar_1:1,g_auto,r_max,bo_5px_solid_white,b_rgb:262c35/v1582367242/Influencers/Edith_Loiseau_l81qnd.jpg')
+puts 'Creating Influencer12...'
+file = URI.open('https://res.cloudinary.com/ddciebk6s/image/upload/w_1000,ar_1:1,c_fill,g_auto/v1582379356/Influencers/Edith_Loiseau_amgyer.png')
 influencer_12 = Influencer.new(name: "Edith Loiseau", location_list: LOCATION.sample, age_list:  AGE.sample, size_list:SIZE.sample , women_stats: 0, men_stats: 100, engagement_rate: "3,45%", media_list: MEDIA.sample)
-influencer_12.photo.attach(io: file, filename: 'Edith_Loiseau_l81qnd.jpg', content_type: 'image/jpg')
+influencer_12.photo.attach(io: file, filename: 'Edith_Loiseau_amgyer.png', content_type: 'image/png')
 influencer_12.save!
 
 puts 'Creating Campaign_influencer...'

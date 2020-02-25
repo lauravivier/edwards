@@ -12,8 +12,9 @@
   color:white;
   font-weight:700;
   background-color: #0047FE;
+  text-decoration:none;
   transform: scale(0.95) !important;
-        transition: transform 0.4s cubic-bezier(0,0,.2,1);
+  transition: transform 0.4s cubic-bezier(0,0,.2,1);
 }
 
 .btn-ghost-nav {
@@ -69,6 +70,9 @@
   border-radius: 12px !important;
   transition: background 0.3s ease;
   justify-content: flex-end;
+  position: absolute;
+  top: 320px;
+  left: 400px;
 }
 
 .btn-ghost2:hover {
