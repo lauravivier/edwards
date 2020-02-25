@@ -1,6 +1,6 @@
 <br>
 <h2> Étape 2 : Sélectionner les influenceurs </h2>
-<div class="container">
+<div class="container" id="edit-influencers">
     <%= simple_form_for :query, url: edit_campaign_path(@campaign), method: :get, remote: true do |f| %>
     <div class="d-flex flex-row align-items-start justify-content-around">
        <%= f.input :ages, label: "Ages", collection: $ages, as: :check_boxes %>
@@ -15,26 +15,3 @@
       <%= render 'influencer', influencers: @influencers, as: :check_boxes %>
     </div>
 </div>
-
-
-<script>
-   var checkBoxes = document.querySelectorAll(".form-check-input");
-    var form = document.querySelector('form');
-    for (const check of checkBoxes) {
-    check.addEventListener( 'change', function() {
-      Rails.fire(form, 'submit');
-    });
-    }
-</script>
-
-<script>
-  const form = document.querySelector('form')
-  const checkBoxes = document.querySelectorAll(".form-check-input");
-  form.addEventListener('change', () => {
-    form.submit();
-  })
-</script>
-
-
-
-
