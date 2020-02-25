@@ -53,7 +53,6 @@ campaign_02.save!
 campaign_03 = Campaign.new(name: "Voyages", user_id: user_03.id, starts_at: Date.new(2020,02,02), ends_at: Date.new(2020,02,03), goal: Campaign::GOALS.sample, target: "18-24ans", message: "achetez mes cravaches", hashtag: ["#sm", "#fiftyshadesofgrey"])
 campaign_03.save!
 
-
 puts 'Creating Influencer01...'
 file = URI.open('https://res.cloudinary.com/ddciebk6s/image/upload/w_1000,ar_1:1,c_fill,g_auto/v1582379354/Influencers/Jean_Michel_y4usdq.png')
 influencer_01 = Influencer.new(name: "Jean Michel", location_list: LOCATIONS.sample, age_list: AGES.sample, size_list: SIZES.sample, women_stats: 30, men_stats: 70, engagement_rate: "10,45%", media_list: MEDIAS.sample)
@@ -70,7 +69,6 @@ puts 'Creating Influencer03...'
 file = URI.open('https://res.cloudinary.com/ddciebk6s/image/upload/w_1000,ar_1:1,c_fill,g_auto/v1582380121/Influencers/Patricia_Ka_yiotqa.png')
 influencer_03 = Influencer.new(name: "Patricia Ka", location_list: LOCATIONS.sample, age_list:  AGES.sample, size_list:SIZES.sample, women_stats: 80, men_stats: 20, engagement_rate: "8,45%", media_list: MEDIAS.sample)
 influencer_03.photo.attach(io: file, filename: 'Patricia_Ka_yiotqa.png', content_type: 'image/png')
-
 influencer_03.save!
 
 puts 'Creating Influencer04...'
