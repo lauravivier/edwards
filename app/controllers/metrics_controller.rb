@@ -1,7 +1,5 @@
 class MetricsController < ApplicationController
 
-  set_up
-
   def show
     @metric = Metric.find(params[:id])
   end
