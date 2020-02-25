@@ -83,6 +83,7 @@ color: #D6249F !important;
 
 .nav-link{
 font-size: 16px;
+font-weight: 400;
 padding-left: 0px !important;
 padding-right: 0px !important;
 }
@@ -100,7 +101,7 @@ font-weight: 600;
 
 .header_border-gradient {
     background: linear-gradient(145deg, #fdf497 5%, #fd5949 25%,#d6249f 75%,#d6249f 100%);
-    height: .3rem;
+    height: .2rem;
     width: 100%;
 }
 
@@ -163,6 +164,7 @@ transition: 0.5s ease all;
 .custom-underline1::after {
   content: "";
   position: absolute;
+      transition: 0.5s ease all;
 }
 .box-e .custom-underline1::after {
   top: 128%;
@@ -206,6 +208,7 @@ transition: 0.5s ease all;
 .custom-underline2::after {
   content: "";
   position: absolute;
+      transition: 0.5s ease all;
 }
 .box-e .custom-underline2::after {
   top: 128%;
@@ -243,11 +246,13 @@ transition: 0.5s ease all;
 .custom-underline3:hover {
   font-weight: 700;
    transition: 0.3s ease all;
+       transition: 0.5s ease all;
 }
 
 .custom-underline3::after {
   content: "";
   position: absolute;
+  transition: 0.5s ease all;
 }
 .box-e .custom-underline3::after {
   top: 128%;
@@ -290,6 +295,7 @@ transition: 0.5s ease all;
 .custom-underline4::after {
   content: "";
   position: absolute;
+      transition: 0.5s ease all;
 }
 .box-e .custom-underline4::after {
   top: 128%;
@@ -333,6 +339,7 @@ transition: 0.5s ease all;
 .custom-underline5::after {
   content: "";
   position: absolute;
+      transition: 0.5s ease all;
 }
 .box-e .custom-underline5::after {
   top: 128%;
@@ -375,6 +382,7 @@ transition: 0.5s ease all;
 .custom-underline6::after {
   content: "";
   position: absolute;
+      transition: 0.5s ease all;
 }
 .box-e .custom-underline6::after {
   top: 128%;
@@ -412,6 +420,7 @@ transition: 0.5s ease all;
 
     .icon-default {
             transition: opacity .3s, transform .5s;
+            color:#0047FE;
     }
 
     .icon-hover {
@@ -426,7 +435,7 @@ transition: 0.5s ease all;
     .icon-hover {
       transform: rotate(0deg) scale(1.2);
       opacity: 1;
-      color:#0047FE;
+      color:#F9D977;
     }
     .icon-default {
       transform: rotate(180deg) scale(1);
@@ -459,6 +468,7 @@ transition: 0.5s ease all;
 
     .icon-default2 {
             transition: opacity .3s, transform .5s;
+            color:#4fc600;
     }
 
     .icon-hover2 {
@@ -505,6 +515,7 @@ transition: 0.5s ease all;
 
     .icon-default3 {
             transition: opacity .3s, transform .5s;
+            color:#F3B712;
     }
 
     .icon-hover3 {
@@ -519,7 +530,7 @@ transition: 0.5s ease all;
     .icon-hover3 {
       transform: rotate(0deg) scale(1.2);
       opacity: 1;
-      color:#F3B712;
+      color:#F865B0;
     }
     .icon-default3 {
       transform: rotate(180deg) scale(1);
