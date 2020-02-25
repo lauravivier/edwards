@@ -22,7 +22,8 @@
                 <div class="brief-campaign">
                   <%= f.input :message, label: false, placeholder: 'Brief' %>
                 </div>
-                <%= f.input :hashtag, label: "Quels sont les hashtags associés ?", as: :check_boxes, collection: Campaign::HASHTAGS, wrapper: :vertical_collection_inline %>
+
+                 <!-- <%= f.input :hashtag, label: "Quels sont les hashtags associés ?", as: :check_boxes, collection: Campaign::HASHTAGS, wrapper: :vertical_collection_inline %> -->
 
                 <%= f.submit "Sélectionner des influencers", class: "btn-ghost" %>
                  </div>
