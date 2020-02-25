@@ -1,27 +1,17 @@
 <br>
+<h2> Étape 2 : Sélectionner les influenceurs </h2>
+<div class="container" id="edit-influencers">
+    <%= simple_form_for :query, url: edit_campaign_path(@campaign), method: :get, remote: true do |f| %>
+    <div class="d-flex flex-row align-items-start justify-content-around">
+       <%= f.input :ages, label: "Ages", collection: $ages, as: :check_boxes %>
+       <%= f.input :medias, label: "Medias", collection: $medias, as: :check_boxes %>
+       <%= f.input :sizes, label: "Taille de Communauté", collection: $sizes, as: :check_boxes %>
+        <%= f.input :sizes, label: "Localisation", collection: $locations, as: :check_boxes %>
+        <%= f.submit "Filter", class: "btn btn-primary" %>
+        <% end %>
+    </div>
 
-<%= simple_form_for :query, url: edit_campaign_path(@campaign), method: :get do |f| %>
- <%= f.input :ages, label: "Ages", collection: $ages,
- as: :check_boxes %>
- <%= f.input :medias, label: "Medias", collection: $medias,
- as: :check_boxes %>
- <%= f.input :sizes, label: "Taille de Communauté", collection: $sizes,
- as: :check_boxes %>
-  <%= f.input :sizes, label: "Localisation", collection: $locations,
-  as: :check_boxes %>
-  <%= f.submit "Filter", class: "btn btn-primary" %>
-<% end %>
-
-<div class="container">
-  <%= simple_form_for(@campaign) do |f| %>
-    <%= simple_fields_for :selection do |x| %>
-      <% @influencers.each do |i| %>
-        <div class="card-campaigns">
-        <%= render 'influencer_card', influencer: i %>
-        <%= x.input i.name.to_sym, as: :boolean, input_html: {id: "checkbox-#{i.id}" } %>
-        </div>
-      <% end %>
-    <% end %>
-    <%= f.submit %>
-  <% end %>
+    <div class="d-flex flex-row flex-wrap align-items-middle mt-4" id="influencers">
+      <%= render 'influencer', influencers: @influencers, as: :check_boxes %>
+    </div>
 </div>
