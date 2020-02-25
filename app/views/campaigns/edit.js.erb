@@ -1,0 +1,5 @@
+function refreshInfluencers() {
+  document.getElementById('influencers').innerHTML = '<%= j render "influencer", influencers: @influencers %>';
+}
+
+refreshInfluencers();
