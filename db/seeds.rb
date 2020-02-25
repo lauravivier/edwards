@@ -56,24 +56,24 @@ campaign_03.save!
 
 puts 'Creating Influencer1...'
 
-influencer_01 = Influencer.new(name: "Jean Michel", location_list: LOCATION.sample, age_list: AGE.sample, size_list: SIZE.sample, women_stats: 30, men_stats: 70, engagement_rate: "10,45%", media_list: MEDIA.sample)
+influencer_01 = Influencer.new(name: "Jean Michel", location_list: LOCATIONS.sample, age_list: AGES.sample, size_list: SIZES.sample, women_stats: 30, men_stats: 70, engagement_rate: "10,45%", media_list: MEDIAS.sample)
 puts influencer_01
 influencer_01.save!
 
 puts 'Creating Influencer2...'
 
-influencer_02 = Influencer.new(name: "Michel Berger ", location_list: LOCATION.sample, age_list:  AGE.sample, size_list:SIZE.sample, women_stats: 55, men_stats: 45, engagement_rate: "9,45%", media_list: MEDIA.sample)
+influencer_02 = Influencer.new(name: "Michel Berger ", location_list: LOCATIONS.sample, age_list:  AGES.sample, size_list:SIZES.sample, women_stats: 55, men_stats: 45, engagement_rate: "9,45%", media_list: MEDIAS.sample)
 puts influencer_02
 influencer_02.save!
 
 puts 'Creating Influencer3...'
-influencer_03 = Influencer.new(name: "Patricia Ka", location_list: LOCATION.sample, age_list:  AGE.sample, size_list:SIZE.sample, women_stats: 80, men_stats: 20, engagement_rate: "8,45%", media_list: MEDIA.sample)
+influencer_03 = Influencer.new(name: "Patricia Ka", location_list: LOCATIONS.sample, age_list:  AGES.sample, size_list:SIZES.sample, women_stats: 80, men_stats: 20, engagement_rate: "8,45%", media_list: MEDIAS.sample)
 puts influencer_03
 influencer_03.save!
 # =======
 
 # Commentaires mis par Cyrille
-  
+
 #influencer_01 =   Influencer.create!(name: "lolo",
 #                  women_stats: 30,
 #                  men_stats: 70,
