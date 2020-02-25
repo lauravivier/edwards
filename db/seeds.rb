@@ -56,26 +56,45 @@ campaign_03.save!
 
 puts 'Creating Influencer1...'
 
-influencer_01 =   Influencer.create!(name: "lolo",
-                  women_stats: 30,
-                  men_stats: 70,
-                  engagement_rate: "10,45%",
-)
-
-
-influencer_01.age_list.add(AGES.sample)
-
-p 'Influencer1 created'
-
-#                    flavor_list: flavors.sample)
-influencer_01 = Influencer.create!(name: "Jean", women_stats: 30, men_stats: 70, engagement_rate: "10,45%")
+influencer_01 = Influencer.new(name: "Jean Michel", location_list: LOCATION.sample, age_list: AGE.sample, size_list: SIZE.sample, women_stats: 30, men_stats: 70, engagement_rate: "10,45%", media_list: MEDIA.sample)
+puts influencer_01
+influencer_01.save!
 
 puts 'Creating Influencer2...'
 
-influencer_02 = Influencer.create!(name: "Michel", location_list: LOCATIONS.sample, age_list:  AGES.sample, size_list:SIZES.sample, women_stats: 55, men_stats: 45, engagement_rate: "9,45%", media_list: MEDIAS.sample)
+influencer_02 = Influencer.new(name: "Michel Berger ", location_list: LOCATION.sample, age_list:  AGE.sample, size_list:SIZE.sample, women_stats: 55, men_stats: 45, engagement_rate: "9,45%", media_list: MEDIA.sample)
+puts influencer_02
+influencer_02.save!
 
 puts 'Creating Influencer3...'
-influencer_03 = Influencer.create!(name: "Patricia Ka", location_list: LOCATIONS.sample, age_list:  AGES.sample, size_list:SIZES.sample, women_stats: 80, men_stats: 20, engagement_rate: "8,45%", media_list: MEDIAS.sample)
+influencer_03 = Influencer.new(name: "Patricia Ka", location_list: LOCATION.sample, age_list:  AGE.sample, size_list:SIZE.sample, women_stats: 80, men_stats: 20, engagement_rate: "8,45%", media_list: MEDIA.sample)
+puts influencer_03
+influencer_03.save!
+# =======
+
+# Commentaires mis par Cyrille
+  
+#influencer_01 =   Influencer.create!(name: "lolo",
+#                  women_stats: 30,
+#                  men_stats: 70,
+#                  engagement_rate: "10,45%",
+#)
+
+
+#influencer_01.age_list.add(AGES.sample)
+
+#p 'Influencer1 created'
+
+#                    flavor_list: flavors.sample)
+#influencer_01 = Influencer.create!(name: "Jean", women_stats: 30, men_stats: 70, engagement_rate: "10,45%")
+
+#puts 'Creating Influencer2...'
+
+#influencer_02 = Influencer.create!(name: "Michel", location_list: LOCATIONS.sample, age_list:  AGES.sample, size_list:SIZES.sample, women_stats: 55, men_stats: 45, engagement_rate: "9,45%", media_list: MEDIAS.sample)
+
+#puts 'Creating Influencer3...'
+#influencer_03 = Influencer.create!(name: "Patricia Ka", location_list: LOCATIONS.sample, age_list:  AGES.sample, size_list:SIZES.sample, women_stats: 80, men_stats: 20, engagement_rate: "8,45%", media_list: MEDIAS.sample)
+#>>>>>>> master
 
 puts 'Creating Influencer4...'
 
@@ -182,6 +201,7 @@ require 'csv'
 filepath = File.join(Rails.root, 'db', 'metrics_seed.csv')
 csv_options = { col_sep: ';', quote_char: '"', headers: :first_row }
 CSV.foreach(filepath, csv_options) do |row|
+
 Metric.create!(
   post_date: row[0],
   social_media: row[1],
@@ -192,10 +212,14 @@ Metric.create!(
   comment: row[6],
   engagement: row [7],
   emv: row[8],
-  campaign_id: Campaign.first.id,
-  influencer_id: Influencer.first.id
+  campaign_id: row[9],
+  influencer_id: row[10]
 )
+
 end
+
+metric_11 = Metric.new(post_date: '15/02/2020', social_media: 'instagram', media_type: 'galery', hashtag: 'poney', impression: 2500, click: 30, comment: 4, engagement: 0.05, emv: 2, campaign_id: 1, influencer_id: 3)
+metric_11.save!
 
 
 puts 'Seed is Finished!'
