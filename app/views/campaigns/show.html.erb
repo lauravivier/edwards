@@ -1,4 +1,6 @@
-    <div class= "list-group hshow">
+
+
+ <div class= "list-group hshow">
       <hshow> Du <%= @campaign.starts_at %> au <%= @campaign.ends_at %></hshow>
       <hshow> Objectif : <%= @campaign.goal%> </hshow>
       <hshow> Brief : <%= @campaign.message %> </hshow>
@@ -6,7 +8,6 @@
       <br>
       </div>
     </div>
-</header>
 
 </container>
 
@@ -32,7 +33,7 @@
 </div>
 
 
-<div class="container">
+<div class= "m-5">
 <h2> Le bilan brut de la campagne est le suivant :</h2>
  <p> Nombre de personne engagées : <%= @nbr_engagement %></p>
   <p> le nombre total de posts est (calcul à vérifier) : <%= @nbr_post %></p>
@@ -45,6 +46,136 @@
   <p> le nombre de likes est : <%= @like_by_influencer %></p>
   <p> le nombre de commentaires est : <%= @comment_by_influencer %></p>
 </div>
+
+<link rel="stylesheet" href="https://github.com/downloads/lafeber/world-flags-sprite/flags16.css" />
+
+<figure class="highcharts-figure">
+  <div id="container1"></div>
+  <p class="highcharts-description">
+    A polar bar chart is similar to a bar chart, but the y-axis is circular.
+    In this demo we see the total Winter Olympics medals earned for the top 10
+    countries.
+  </p>
+</figure>
+<figure class="highcharts-figure">
+    <div id="container2"></div>
+    <p class="highcharts-description">
+        Word clouds are used to visualize how often each word in a
+        text occurs. This example uses an excerpt from the popular
+        "Lorem Ipsum" text. Words that appear often will appear
+        larger.
+    </p>
+</figure>
+
+<%= @hashtag %>
+<script>
+console.log('<%=@campaign.metrics.pluck(:hashtag)%>')
+Highcharts.chart('container1', {
+    colors: ['#FFD700', '#C0C0C0', '#CD7F32'],
+    chart: {
+        type: 'column',
+        inverted: true,
+        polar: true
+    },
+    title: {
+        text: 'Impression par influencer'
+    },
+    tooltip: {
+        outside: true
+    },
+    pane: {
+        size: '85%',
+        innerSize: '20%',
+        endAngle: 270
+    },
+    xAxis: {
+        tickInterval: 1,
+        labels: {
+            align: 'right',
+            useHTML: true,
+            allowOverlap: true,
+            step: 1,
+            y: 3,
+            style: {
+                fontSize: '13px'
+            }
+        },
+        lineWidth: 0,
+        categories: [
+            <% @impression_by_influencer.keys.each do |key| %>
+            '<%=key%>',
+            <% end %>
+        ]
+    },
+    yAxis: {
+        crosshair: {
+            enabled: true,
+            color: '#333'
+        },
+        lineWidth: 0,
+        tickInterval: 25,
+        reversedStacks: false,
+        endOnTick: true,
+        showLastLabel: true
+    },
+    plotOptions: {
+        column: {
+            stacking: 'normal',
+            borderWidth: 0,
+            pointPadding: 0,
+            groupPadding: 0.15
+        }
+    },
+    series: [{
+        name: 'Impression',
+        data:
+          <%=@impression_by_influencer.values%>
+
+
+    }, {
+        name: 'Audience',
+        data: [10000, 15000, 20000]
+    }]
+});
+
+
+var text = '<%=@hashtag %>';
+var lines = text.split(/[,\. ]+/g),
+    data = Highcharts.reduce(lines, function (arr, word) {
+        var obj = Highcharts.find(arr, function (obj) {
+            return obj.name === word;
+        });
+        if (obj) {
+            obj.weight += 1;
+        } else {
+            obj = {
+                name: word,
+                weight: 1
+            };
+            arr.push(obj);
+        }
+        return arr;
+    }, []);
+
+Highcharts.chart('container2', {
+    accessibility: {
+        screenReaderSection: {
+            beforeChartFormat: '<h5>{chartTitle}</h5>' +
+                '<div>{chartSubtitle}</div>' +
+                '<div>{chartLongdesc}</div>' +
+                '<div>{viewTableButton}</div>'
+        }
+    },
+    series: [{
+        type: 'wordcloud',
+        data: data,
+        name: 'Occurrences'
+    }],
+    title: {
+        text: 'Hastags'
+    }
+});
+</script>
 
 
 
