@@ -10,6 +10,11 @@
       </div>
     <% end %>
 
+    <%= simple_form_for(@campaign) do |f| %>
+      <input type="text" name="selection" id="added-influencers">
+      <%= f.submit %>
+    <% end %>
+
     <div class="d-flex flex-row flex-wrap align-items-middle mt-4" id="influencers">
       <%= render 'influencer', influencers: @influencers, as: :check_boxes %>
     </div>

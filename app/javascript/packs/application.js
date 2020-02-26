@@ -24,9 +24,18 @@ if (editInfluencersForm) {
   const checkBoxes = document.querySelectorAll(".form-check-input");
   const form = document.querySelector('form');
   for (const check of checkBoxes) {
-    console.log('coucou');
     check.addEventListener( 'change', function() {
       Rails.fire(form, 'submit');
     });
   }
+}
+
+const influencersToAdd = document.querySelectorAll('.influencer-to-add');
+if (influencersToAdd) {
+  const input = document.getElementById('added-influencers');
+  influencersToAdd.forEach((influencer) => {
+    influencer.addEventListener('click', (event) => {
+      input.value = input.value + " " + event.currentTarget.id.replace('influencer-', '');
+    });
+  });
 }

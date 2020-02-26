@@ -1,6 +1,6 @@
   <div class="d-flex flex-row flex-wrap">
     <% influencers.each do |influencer| %>
-      <div class="card" id="influencer-<%= influencer.id %>">
+      <div class="card influencer-to-add" id="influencer-<%= influencer.id %>">
         <h3 class="title"><%= influencer.name %></h3>
           <div>
             <% if influencer.photo.attached?  %>
