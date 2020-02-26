@@ -1,26 +1,37 @@
+//// SHOW //////
+//// PART 2  //////
+
+
+
 *{padding: 0; margin: 0; box-sizing: border-box;}
 
-hshow {
-  text-align: center;
-  font-weight: lighter;
-  font-size: 20px;
-  color: #0047FE;
-  margin-bottom: 10px;
-  }
 
-
-headershow {
+header {
   background: url('showbanner');
-  text-align: left;
   width: 100%;
   height: 300px;
   background-size: cover;
   background-attachment: fixed;
   position: relative;
   overflow: hidden;
+  justify-content: space-between;
+  align-content: space-between;
   }
 
 
+hshow {
+  text-shadow: 5px 5px 5px white;
+  display: flex;
+  justify-content: center;
+  font-weight: lighter;
+  font-size: 30px;
+  color: #0047FE;
+  margin-bottom: 10px;
+  font-weight: 500;
+  line-height: 1em;
+  top-margin: 10px;
+  font-weight: bold;
+  }
 
 .hname {
 text-align: left;
@@ -53,29 +64,34 @@ border-radius: 20px;
 }
 
 
- .txtbil {
-  text-align: center;
-  width: 512px;
-  height: 46px;
-  left: 64px;
-  top: 572px;
+ txtbil {
   font-family: 'Nunito Sans', sans-serif;
   font-style: normal;
-  font-weight: bold;
-  font-size: 25px;
-  line-height: 30px;
-  color: #0047FE;
+  font-size: 20px;
+  color: black;
+  padding-bottom: 10px;
+  padding-left: 10px;
   }
 
-.fatnombre {
+ txtbil2 {
+  font-family: 'Nunito Sans', sans-serif;
+  font-style: normal;
+  font-size: 20px;
+  color: white;
+  padding-left: 10px;
+  }
+
+
+fn {
   position: center;
   text-align: center;
-  margin: 15px;
+  margin-top: 15px;
+  padding-left: 5px;
   text-align: center;
   font-family: 'Nunito Sans', sans-serif;
   font-style: normal;
   font-weight: bold;
-  font-size: 48px;
+  font-size: 40px;
   line-height: 100px;
   color: #0047FE;
   }
@@ -105,22 +121,15 @@ border-radius: 20px;
   color: #FFFFFF;
 }
 
-.three {
-  width: 300px;
-  background-color: white;
-}
 
-.four {
-  width: 300px;
-  background-color: #0048fe;
-  font-family: Lato;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 20px;
-  line-height: 15px;
-  color: #FFFFFF;
-}
+//// SHOW //////
+//// PART 1  //////
 
+  .iconb {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 10px;
+  }
 
   .flexshow {
     display: -ms-flexbox;
@@ -129,7 +138,6 @@ border-radius: 20px;
     -moz-justify-content: space-between;
     -webkit-justify-content: space-between;
     -ms-justify-content: space-between;
-    justify-content: space-between;
     display: -moz-flex;
     display: -webkit-flex;
     display: -ms-flex;
@@ -137,11 +145,13 @@ border-radius: 20px;
     -moz-flex-wrap: wrap;
     -webkit-flex-wrap: wrap;
     -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
-    width: 100%;
+    width: 80%;
+    margin-left: 100px;
     }
 
     .iconshow {
+    display: flex;
+    justify-content: center;
     text-decoration: none;
     border-bottom: none;
     position: relative;
@@ -195,7 +205,7 @@ border-radius: 20px;
       padding-top: 8em;
     }
 
-    #bannershow h1 {
+    #bannershow hshow {
       font-size: 3.5em;
       font-weight: 400;
       color: #fff;
@@ -278,7 +288,7 @@ bannershow
           padding-top: 6em;
         }
 
-        #bannershow h1 {
+        #bannershow hshow {
           font-size: 3em;
         }
 
@@ -303,7 +313,7 @@ bannershow
           padding-top: 4em;
         }
 
-        #bannershow h1 {
+        #bannershow hshow {
           font-size: 2.5em;
         }
 
@@ -328,7 +338,7 @@ bannershow
           padding-top: 3em;
         }
 
-        #bannershow h1 {
+        #bannershow hshow {
           font-size: 2em;
         }
 
@@ -355,7 +365,7 @@ bannershow
 
     @media screen and (max-width: 480px) {
 
-      #bannershow h1 {
+      #bannershow hshow {
         font-size: 1.5em;
       }
 
