@@ -4,13 +4,13 @@
       <div class="flexf">
 
         <div class="image-form col-6">
-          <%= image_tag "kayak.jpg"%>
+           <%=image_tag "kayak.jpg",class: "image-form"%>
          </div>
 
           <div class="bg-container col-6 flex-sb-m">
               <div class="form-campaign ">
                 <h1>Créer votre campagne d'influence en trois clics</h1>
-                <h2> Étape 1 : Renseigner votre brief créatif </h2>
+                <h2> Étape 1 : Renseigner votre brief </h2>
                 <div class="form-campaign ">
                 <%= simple_form_for(@campaign) do |f| %>
                 <%= f.input :name, label: false, placeholder: 'Nom de votre campagne' %>
