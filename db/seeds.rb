@@ -25,7 +25,7 @@ Campaign.destroy_all
 User.destroy_all
 
 
-AGES = ["25-34", "18-24", "35-44"]
+AGES = ["18-24","25-34", "35-44"]
 LOCATIONS = ["France", "Espagne", "Italie", "Belgique", "Portugal", "Angleterre"]
 SIZES = ["100", "1500", "5500", "10500", "50500", "100500", "500500", "1000500"]
 MEDIAS = ["Instagram", "Facebook", "Pinterest", "Twitter"]
