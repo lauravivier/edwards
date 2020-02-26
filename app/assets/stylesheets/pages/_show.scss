@@ -1,6 +1,6 @@
 *{padding: 0; margin: 0; box-sizing: border-box;}
 
-h2 {
+hshow {
   text-align: center;
   font-weight: lighter;
   font-size: 20px;
@@ -9,25 +9,18 @@ h2 {
   }
 
 
-header {
-  background: url('image.png');
+headershow {
+  background: url('showbanner');
   text-align: left;
   width: 100%;
-  height: auto;
+  height: 300px;
   background-size: cover;
   background-attachment: fixed;
   position: relative;
   overflow: hidden;
   }
 
-header .overlay {
-  width: 100%;
-  height: 100%;
-  padding: 50px;
-  color: #FFF;
-  text-shadow: 1px 1px 1px #333;
-  background-image: linear-gradient( 135deg, #9f05ff69 10%, #fd5e086b 100%);
-}
+
 
 .hname {
 text-align: left;
@@ -128,6 +121,44 @@ border-radius: 20px;
   color: #FFFFFF;
 }
 
+
+  .flexshow {
+    display: -ms-flexbox;
+    -ms-flex-wrap: wrap;
+    -ms-flex-pack: justify;
+    -moz-justify-content: space-between;
+    -webkit-justify-content: space-between;
+    -ms-justify-content: space-between;
+    justify-content: space-between;
+    display: -moz-flex;
+    display: -webkit-flex;
+    display: -ms-flex;
+    display: flex;
+    -moz-flex-wrap: wrap;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    width: 100%;
+    }
+
+    .iconshow {
+    text-decoration: none;
+    border-bottom: none;
+    position: relative;
+  }
+
+    .iconshow:before {
+      -moz-osx-font-smoothing: grayscale;
+      -webkit-font-smoothing: antialiased;
+      font-family: FontAwesome;
+      font-style: normal;
+      font-weight: normal;
+      text-transform: none !important;
+    }
+
+    .iconshow > .label {
+      display: none;
+    }
 // @media screen and (max-width: 600px) {
 //  .container {
 //     display: block;
@@ -136,3 +167,196 @@ border-radius: 20px;
 //     width: 100%;
 //   }
 // }
+
+#bannershow {
+    background-image: url(../../images/shobanner.png);
+    background-size: cover;
+    background-position: bottom;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    text-align: center;
+    position: relative;
+  }
+
+    #bannershow:before {
+      content: '';
+      background: rgba(75, 75, 93, 0.85);
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+    }
+
+    #bannershow .inner {
+      border-top: 2px solid rgba(255, 255, 255, 0.2);
+      position: relative;
+      z-index: 10005;
+      padding-top: 8em;
+    }
+
+    #bannershow h1 {
+      font-size: 3.5em;
+      font-weight: 400;
+      color: #fff;
+      line-height: 1em;
+      margin: 0 0 1em 0;
+      padding: 0;
+    }
+
+    #bannershow h3 {
+      font-weight: 400;
+      color: #fff;
+      margin: 20px;
+      padding-right:20px;
+      font-size: 1.5em;
+    }
+
+    #bannershow .icon {
+      color: #6cc091;
+      padding-right:20px;
+      font-size: 2em;
+    }
+
+    #bannershow p {
+      font-size: 1em;
+      color: rgba(255, 255, 255, 0.55);
+      margin-bottom: 1.75em;
+    }
+
+    #bannershow .flex {
+      -ms-flex-pack: center;
+      -moz-justify-content: center;
+      -webkit-justify-content: center;
+      -ms-justify-content: center;
+      justify-content: center;
+      text-align: center;
+      margin: 0 auto 4em auto;
+    }
+
+      #bannershow .flex div {
+        border-right: 2px solid rgba(255, 255, 255, 0.2);
+        padding: 0 8em;
+      }
+
+        #bannershow .flex div:last-child {
+          border: none;
+          padding-right: 0;
+        }
+bannershow
+        #bannershow .flex div:first-child {
+          padding-left: 0;
+        }
+
+        #bannershow .flex div p {
+          margin: 0;
+        }
+
+    @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
+
+      #bannershow {
+        background-attachment: scroll;
+      }
+
+    }
+
+    @media screen and (max-width: 1680px) {
+
+      #bannershow .flex div {
+        padding: 0 6em;
+      }
+
+    }
+
+    @media screen and (max-width: 1280px) {
+
+      #bannershow {
+        padding: 7em 0 6em 0;
+      }
+
+        #bannershow .inner {
+          padding-top: 6em;
+        }
+
+        #bannershow h1 {
+          font-size: 3em;
+        }
+
+        #bannershow h3 {
+          font-size: 1.25em;
+        }
+
+        #bannershow .flex div {
+          padding: 0 3em;
+        }
+
+    }
+
+    @media screen and (max-width: 980px) {
+
+      #bannershow {
+        background-attachment: scroll;
+        padding: 5em 0 4em 0;
+      }
+
+        #bannershow .inner {
+          padding-top: 4em;
+        }
+
+        #bannershow h1 {
+          font-size: 2.5em;
+        }
+
+        #bannershow h3 {
+          font-size: 1.25em;
+        }
+
+        #bannershow .flex div {
+          font-size: .85em;
+          padding: 0 1.5em;
+        }
+
+    }
+
+    @media screen and (max-width: 736px) {
+
+      #bannershow {
+        padding: 4em 0 3em 0;
+      }
+
+        #bannershow .inner {
+          padding-top: 3em;
+        }
+
+        #bannershow h1 {
+          font-size: 2em;
+        }
+
+        #bannershow h3 {
+          font-size: 1.25em;
+        }
+
+        #bannershow .flex {
+          -moz-flex-direction: column;
+          -webkit-flex-direction: column;
+          -ms-flex-direction: column;
+          flex-direction: column;
+          margin: 0 auto 2em auto;
+        }
+
+          #bannershow .flex div {
+            font-size: .85em;
+            padding: 0;
+            border: none;
+            margin-bottom: 1em;
+          }
+
+    }
+
+    @media screen and (max-width: 480px) {
+
+      #bannershow h1 {
+        font-size: 1.5em;
+      }
+
+    }
