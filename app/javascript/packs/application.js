@@ -42,3 +42,15 @@ if (influencersToAdd) {
     });
   });
 }
+
+
+
+if (document.querySelector('#confirm')) {
+  document.querySelector('#confirm').addEventListener('click', (e) => {
+    e.preventDefault();
+    document.querySelector('.alert-campaign').classList.remove('d-none');
+    setTimeout(() => {
+      document.querySelector('.alert-campaign').classList.add('d-none');
+    }, 3000)
+  })
+}
