@@ -25,10 +25,10 @@ display: flex;
 // mix-blend-mode: normal;
 }
 
- .image-form {
+
+ .image-form{
 padding: 0;
 width:100%;
-height:750px;
 position: relative;
 opacity:0.9;
 
@@ -55,6 +55,36 @@ opacity:0.9;
     padding-top: 8px;
   }
 }
+
+ .image-form3 {
+padding: 0;
+width:100%;
+position: relative;
+opacity:0.9;
+
+.image-text{
+  width:10%;
+  height:10%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: column;
+  color:white;
+  font-size:24px;
+  font-weight: 900;
+  position: absolute;
+  top:0;
+  left:0px;
+}
+
+  img {
+    width:100%;
+    position: absolute;
+    top:0;
+    padding-top: 8px;
+  }
+}
+
 
 .bouton {
   color: white;

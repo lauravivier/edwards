@@ -9,10 +9,10 @@ class Influencer < ApplicationRecord
   acts_as_taggable_on :sizes
   acts_as_taggable_on :medias
 
-  $ages =["25-34", "18-24", "35-44"]
-  $medias = ["Instagram", "Facebook", "Pinterest", "Twitter"]
-  $locations = ["France", "Espagne", "Italie", "Belgique", "Portugal", "Angleterre"]
-  $sizes = [100, 1500, 5500, 10500, 50500, 100500, 500500, 1000500]
+  $ages = ["13 à 17 ans", "18 à 24 ans", "25 à 34ans", "35 à 44 ans", "45 à 54 ans"]
+  $medias = ["Instagram", "Facebook", "Twitter", "Youtube", "Pinterest"]
+  $locations = ["France", "Espagne", "Italie", "Belgique", "Angleterre"]
+  $sizes = ["10 000 à 20 000 followers", "20 000 à 30 000 followers", "30 000 à 50 000 followers", "50 000 à 100 000 followers", "100 000 followers et +"]
 
   include PgSearch::Model
 

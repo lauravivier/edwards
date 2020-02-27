@@ -60,38 +60,6 @@ body {
   transition: transform 0.4s cubic-bezier(0,0,.2,1);
 }
 
-.card-campaigns {
-    display: inline-block !important;
-}
-
-.card-campaigns .form-group {
-  display: none;
-}
-
-.card {
-  display: flex;
-  height: 320px;
-  width: 240px;
-  // padding-left: 150px;
-  background:linear-gradient(145deg, #fdf497 5%, #fd5949 25%,#d6249f 75%,#d6249f 100%);
-  border-radius: 12px;
-  border: 2px solid;
-  border-color: white;
-  // box-shadow: -0.5rem 0 0.2rem #f4f4f4;
-  margin: 12px;
-  transition: 0.4s ease-out;
-  position: relative;
-  // left: 0px;
-}
-
-.card:hover {
-  transform: scale(0.95);
-  transition: transform 0.8s cubic-bezier(0,0,.2,1);
-}
-
-.card:hover::after {
-  transition: 0.8s ease all;
-}
 
 .photocard{
 width:100px;
@@ -111,34 +79,9 @@ left:70px;
   right: 8px;
 }
 
+
 .bar {
   position: absolute;
-  top: 160px;
-  left: 45px;
-  height: 5px;
-  width: 150px;
-}
-
-.bar2 {
-  position: absolute;
-  top: 200px;
-  left: 45px;
-  height: 5px;
-  width: 150px;
-}
-
-.bar3 {
-  position: absolute;
-  top: 240px;
-  left: 45px;
-  height: 5px;
-  width: 150px;
-}
-
-.bar4 {
-  position: absolute;
-  top: 280px;
-  left: 45px;
   height: 5px;
   width: 150px;
 }
@@ -156,7 +99,7 @@ left:70px;
   width: 0px;
   height: 100%;
   background: rgb(0,154,217);
-  background: linear-gradient(90deg, rgba(0,154,217,1) 0%, rgba(217,147,0,1) 65%, rgba(255,186,0,1) 100%);
+  background: linear-gradient(145deg, #fdf497 5%, #fd5949 25%,#d6249f 75%,#d6249f 100%);
   transition: 0.8s ease-out;
 }
 
@@ -165,50 +108,127 @@ left:70px;
   transition: 0.8s ease all;
 }
 
-.filledbar2 {
-  position: absolute;
-  top: 0px;
-  z-index: 3;
-  width: 0px;
-  height: 100%;
-  background: rgb(0,154,217);
-  background: linear-gradient(90deg, rgba(0,154,217,1) 0%, rgba(217,147,0,1) 65%, rgba(255,186,0,1) 100%);
-  transition: 0.8s ease-out;
+.containetape2{
+  background-color:white;
+  border-radius:12px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  padding:12px;
+  padding-top: 16px;
 }
 
-.card:hover .filledbar2 {
-  width: 10%;
+
+
+.card-campaigns {
+    display: inline-block !important;
+}
+
+.card-campaigns .form-group {
+  display: none;
+}
+
+
+
+
+
+
+.card {
+  display: flex;
+  width: 200px;
+  height: 300px;
+  text-align: center;
+  background:white;
+  border-radius: 12px 0 0 12px;
+   box-shadow: 0 0 15px rgba(0,0,0,0.2);
+   margin : 12px;
+     transition: 0.4s ease-out;
+  position: relative;
+
+  .image {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    margin: 8px auto 0 auto;
+
+
+    img {
+      border-radius: 50%;
+      border-color: 1px solid white;
+    }
+
+  }
+
+  .name {
+    font-size: 15px;
+    font-weight: 600;
+  }
+
+  .job {
+    font-size: 11px;
+    line-height: 15px;
+  }
+
+
+    .btna {
+      display: block;
+      width: 120px;
+      height: 30px;
+      margin: 0 auto 10px auto;
+      background: white;
+      border: 1px solid white;
+      border-radius: 15px;
+      font-size: 12px;
+      font-weight: 600;
+      box-sizing: border-box;
+
+    }
+  }
+
+
+.card:hover {
+  transform: scale(0.95);
+  transition: transform 0.8s cubic-bezier(0,0,.2,1);
+}
+
+.card:hover::after {
   transition: 0.8s ease all;
 }
 
-.filledbar3 {
-  position: absolute;
-  top: 0px;
-  z-index: 3;
-  width: 0px;
-  height: 100%;
-  background: rgb(0,154,217);
-  background: linear-gradient(90deg, rgba(0,154,217,1) 0%, rgba(217,147,0,1) 65%, rgba(255,186,0,1) 100%);
-  transition: 0.8s ease-out;
+.stats {
+    float: left;
+    background: linear-gradient(145deg, #fdf497 5%, #fd5949 25%,#d6249f 75%,#d6249f 100%);
+    border-radius: 0 12px 12px 0;
+
+  .box {
+    box-sizing: border-box;
+    width: 81px;
+    height: 100px;
+    text-align: center;
+    padding-top: 28px;
+
+  }
+
+  span {
+    display: block;
+
+  }
+
+  .value {
+    font-size: 18px;
+    font-weight: 600;
+    color:white;
+  }
+
+  .parameter {
+    font-size: 11px;
+    color:white;
+  }
+
 }
 
-.card:hover .filledbar3 {
-  width: 80%;
-  transition: 0.8s ease all;
+.engagement_rate{
+position: relative;
+left:40px;
+padding:4px 0 0 4px;
+font-size:12px;
 }
 
-.filledbar4 {
-  position: absolute;
-  top: 0px;
-  z-index: 3;
-  width: 0px;
-  height: 100%;
-  background: rgb(0,154,217);
-  background: linear-gradient(90deg, rgba(0,154,217,1) 0%, rgba(217,147,0,1) 65%, rgba(255,186,0,1) 100%);
-  transition: 0.8s ease-out;
-}
-
-.card:hover .filledbar4 {
-  width: 100%;
-  transition: 0.8s ease all;
-}

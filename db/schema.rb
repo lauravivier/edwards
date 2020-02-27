@@ -68,9 +68,11 @@ ActiveRecord::Schema.define(version: 2020_02_22_113732) do
 
   create_table "influencers", force: :cascade do |t|
     t.string "name"
-    t.integer "women_stats"
-    t.integer "men_stats"
+    t.integer "followers"
+    t.integer "posts"
     t.string "engagement_rate"
+    t.string "influencer_type"
+    t.integer "likes"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

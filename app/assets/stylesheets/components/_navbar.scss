@@ -40,6 +40,20 @@ transform: scale(0.90) !important;
         transition: transform 2s cubic-bezier(0,0,.2,1);
 }
 
+
+.logonav{
+  width:44px;
+  border-radius: 50%;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.2);
+  border: #d6249f 1px solid;
+
+
+  .headshot-3 {
+  border-radius: 50% 10%;
+  background-image: var(--img-url), linear-gradient(to bottom left, #f83600, #f9d423);
+}
+
+}
 .navbar-color1 {
 }
 .navbar-color1:hover {

@@ -88,9 +88,9 @@ class CampaignsController < ApplicationController
   def edit
     @campaign = Campaign.find(params[:id])
     if params["query"].present?
-      @filter = params["query"]["ages"].concat(params["query"]["medias"]).concat(params["query"]["sizes"]).flatten.reject(&:blank?)
-      if @filter.present?
-        @influencers = Influencer.tagged_with(@filter, any: true)
+      @filtrer = params["query"]["ages"].concat(params["query"]["medias"]).concat(params["query"]["sizes"]).flatten.reject(&:blank?)
+      if @filtrer.present?
+        @influencers = Influencer.tagged_with(@filtrer, any: true)
       else
         @influencers = Influencer.all.order(name: :asc)
       end

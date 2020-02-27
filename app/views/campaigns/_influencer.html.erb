@@ -1,38 +1,76 @@
-  <div class="d-flex flex-row flex-wrap">
+<!--   <div class="d-flex flex-row flex-wrap">
     <% influencers.each do |influencer| %>
       <div class="card influencer-to-add" id="influencer-<%= influencer.id %>">
         <h3 class="title"><%= influencer.name %></h3>
           <div>
             <% if influencer.photo.attached?  %>
-              <%= cl_image_tag influencer.photo.key, class:"photocard" %>>
+              <%= cl_image_tag influencer.photo.key, class:"photocard" %>
             <% end %>
 
             <div class="bar">
-              <h4 class="title">Communauté</h4>
+              <h4 class="title">Cible : <%= influencer.age_list%></h4>
               <div class="emptybar"></div>
               <div class="filledbar"></div>
            </div>
             <div class="bar2">
-              <h4 class="title">Localisation</h4>
-              <div class="emptybar"></div>
-              <div class="filledbar2"></div>
+              <h4 class="title"><%= influencer.media_list%></h4>
+
            </div>
                 <div class="bar3">
-              <h4 class="title">Age</h4>
-              <div class="emptybar"></div>
-              <div class="filledbar3"></div>
+              <h4 class="title"><%= influencer.influencer_type%></h4>
+
            </div>
                 <div class="bar4">
-              <h4 class="title">Engagement Rate</h4>
-              <div class="emptybar"></div>
-              <div class="filledbar4"></div>
-           </div>
-        </div>
+              <h4 class="title"> followers</h4>
 
-        <div class="circle">
-          <circle class="stroke" cx="60" cy="60" r="50"/>
+           </div>
         </div>
       </div>
     <% end %>
   </div>
+ -->
+<div class="d-flex flex-row flex-wrap">
+  <% influencers.each do |influencer| %>
+    <div class="card influencer-to-add" id="influencer-<%= influencer.id %>">
 
+      <div class="image">
+        <% if influencer.photo.attached?  %>
+        <%= cl_image_tag influencer.photo.key, class:"image" %>
+        <% end %>
+
+        <div class="name"><%= influencer.name %></div>
+        <div class="job"><%= influencer.influencer_type%></div>
+
+
+          <div class="bar">
+          <div class="emptybar"></div>
+          <div class="filledbar"></div>
+          </div>
+          <div class="engagement_rate"><%= influencer.engagement_rate%></div>
+
+        <div class="btn-ghost" style="cursor: pointer">Sélectionner</div>
+
+            <div class="stats">
+
+                <div class="box" style="border-bottom: 1px solid white">
+                  <span class="value"><%= influencer.posts%></span>
+                  <span class="parameter">Posts</span>
+                </div>
+
+                  <div class="box" style="border-bottom: 1px solid white">
+                    <span class="value"><%= influencer.likes%></span>
+                    <span class="parameter">Moyenne de Likes</span>
+                  </div>
+
+                    <div class="box">
+                      <span class="value"><%= influencer.followers%></span>
+                      <span class="parameter">Followers</span>
+                    </div>
+            </div>
+
+      </div>
+
+
+    </div>
+  <% end %>
+</div>
