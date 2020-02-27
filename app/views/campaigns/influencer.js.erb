@@ -15,7 +15,7 @@ function replaceInfluencers (innerHTML) {
   const influencers = document.getElementById('influencers');
   influencers.innerHTML = innerHTML;
 }
-if ('<%= @filter %>' === "[]") {
+if ('<%= @filtrer %>' === "[]") {
 replaceInfluencers("<%= j render 'influencer', influencers: Influencer.all %>");
 }
 else {

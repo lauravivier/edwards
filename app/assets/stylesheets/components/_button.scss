@@ -38,6 +38,7 @@
 
 }
 
+
 .btn-white {
  color:white;
  background-color: #F04867;
@@ -106,6 +107,31 @@
         transition: transform 0.4s cubic-bezier(0,0,.2,1);
 
 }
+
+
+.btn-ghost4 {
+  color: #0047FE;
+  border: 2px solid #0047FE;
+  font-weight:600;
+  height: 60px;
+  padding: 8px 24px;
+  border-radius: 12px !important;
+  transition: background 0.3s ease;
+  justify-content: flex-end;
+  position: relative;
+  left:320px;
+}
+
+.btn-ghost4:hover {
+  color:white;
+  font-weight:700;
+  text-decoration:none;
+  background-color: #0047FE;
+  transform: scale(0.95) !important;
+        transition: transform 0.4s cubic-bezier(0,0,.2,1);
+
+}
+
 
 .form-button {
   border-radius: 12px !important;
