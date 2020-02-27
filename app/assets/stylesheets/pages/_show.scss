@@ -7,7 +7,7 @@
 
 
 header {
-  background: url('showbanner');
+  background: url('showbanner.png');
   width: 100%;
   height: 300px;
   background-size: cover;
@@ -188,7 +188,7 @@ fn {
 // }
 
   #bannershow {
-    background-image: url(../../images/shobanner.png);
+    background-image: url(../../images/showbanner.png);
     background-size: cover;
     background-position: bottom;
     background-attachment: fixed;
