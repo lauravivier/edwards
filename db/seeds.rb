@@ -16,13 +16,13 @@ puts 'Seed is coming...'
 
 # puts 'Delete old data'
 
-# ActsAsTaggableOn::Tag.destroy_all
-# InfluencerTag.destroy_all
-# Metric.destroy_all
-# CampaignInfluencer.destroy_all
-# Influencer.destroy_all
-# Campaign.destroy_all
-# User.destroy_all
+ActsAsTaggableOn::Tag.destroy_all
+InfluencerTag.destroy_all
+Metric.destroy_all
+CampaignInfluencer.destroy_all
+Influencer.destroy_all
+Campaign.destroy_all
+User.destroy_all
 
 
 # AGES = ["13 à 17 ans", "18 à 24 ans", "25 à 34ans", "35 à 44 ans", "45 à 54 ans"]
