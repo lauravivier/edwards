@@ -124,18 +124,16 @@ influencer_12.photo.attach(io: file, filename: 'Edith_Loiseau_amgyer.png', conte
 influencer_12.save!
 
 puts 'Creating Campaign_influencer...'
-CampaignInfluencer.create(campaign_id: campaign_01.id, influencer_id: influencer_01.id)
-CampaignInfluencer.create(campaign_id: campaign_01.id, influencer_id: influencer_02.id)
-CampaignInfluencer.create(campaign_id: campaign_01.id, influencer_id: influencer_03.id)
 
-CampaignInfluencer.create(campaign_id: campaign_02.id, influencer_id: influencer_04.id)
-CampaignInfluencer.create(campaign_id: campaign_02.id, influencer_id: influencer_05.id)
-CampaignInfluencer.create(campaign_id: campaign_02.id, influencer_id: influencer_06.id)
-
-CampaignInfluencer.create(campaign_id: campaign_03.id, influencer_id: influencer_07.id)
-CampaignInfluencer.create(campaign_id: campaign_03.id, influencer_id: influencer_08.id)
-CampaignInfluencer.create(campaign_id: campaign_03.id, influencer_id: influencer_01.id)
-
+CampaignInfluencer.create(campaign: campaign_01, influencer: influencer_01)
+CampaignInfluencer.create(campaign: campaign_01, influencer: influencer_02)
+CampaignInfluencer.create(campaign: campaign_01, influencer: influencer_03)
+CampaignInfluencer.create(campaign: campaign_02, influencer: influencer_04)
+CampaignInfluencer.create(campaign: campaign_02, influencer: influencer_05)
+CampaignInfluencer.create(campaign: campaign_02, influencer: influencer_06)
+CampaignInfluencer.create(campaign: campaign_03, influencer: influencer_07)
+CampaignInfluencer.create(campaign: campaign_03, influencer: influencer_08)
+CampaignInfluencer.create(campaign: campaign_03, influencer: influencer_01)
 
 # puts 'Creating Tag...'
 

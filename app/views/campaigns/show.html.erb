@@ -25,6 +25,7 @@
     <%=image_tag "objectif.png", class: "iconb"%>
     <h3>Objectif</h3>
       <p><%= @campaign.goal%></p>
+
 </div>
   <div>
     <span class="icon"></span>
@@ -35,6 +36,7 @@
 </header>
 
 
+
 <div>
   <div class="container4 m-5">
     <div class="one">
@@ -42,23 +44,38 @@
       <txtbil>INFLUENCEURS</txtbil>
     </div>
     <div class="two">
-      <br><txtbil><%= @community_age %></txtbil><br/>
-      <br><txtbil2> Espagne </txtbil2><br/>
+      <txtbil><%= @community_age %></txtbil><br/>
+      <br>
+      <br>
+      <txtbil2> Pays Ciblé : France </txtbil2><br/>
         <br><txtbil> <%= @community_location %> </txtbil> <br/>
     </div>
-    <div class="one">
-      <br><txtbil>PRÉVISIONS</txttbil></txtbil>
+      <br>
+      <br>
+      <div class="one ">
+      <br>
+      <br>
+    <txtbil> PRÉVISIONS </txttbil>
     </div>
     <div class="two">
-      <br><txtbil2> 1 million de vues</txttbil2><br/>
+      <br><txtbil2><%= @nbr_impression %> impressions</txttbil2><br/>
       <br><txtbil2> 30 000 engagements</txttbil2><br/>
+      <br><txtbil2><%= @nbr_like %> Likes</txttbil2><br/>
+      <br>
     </div>
   </div>
+<container>
+<a href="" class="btn btn-primary ml-5 mb-4">PRÉCÉDENT</a>
+<a href="" class="btn btn-primary col-md-3 mb-4 offset-md-">CONFIMER LA CAMPAGNE</a>
+</container>
+<br>
+</div>
 </div>
 
 
 
-<div class= "m-5">
+
+<div class= "m-5 foo">
 <h2> Le bilan brut de la campagne est le suivant :</h2>
  <p> Nombre de personne engagées : <%= @nbr_engagement %></p>
   <p> le nombre total de posts est (calcul à vérifier) : <%= @nbr_post %></p>
@@ -76,20 +93,10 @@
 
 <figure class="highcharts-figure">
   <div id="container1"></div>
-  <p class="highcharts-description">
-    A polar bar chart is similar to a bar chart, but the y-axis is circular.
-    In this demo we see the total Winter Olympics medals earned for the top 10
-    countries.
-  </p>
 </figure>
 <figure class="highcharts-figure">
     <div id="container2"></div>
-    <p class="highcharts-description">
-        Word clouds are used to visualize how often each word in a
-        text occurs. This example uses an excerpt from the popular
-        "Lorem Ipsum" text. Words that appear often will appear
-        larger.
-    </p>
+
 </figure>
 
 <%= @hashtag %>
@@ -103,7 +110,7 @@ Highcharts.chart('container1', {
         polar: true
     },
     title: {
-        text: 'Impression par influencer'
+        text: 'Impression par influenceur'
     },
     tooltip: {
         outside: true
