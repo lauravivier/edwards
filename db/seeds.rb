@@ -125,16 +125,14 @@ influencer_12.save!
 
 puts 'Creating Campaign_influencer...'
 CampaignInfluencer.create(campaign: campaign_01, influencer: influencer_01)
-# CampaignInfluencer.create(campaign: campaign_01, influencer: influencer_02)
-# CampaignInfluencer.create(campaign: campaign_01, influencer: influencer_03)
-
-# CampaignInfluencer.create(campaign: campaign_02, influencer: influencer_04)
-# CampaignInfluencer.create(campaign: campaign_02, influencer: influencer_05)
-# CampaignInfluencer.create(campaign: campaign_02, influencer: influencer_06)
-
-# CampaignInfluencer.create(campaign: campaign_03, influencer: influencer_07)
-# CampaignInfluencer.create(campaign: campaign_03, influencer: influencer_08)
-# CampaignInfluencer.create(campaign: campaign_03, influencer: influencer_01)
+CampaignInfluencer.create(campaign: campaign_01, influencer: influencer_02)
+CampaignInfluencer.create(campaign: campaign_01, influencer: influencer_03)
+CampaignInfluencer.create(campaign: campaign_02, influencer: influencer_04)
+CampaignInfluencer.create(campaign: campaign_02, influencer: influencer_05)
+CampaignInfluencer.create(campaign: campaign_02, influencer: influencer_06)
+CampaignInfluencer.create(campaign: campaign_03, influencer: influencer_07)
+CampaignInfluencer.create(campaign: campaign_03, influencer: influencer_08)
+CampaignInfluencer.create(campaign: campaign_03, influencer: influencer_01)
 
 
 # puts 'Creating Tag...'

@@ -1,7 +1,7 @@
-<div class="card" id="influencer-<%= influencer.id %>">
+<div class="card" id="influencer"<%= influencer.id%>
   <h3 class="title"><%= influencer.name %></h3>
     <div>
-      <% if influencer.photo.attached?  %>
+      <% if influencer.photo.attached? %>
         <%= cl_image_tag influencer.photo.key, class:"photocard" %>
       <% else %>
         <!-- placeholder -->
