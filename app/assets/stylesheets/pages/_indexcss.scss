@@ -1,0 +1,154 @@
+.bar2 {
+  position: absolute;
+  height: 5px;
+  width: 150px;
+}
+
+.emptybar2 {
+  background-color: #2e3033;
+  width: 100%;
+  height: 100%;
+}
+
+.filledbar2 {
+  position: absolute;
+  top: 0px;
+  z-index: 3;
+  width: 0px;
+  height: 100%;
+  background: rgb(0,154,217);
+  background: linear-gradient(145deg, #fdf497 5%, #fd5949 25%,#d6249f 75%,#d6249f 100%);
+  transition: 0.8s ease-out;
+}
+
+.card2:hover .filledbar2 {
+  width: 75%;
+  transition: 0.8s ease all;
+}
+
+
+.card2 {
+  display: flex;
+  height: 600px;
+  text-align: center;
+  background:white;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  margin : 12px;
+  transition: 0.4s ease-out;
+  position: relative;
+
+
+  .image2 {
+
+    width: 80px;
+    height: 80px;
+    margin: 8px auto 0 auto;
+    border-radius: 50%;
+    position:relative;
+    top: 56px;
+    right:50px;
+
+
+    img {
+      border-radius: 50%;
+      border-color: 1px solid white;
+
+    }
+
+  }
+
+    .image3 {
+
+    width: 300px;
+    height: 300px;
+    margin: 8px auto 0 auto;
+
+
+
+    img {
+      border-color: 1px solid white;
+ }
+ }
+
+  .name2 {
+    font-size: 15px;
+    font-weight: 600;
+  }
+
+  .job2 {
+    font-size: 11px;
+    line-height: 15px;
+  }
+
+  }
+
+
+// .card2:hover {
+//   transform: scale(0.95);
+//   transition: transform 0.8s cubic-bezier(0,0,.2,1);
+// }
+
+// .card2:hover::after {
+//   transition: 0.8s ease all;
+// }
+
+.stats2 {
+    float: left;
+    background: linear-gradient(145deg, #fdf497 5%, #fd5949 25%,#d6249f 75%,#d6249f 100%);
+    border-radius: 0 12px 12px 0;
+
+  .box2 {
+    box-sizing: border-box;
+    width: 81px;
+    height: 196px;
+    text-align: center;
+    padding-top: 28px;
+
+  }
+
+  span {
+    display: block;
+
+  }
+
+  .value2 {
+    font-size: 18px;
+    font-weight: 600;
+    color:white;
+  }
+
+  .parameter2 {
+    font-size: 11px;
+    color:white;
+  }
+
+}
+
+.engagement_rate2{
+position: relative;
+left:0;
+padding:4px 0 0 4px;
+font-size:12px;
+}
+
+
+.padd2 {
+padding:0 12px 0px 12px;
+  }
+
+
+.image2 {
+
+    width: 80px;
+    height: 80px;
+    margin: 8px auto 0 auto;
+    border-radius: 50%;
+    position: relative;
+    bottom: 113px;
+    left: 52px;
+    z-index: 1;
+
+
+}
+
