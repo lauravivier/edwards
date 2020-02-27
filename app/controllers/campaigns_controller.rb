@@ -14,11 +14,8 @@ class CampaignsController < ApplicationController
     #@influencer_audience = Campaign.influencer.audience.find(params[:id])
 
     @hashtag = @campaign.metrics.pluck(:hashtag).join(',').split(',').join(', ')
-
-
     @metrics = @campaign.metrics
     @sum = sum_impression_metrics
-
     @like_by_influencer = sum_influencer_like
     @comment_by_influencer = sum_influencer_comment
     #@hastag_by_influencer = sum_influencer_hastag
@@ -30,11 +27,7 @@ class CampaignsController < ApplicationController
     @nbr_engagement = sum_engagement.ceil
     @number_of_influencers = @campaign.influencers.count
     # @geoloc_influencers = @community_location
-
   end
-
-
-
 
 
   def sum_impression
@@ -77,9 +70,6 @@ class CampaignsController < ApplicationController
     return hsh
   end
 
-
-
-
   def sum_influencer_engagement
     hsh = Hash.new
     @campaign.influencers.each do |influencer|
@@ -90,13 +80,10 @@ class CampaignsController < ApplicationController
     return hsh
   end
 
-
-
   def new
     @campaign = Campaign.new
     @influencers = Influencer.all
   end
-
 
   def edit
     @campaign = Campaign.find(params[:id])
