@@ -11,14 +11,15 @@
       </div>
     <% end %>
 
-    <div class="d-flex flex-row flex-wrap align-items-middle mt-4" id="influencers">
+    <div id="influencers">
       <%= render 'influencer', influencers: @influencers, as: :check_boxes %>
     </div>
 
     <%= simple_form_for(@campaign) do |f| %>
       <input type="text" name="selection" id="added-influencers" class='d-none'>
       <div class="d-flex justify-content-center">
-        <%= f.submit 'Next', class: 'btn btn-primary mb-5' %>
+        <%= f.submit 'Valider', class: 'btn-ghost' %>
       </div>
+      <br>
     <% end %>
 </div>
