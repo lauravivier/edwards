@@ -35,6 +35,7 @@ if (influencersToAdd) {
   const input = document.getElementById('added-influencers');
   influencersToAdd.forEach((influencer) => {
     influencer.addEventListener('click', (event) => {
+      console.log(event.currentTarget);
       event.currentTarget.classList.add('border-1');
       event.currentTarget.classList.add('border-primary');
       input.value = input.value + " " + event.currentTarget.id.replace('influencer-', '');

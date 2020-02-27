@@ -133,15 +133,15 @@ left:70px;
 
 .card {
   display: flex;
-  width: 200px;
-  height: 300px;
+  height: 360px;
   text-align: center;
   background:white;
   border-radius: 12px 0 0 12px;
-   box-shadow: 0 0 15px rgba(0,0,0,0.2);
-   margin : 12px;
-     transition: 0.4s ease-out;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  margin : 12px;
+  transition: 0.4s ease-out;
   position: relative;
+
 
   .image {
     position: relative;
@@ -201,7 +201,7 @@ left:70px;
   .box {
     box-sizing: border-box;
     width: 81px;
-    height: 100px;
+    height: 120px;
     text-align: center;
     padding-top: 28px;
 
@@ -227,8 +227,13 @@ left:70px;
 
 .engagement_rate{
 position: relative;
-left:40px;
+left:0;
 padding:4px 0 0 4px;
 font-size:12px;
 }
+
+
+.padd {
+padding:0 48px 0px 48px;
+  }
 
