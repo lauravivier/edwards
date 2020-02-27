@@ -3,3 +3,18 @@ function refreshInfluencers() {
 }
 
 refreshInfluencers();
+
+
+function influencersToAdd() {
+  const influencersToAdd = document.querySelectorAll('.influencer-to-add');
+  const input = document.getElementById('added-influencers');
+  influencersToAdd.forEach((influencer) => {
+    influencer.addEventListener('click', (event) => {
+      event.currentTarget.classList.add('border-1');
+      event.currentTarget.classList.add('border-primary');
+      input.value = input.value + " " + event.currentTarget.id.replace('influencer-', '');
+    });
+  });
+}
+
+influencersToAdd();
