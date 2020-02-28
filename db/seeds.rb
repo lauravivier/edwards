@@ -106,6 +106,7 @@ influencer_09 = Influencer.new(name: "Mylene Dupont", location_list: "Espagne", 
 influencer_09.photo.attach(io: file, filename: 'Mylene_Dupont_fite5e.png', content_type: 'image/png')
 influencer_09.save!
 
+puts 'Creating Influencer10...'
 file = URI.open('https://res.cloudinary.com/ddciebk6s/image/upload/w_1000,ar_1:1,c_fill,g_auto/v1582380515/Influencers/Veronica_Eliot_uufgbi.png')
 influencer_10  = Influencer.new(name: "Veronica Eliot", location_list: "France", size_list: "20 000 à 30 000 followers", age_list:"13 à 17 ans", followers: 21987, likes:2051, posts: 103, influencer_type:"Fitness", engagement_rate: "3,45%", media_list: "Instagram")
 influencer_10.photo.attach(io: file, filename: 'Veronica_Eliot_uufgbi.png', content_type: 'image/png')
@@ -125,15 +126,17 @@ influencer_12.save!
 
 puts 'Creating Campaign_influencer...'
 
-CampaignInfluencer.create(campaign: campaign_01, influencer: influencer_01)
-CampaignInfluencer.create(campaign: campaign_01, influencer: influencer_02)
-CampaignInfluencer.create(campaign: campaign_01, influencer: influencer_03)
-CampaignInfluencer.create(campaign: campaign_02, influencer: influencer_04)
-CampaignInfluencer.create(campaign: campaign_02, influencer: influencer_05)
-CampaignInfluencer.create(campaign: campaign_02, influencer: influencer_06)
-CampaignInfluencer.create(campaign: campaign_03, influencer: influencer_07)
-CampaignInfluencer.create(campaign: campaign_03, influencer: influencer_08)
-CampaignInfluencer.create(campaign: campaign_03, influencer: influencer_01)
+CampaignInfluencer.create(campaign_id: campaign_01.id, influencer_id: influencer_01.id)
+CampaignInfluencer.create(campaign_id: campaign_01.id, influencer_id: influencer_02.id)
+CampaignInfluencer.create(campaign_id: campaign_01.id, influencer_id: influencer_03.id)
+
+CampaignInfluencer.create(campaign_id: campaign_02.id, influencer_id: influencer_04.id)
+CampaignInfluencer.create(campaign_id: campaign_02.id, influencer_id: influencer_05.id)
+CampaignInfluencer.create(campaign_id: campaign_02.id, influencer_id: influencer_06.id)
+
+CampaignInfluencer.create(campaign_id: campaign_03.id, influencer_id: influencer_07.id)
+CampaignInfluencer.create(campaign_id: campaign_03.id, influencer_id: influencer_08.id)
+CampaignInfluencer.create(campaign_id: campaign_03.id, influencer_id: influencer_01.id)
 
 # puts 'Creating Tag...'
 
