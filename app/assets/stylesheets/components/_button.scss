@@ -138,3 +138,49 @@
   background-color: #33CC33;
   width: 200px;
 }
+
+.btn-ghost7 {
+  color: #0047FE;
+  border: 2px solid #0047FE;
+  font-weight:600;
+  padding: 8px 24px;
+  margin-right:12px;
+  margin-left:12px;
+  border-radius: 12px !important;
+  transition: background 0.3s ease;
+  justify-content: flex-end;
+}
+
+.btn-ghost7:hover {
+  color:white;
+  font-weight:700;
+  background-color: #0047FE;
+  text-decoration:none;
+  transform: scale(0.95) !important;
+  transition: transform 0.4s cubic-bezier(0,0,.2,1);
+}
+
+.btn-ghost8 {
+  color: #0047FE;
+  border: 2px solid #0047FE;
+  font-weight:600;
+  padding: 8px 24px;
+  margin-right:12px;
+  margin-left:12px;
+  border-radius: 12px !important;
+  transition: background 0.3s ease;
+  justify-content: flex-end;
+}
+
+.btn-ghost8:hover {
+  color:white;
+  font-weight:700;
+  background-color: #0047FE;
+  text-decoration:none;
+  transform: scale(0.95) !important;
+  transition: transform 0.4s cubic-bezier(0,0,.2,1);
+}
+
+
+
+
