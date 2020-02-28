@@ -11,7 +11,7 @@ function influencersToAdd() {
   influencersToAdd.forEach((influencer) => {
     influencer.addEventListener('click', (event) => {
       event.currentTarget.classList.add('border-1');
-      event.currentTarget.classList.add('border-primary');
+      event.currentTarget.classList.add('border-danger');
       input.value = input.value + " " + event.currentTarget.id.replace('influencer-', '');
     });
   });
