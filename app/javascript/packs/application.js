@@ -37,7 +37,7 @@ if (influencersToAdd) {
     influencer.addEventListener('click', (event) => {
       console.log(event.currentTarget);
       event.currentTarget.classList.add('border-1');
-      event.currentTarget.classList.add('border-primary');
+      event.currentTarget.classList.add('border-danger');
       input.value = input.value + " " + event.currentTarget.id.replace('influencer-', '');
     });
   });
