@@ -9,13 +9,14 @@
         <%= f.input :sizes, label: "Localisation", collection: $locations, as: :check_boxes %>
       </div>
     <% end %>
-
+<br>
     <div id="influencers">
       <%= render 'influencer', influencers: @influencers, as: :check_boxes %>
     </div>
 
     <%= simple_form_for(@campaign) do |f| %>
       <input type="text" name="selection" id="added-influencers" class='d-none'>
+      <br>
       <div class="d-flex justify-content-center">
         <%= f.submit 'Valider', class: 'btn-ghost' %>
       </div>

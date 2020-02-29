@@ -68,36 +68,62 @@ border-radius: 20px;
 }
 
 
+ txtbil0 {
+  font-weight: 800;
+  font-size:32px;;
+  padding-left: 12px;
+  }
+
  txtbil {
-  font-family: 'Nunito Sans', sans-serif;
-  font-style: normal;
-  font-size: 15px;
-  color: black;
-  padding-bottom: 25px;
-  padding-left: 10px;
+  font-weight: 800;
+  font-size:32px;
+  color: white;
+  padding-left: 12px;
   }
 
  txtbil2 {
-  font-family: 'Nunito Sans';
-  font-style: lighter;
-  font-size: 15px;
+
+  font-weight: 700;
+  font-size: 16px;
   color: white;
   padding-left: 10px;
   margin-bottom: 10px;
   }
 
+   txtbil3 {
+
+  font-weight: 700;
+   font-size: 16px;
+color: white;
+  padding-left: 10px;
+  margin-bottom: 10px;
+  }
+
+  txtbil4 {
+
+  font-weight: 800;
+  font-size: 40px;
+  color: white;
+  padding-left: 10px;
+  margin-bottom: 10px;
+  }
+
+ txtbil5 {
+
+  font-weight: 700;
+  font-size: 24px;
+color: white;
+  padding-left: 10px;
+  margin-bottom: 10px;
+  }
 
 fn {
   position: center;
   text-align: center;
-  margin-top: 15px;
   padding-left: 5px;
   text-align: center;
-  font-family: 'Nunito Sans', sans-serif;
-  font-style: normal;
   font-weight: bold;
   font-size: 40px;
-  line-height: 100px;
   color: #0047FE;
   }
 
@@ -107,24 +133,186 @@ fn {
 
 .container4 {
   position: center;
-  max-width: 1050px;
+
   margin: 0 auto;         /*  will center the container on wide screen  */
   display: flex;
 }
+
 .one {
-  width: 300px;
-  background-color: white;
+  width: 400px;
+  background: linear-gradient(145deg, #fdf497 5%, #fd5949 25%,#d6249f 75%,#d6249f 100%);
+  font-weight:600;
+  padding: 8px 24px;
+  margin-left: 12px;
+  margin-right: 12px;
+  margin-bottom: 24px;
+  border-radius: 25px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.4);
+  transition: background 0.3s ease;
+  justify-content: flex-end;
 }
+
+
 .two {
-  width: 300px;
+  width: 400px;
   background-color: #0048fe;
-  font-family: Lato;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 20px;
-  line-height: 15px;
-  color: #FFFFFF;
+  line-height: 16px;
+padding: 8px 24px;
+  margin-left: 12px;
+  margin-right: 12px;
+    margin-bottom: 24px;
+  border-radius: 25px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.4);
+  transition: background 0.3s ease;
+  justify-content: flex-end;
 }
+
+
+
+.three {
+  width: 400px;
+  background-color: #163438;
+  font-weight:600;
+   line-height: 16px;
+  padding: 8px 24px;
+  margin-left: 12px;
+  margin-right: 12px;
+  margin-bottom: 24px;
+  border-radius: 25px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.4);
+  transition: background 0.3s ease;
+  justify-content: flex-end;
+}
+
+
+.head_logo1 {
+  width: 60px;
+  border-radius: 50%;
+  border: 1px solid white;
+  position: relative;
+  margin-bottom: 12px;
+}
+
+.head_logo1:hover {
+transform: scale(1.50) !important;
+        transition: transform 0.8s cubic-bezier(0,0,.2,1);
+}
+
+.head_logo1::after {
+transition: 0.5s ease all;
+}
+
+.head_logo2 {
+  width: 60px;
+  border-radius: 50%;
+  border: 1px solid white;
+  position: relative;
+  right:12px;
+    margin-bottom: 12px;
+}
+
+.head_logo2:hover {
+transform: scale(1.50) !important;
+        transition: transform 0.8s cubic-bezier(0,0,.2,1);
+}
+
+.head_logo2::after {
+transition: 0.5s ease all;
+}
+
+.head_logo3 {
+  width: 60px;
+  border-radius: 50%;
+  border: 1px solid white;
+  position: relative;
+  right:24px;
+    margin-bottom: 12px;
+}
+
+.head_logo3:hover {
+transform: scale(1.50) !important;
+        transition: transform 0.8s cubic-bezier(0,0,.2,1);
+}
+
+.head_logo3::after {
+transition: 0.5s ease all;
+}
+
+
+.head_logo4 {
+  width: 60px;
+  border-radius: 50%;
+  border: 1px solid white;
+  position: relative;
+  right:36px;
+    margin-bottom: 12px;
+}
+
+.head_logo4:hover {
+transform: scale(1.50) !important;
+        transition: transform 0.8s cubic-bezier(0,0,.2,1);
+}
+
+.head_logo4::after {
+transition: 0.5s ease all;
+}
+
+.head_logo5 {
+  width: 60px;
+  border-radius: 50%;
+  border: 1px solid white;
+  position: relative;
+  right:48px;
+    margin-bottom: 12px;
+}
+
+.head_logo5:hover {
+transform: scale(1.50) !important;
+        transition: transform 0.8s cubic-bezier(0,0,.2,1);
+}
+
+.head_logo5::after {
+transition: 0.5s ease all;
+}
+
+.head_logo6 {
+  width: 60px;
+  border-radius: 50%;
+  border: 1px solid white;
+  position: relative;
+  right:60px;
+    margin-bottom: 12px;
+}
+
+.head_logo6:hover {
+transform: scale(1.50) !important;
+        transition: transform 0.8s cubic-bezier(0,0,.2,1);
+}
+
+.head_logo6::after {
+transition: 0.5s ease all;
+}
+
+.head_logo7 {
+  width: 60px;
+  border-radius: 50%;
+  border: 1px solid white;
+  position: relative;
+  right:72px;
+    margin-bottom: 12px;
+}
+
+.head_logo7:hover {
+transform: scale(1.50) !important;
+        transition: transform 0.8s cubic-bezier(0,0,.2,1);
+}
+
+.head_logo7::after {
+transition: 0.5s ease all;
+}
+
+
+
 
 .ml-9 {
   margin-left: 875px;
@@ -133,12 +321,18 @@ fn {
 
 //// SHOW //////
 //// PART 1  //////
+   .iconab {
+    width: 350px;
+    margin-bottom: 10px;
+  }
 
   .iconb {
     width: 50px;
     height: 50px;
     margin-bottom: 10px;
   }
+
+
 
   .flexshow {
     display: -ms-flexbox;
@@ -154,8 +348,8 @@ fn {
     -moz-flex-wrap: wrap;
     -webkit-flex-wrap: wrap;
     -ms-flex-wrap: wrap;
-    width: 80%;
-    margin-left: 100px;
+    margin-left: 48px;
+    margin-right:48px;
     }
 
     .iconshow {
