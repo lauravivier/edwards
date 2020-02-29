@@ -6,23 +6,24 @@
     <a data-dismiss="alert" aria-label="Close"><i class="fas fa-times"></i></a>
   </div>
   <br>
+
     <hshow>VOS PROJECTIONS POUR LA CAMPAGNE</hshow>
     <br>
 
-    <div class="flexshow d-flex">
-      <div class="iconab">
+    <div class="align-elements-campaigns">
+      <div class="">
         <%=image_tag "date.png", class: "iconb"%>
         <h3>Date</h3>
         <p>Du <%= @campaign.starts_at %> au <%= @campaign.ends_at %></p>
       </div>
 
-      <div class="iconab">
+      <div class="">
         <%=image_tag "objectif.png", class: "iconb"%>
         <h3>Objectif</h3>
         <p><%= @campaign.goal%></p>
       </div>
 
-      <div class="iconab">
+      <div class="">
         <%=image_tag "brief.png", class: "iconb"%>
         <h3>Brief</h3>
         <p><%= @campaign.message %></p>
