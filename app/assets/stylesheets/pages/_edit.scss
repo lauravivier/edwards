@@ -104,7 +104,7 @@ left:70px;
 }
 
 .card:hover .filledbar {
-  width: 75%;
+  width: 100%;
   transition: 0.8s ease all;
 }
 
@@ -158,12 +158,13 @@ left:70px;
   }
 
   .name {
-    font-size: 15px;
-    font-weight: 600;
+    font-size: 14px;
+    font-weight: 800;
   }
 
   .job {
-    font-size: 11px;
+    font-size: 12px;
+    font-weight: 700;
     line-height: 15px;
   }
 

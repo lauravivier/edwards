@@ -229,7 +229,7 @@ influencer_29.save!
 
 puts 'Creating Influencer30...'
 file = URI.open('https://res.cloudinary.com/ddciebk6s/image/upload/w_1000,ar_1:1,c_fill,g_auto,e_art:hokusai/v1582955951/Influencers/Urszula_Duda_tzwfdk.png')
-influencer_30 = Influencer.new(name: "Urszula_Duda_tzwfdk.png", location_list: "France", size_list: "20 000 à 30 000 followers", age_list:"13 à 17 ans", followers: 11341, likes:751, posts: 721, influencer_type:"Fitness", engagement_rate: "3,45%", media_list: "Instagram")
+influencer_30 = Influencer.new(name: "Urszula_Duda", location_list: "France", size_list: "20 000 à 30 000 followers", age_list:"13 à 17 ans", followers: 11341, likes:751, posts: 721, influencer_type:"Fitness", engagement_rate: "3,45%", media_list: "Instagram")
 influencer_30.photo.attach(io: file, filename: 'Veronica_Eliot_uufgbi.png', content_type: 'image/png')
 influencer_30.save!
 
