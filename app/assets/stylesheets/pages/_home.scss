@@ -26,13 +26,13 @@ display: flex;
 }
 
 
- .image-form{
+ .image-form {
 padding: 0;
 width:100%;
 position: relative;
 opacity:0.9;
 
-.image-text{
+.image-text {
   width:100%;
   height:100%;
   display: flex;
@@ -49,6 +49,7 @@ opacity:0.9;
 
   img {
     width:120%;
+    height:612px;
     position: absolute;
     top:0;
     right:0px;
@@ -111,4 +112,86 @@ min-width: 0;
   text-decoration: none;
   background: #003cd6;
   transition: background 0.3s ease;
+}
+
+
+.counter {
+    background-color:#f5f5f5;
+    padding: 20px 0;
+    border-radius: 5px;
+}
+
+.count-title {
+    font-size: 40px;
+    font-weight: normal;
+    margin-top: 10px;
+    margin-bottom: 0;
+    text-align: center;
+}
+
+.count-text {
+    font-size: 13px;
+    font-weight: normal;
+    margin-top: 10px;
+    margin-bottom: 0;
+    text-align: center;
+}
+
+.fa-2x {
+    margin: 0 auto;
+    float: none;
+    display: table;
+    color: #4ad1e5;
+}
+
+// SECTION BAROMETRE
+.carousel-item {
+  height: 100vh;
+  min-height: 350px;
+  background: no-repeat center center scroll;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+section {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
+
+.lnr {
+  display: inline-block;
+  fill: currentColor;
+  width: 1em;
+  height: 1em;
+  vertical-align: -0.05em;
+  stroke-width: 1;
+}
+
+.services-icon {
+  margin-bottom: 20px;
+  font-size: 30px;
+}
+bgc2, .vLine, .hLine {
+    background-color: #0F52BA;
+}
+
+.quote-icon {
+  font-size: 40px;
+  margin-bottom: 20px;
+}
+.services-icon {
+    font-size: 60px;
+    margin-left: 2rem;
+}
+
+.gifcss {
+height: 10px;
+weight: 10px;
+}
+
+.containerwhite {
+background-color: white;
+margin: 19px;
+padding: 20px;
 }
