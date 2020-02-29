@@ -22,9 +22,10 @@
                 <div class= "goal-campaign">
                   <%= f.input :goal, label:"Quel est votre objectif principal ?", as: :radio_buttons, collection: Campaign::GOALS, wrapper: :vertical_collection_inline %>
                 </div>
-                <%= f.input :starts_at, label: 'Date de début' %>
-                <%= f.input :ends_at, label: 'Date de fin' %>
-                 <br>
+                <%= f.date_field :starts_at, label: 'Date de début' %>
+                <%= f.date_field :ends_at, label: 'Date de fin' %>
+                  <br>
+                  <br>
                 <div class="brief-campaign">
                   <%= f.input :message, label: false, placeholder: 'Brief' %>
                 </div>
