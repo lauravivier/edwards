@@ -25,6 +25,40 @@ display: flex;
 // mix-blend-mode: normal;
 }
 
+.image-home-size img {
+  width: 120%;
+  position: absolute;
+  top: 0;
+  right: 0px;
+  padding-top: 8px;
+}
+
+.grid-card-home {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  margin-bottom: 55px;
+}
+
+.card-body h5 {
+  font-weight: 600;
+  color: orange;
+}
+
+.card-body p {
+  color: red;
+}
+
+#image_card {
+  width: 45%;
+  display: table;
+  margin: 0 auto;
+}
+
+#image_card_3 {
+  width: 30%;
+  display: table;
+  margin: 0 auto;
+}
 
  .image-form {
 padding: 0;
