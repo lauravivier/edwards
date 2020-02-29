@@ -26,13 +26,13 @@ display: flex;
 }
 
 
- .image-form{
+ .image-form {
 padding: 0;
 width:100%;
 position: relative;
 opacity:0.9;
 
-.image-text{
+.image-text {
   width:100%;
   height:100%;
   display: flex;
@@ -188,4 +188,10 @@ bgc2, .vLine, .hLine {
 .gifcss {
 height: 10px;
 weight: 10px;
+}
+
+.containerwhite {
+background-color: white;
+margin: 19px;
+padding: 20px;
 }
