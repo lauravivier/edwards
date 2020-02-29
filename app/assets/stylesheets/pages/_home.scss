@@ -41,15 +41,16 @@ display: flex;
 
 .card-body h5 {
   font-weight: 600;
-  color: orange;
+  color: #5c5c5c;
 }
 
 .card-body p {
-  color: red;
+  color: black;
 }
 
 #image_card {
   width: 45%;
+  padding-top: 10px;
   display: table;
   margin: 0 auto;
 }
