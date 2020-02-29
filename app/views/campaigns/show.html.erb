@@ -1,18 +1,15 @@
-
-
 <header>
-  <div class="flash flash-success alert alert-dismissible fade show alert-campaign d-none" role="alert">
-  <span ><strong>Parfait!</strong> 🎉 Un mail a été envoyé à tous les influenceurs ! &nbsp;</span>
-  <br><a data-dismiss="alert" aria-label="Close">
-    <i class="fas fa-times"></i>
-  </a>
-</div>
-
-<br>
+  <br>
+  <div class="flash flash-success alert alert-dismissible fade alert-campaign" role="alert">
+    <span ><strong>Parfait!</strong> 🎉 Un mail a été envoyé à tous les influenceurs ! &nbsp;</span>
+    <br>
+    <a data-dismiss="alert" aria-label="Close"><i class="fas fa-times"></i></a>
+  </div>
   <br>
     <hshow>VOS PROJECTIONS POUR LA CAMPAGNE</hshow>
     <br>
-  <div class="flexshow d-flex">
+
+    <div class="flexshow d-flex">
       <div class="iconab">
         <%=image_tag "date.png", class: "iconb"%>
         <h3>Date</h3>
@@ -30,27 +27,28 @@
         <h3>Brief</h3>
         <p><%= @campaign.message %></p>
       </div>
-
+    </div>
 </header>
 
 
 <div>
   <div class="container4">
+
     <div class="one">
       <fn> <txtbil0><%=@campaign.influencers.count %></txtbil0> </fn>
       <txtbil>INFLUENCEURS</txtbil>
-      <%=image_tag "https://res.cloudinary.com/ddciebk6s/image/upload/w_1000,ar_1:1,c_fill,g_auto,e_art:hokusai/v1582955953/Influencers/Lucrezia_De_Luca_mqkd1f.png", class: "head_logo1"%>
-      <%=image_tag "https://res.cloudinary.com/ddciebk6s/image/upload/w_1000,ar_1:1,c_fill,g_auto,e_art:hokusai/v1582955953/Influencers/Lucrezia_De_Luca_mqkd1f.png", class: "head_logo2"%>
-      <%=image_tag "https://res.cloudinary.com/ddciebk6s/image/upload/w_1000,ar_1:1,c_fill,g_auto,e_art:hokusai/v1582955953/Influencers/Lucrezia_De_Luca_mqkd1f.png", class: "head_logo3"%>
-      <%=image_tag "https://res.cloudinary.com/ddciebk6s/image/upload/w_1000,ar_1:1,c_fill,g_auto,e_art:hokusai/v1582955953/Influencers/Lucrezia_De_Luca_mqkd1f.png", class: "head_logo4"%>
-      <%=image_tag "https://res.cloudinary.com/ddciebk6s/image/upload/w_1000,ar_1:1,c_fill,g_auto,e_art:hokusai/v1582955953/Influencers/Lucrezia_De_Luca_mqkd1f.png", class: "head_logo5"%>
-      <%=image_tag "https://res.cloudinary.com/ddciebk6s/image/upload/w_1000,ar_1:1,c_fill,g_auto,e_art:hokusai/v1582955953/Influencers/Lucrezia_De_Luca_mqkd1f.png", class: "head_logo1"%>
-      <%=image_tag "https://res.cloudinary.com/ddciebk6s/image/upload/w_1000,ar_1:1,c_fill,g_auto,e_art:hokusai/v1582955953/Influencers/Lucrezia_De_Luca_mqkd1f.png", class: "head_logo2"%>
-      <%=image_tag "https://res.cloudinary.com/ddciebk6s/image/upload/w_1000,ar_1:1,c_fill,g_auto,e_art:hokusai/v1582955953/Influencers/Lucrezia_De_Luca_mqkd1f.png", class: "head_logo3"%>
-      <%=image_tag "https://res.cloudinary.com/ddciebk6s/image/upload/w_1000,ar_1:1,c_fill,g_auto,e_art:hokusai/v1582955953/Influencers/Lucrezia_De_Luca_mqkd1f.png", class: "head_logo4"%>
-      <%=image_tag "https://res.cloudinary.com/ddciebk6s/image/upload/w_1000,ar_1:1,c_fill,g_auto,e_art:hokusai/v1582955953/Influencers/Lucrezia_De_Luca_mqkd1f.png", class: "head_logo5"%>
-      <%=image_tag "https://res.cloudinary.com/ddciebk6s/image/upload/w_1000,ar_1:1,c_fill,g_auto,e_art:hokusai/v1582955953/Influencers/Lucrezia_De_Luca_mqkd1f.png", class: "head_logo1"%>
-      <%=image_tag "https://res.cloudinary.com/ddciebk6s/image/upload/w_1000,ar_1:1,c_fill,g_auto,e_art:hokusai/v1582955953/Influencers/Lucrezia_De_Luca_mqkd1f.png", class: "head_logo2"%>
+      <%=image_tag "https://res.cloudinary.com/ddciebk6s/image/upload/w_1000,ar_1:1,c_fill,g_auto/v1582379354/Influencers/Jean_Michel_y4usdq.png", class: "head_logo1"%>
+      <%=image_tag "https://res.cloudinary.com/ddciebk6s/image/upload/w_1000,ar_1:1,c_fill,g_auto/v1582380515/Influencers/Veronica_Eliot_uufgbi.png", class: "head_logo2"%>
+      <%=image_tag "https://res.cloudinary.com/ddciebk6s/image/upload/w_1000,ar_1:1,c_fill,g_auto/v1582379353/Influencers/Rachel_Birk_qsjnuf.png", class: "head_logo3"%>
+      <%=image_tag "https://res.cloudinary.com/ddciebk6s/image/upload/w_1000,ar_1:1,c_fill,g_auto,e_art:hokusai/v1582955947/Influencers/Blanche_Dubee_gydjrw.png", class: "head_logo4"%>
+      <%=image_tag "https://res.cloudinary.com/ddciebk6s/image/upload/w_1000,ar_1:1,c_fill,g_auto,e_art:hokusai/v1582955947/Influencers/Corinne_Lemelin_ofyziw.png", class: "head_logo5"%>
+      <%=image_tag "https://res.cloudinary.com/ddciebk6s/image/upload/w_1000,ar_1:1,c_fill,g_auto,e_art:hokusai/v1582955951/Influencers/Kristin_Boston_lju5ov.png", class: "head_logo1"%>
+      <%=image_tag "https://res.cloudinary.com/ddciebk6s/image/upload/w_1000,ar_1:1,c_fill,g_auto/v1582955952/Influencers/Luke_Butler_gglile.png", class: "head_logo2"%>
+      <%=image_tag "https://res.cloudinary.com/ddciebk6s/image/upload/w_1000,ar_1:1,c_fill,g_auto/v1582955946/Influencers/Charles_Mitchell_fe1n7s.png", class: "head_logo3"%>
+      <%=image_tag "https://res.cloudinary.com/ddciebk6s/image/upload/w_1000,ar_1:1,c_fill,g_auto,e_art:hokusai/v1582955948/Influencers/Apolonio_Ruvalcaba_l4mvyr.png", class: "head_logo4"%>
+      <%=image_tag "https://res.cloudinary.com/ddciebk6s/image/upload/w_1000,ar_1:1,c_fill,g_auto/v1582955949/Influencers/Petrona_Ybarra_ssjpan.png", class: "head_logo5"%>
+      <%=image_tag "https://res.cloudinary.com/ddciebk6s/image/upload/w_1000,ar_1:1,c_fill,g_auto,e_art:hokusai/v1582955947/Influencers/Sarah_Neely_kufvid.png", class: "head_logo1"%>
+      <%=image_tag "https://res.cloudinary.com/ddciebk6s/image/upload/w_1000,ar_1:1,c_fill,g_auto,e_art:hokusai/v1582955950/Influencers/Henry_Morgan_i2jzpy.png", class: "head_logo2"%>
     </div>
 
     <div class="two">
@@ -61,25 +59,32 @@
     </div>
 
     <div class="three">
-      <br><txtbil2> Prévisions de campagne :</txttbil2><br/>
-      <br><txtbil5>- 22 500 impressions</txttbil5><br/>
+      <br><txtbil2> Prévisions de campagne par post :</txttbil2><br/>
+      <br><txtbil5>- 18 000 impressions</txttbil5><br/>
         <br>
-      <br><txtbil5>- 4 900 like</txttbil5><br/>
+      <br><txtbil5>- 1500 like</txttbil5><br/>
         <br>
-      <br><txtbil5>- 1500 reposts</txttbil5><br/>
+      <br><txtbil5>- 300 reposts</txttbil5><br/>
         <br>
-      <br><txtbil5>- 800 commentaires</txttbil5><br/>
+      <br><txtbil5>- 250 commentaires</txttbil5><br/>
         <br>
       <br>
     </div>
+
+  </div> <!-- end of container4 -->
+
+  <container class="d-flex">
+    <span class="btn-ghost8">CONFIMER LA CAMPAGNE</span>
+  </container>
+
+
+  <br>
+  <br>
+  <br>
+
+  <div class="div">
+    cl_image_tag
   </div>
-      <container class="d-flex">
-        <a href="" class="btn-ghost8">CONFIMER LA CAMPAGNE</a>
-      </container>
-      <br>
-</container>
-<br>
-</div>
 </div>
 
 
@@ -104,14 +109,23 @@
 <figure class="highcharts-figure">
   <div id="container1"></div>
 </figure>
+
 <figure class="highcharts-figure">
     <div id="container2"></div>
-
 </figure>
 
 <%= @hashtag %>
+
 <script>
-console.log('<%=@campaign.metrics.pluck(:hashtag)%>')
+  const alert = document.querySelector('.flash.flash-success.alert')
+  const button = document.querySelector('.btn-ghost8')
+
+  button.addEventListener('click', () => {
+    window.scrollTo(0, 0);
+    alert.classList.add('show');
+  });
+
+// console.log('<%=@campaign.metrics.pluck(:hashtag)%>')
 // Highcharts.chart('container1', {
 //     colors: ['#FFD700', '#C0C0C0', '#CD7F32'],
 //     chart: {
@@ -144,9 +158,9 @@ console.log('<%=@campaign.metrics.pluck(:hashtag)%>')
 //         },
 //         lineWidth: 0,
 //         categories: [
-//             <% @impression_by_influencer.keys.each do |key| %>
-//             '<%=key%>',
-//             <% end %>
+//             <%# @impression_by_influencer.keys.each do |key| %>
+//             '<%#=key%>',
+//             <%# end %>
 //         ]
 //     },
 //     yAxis: {
@@ -181,42 +195,42 @@ console.log('<%=@campaign.metrics.pluck(:hashtag)%>')
 // });
 
 
-var text = '<%=@hashtag %>';
-var lines = text.split(/[,\. ]+/g),
-    data = Highcharts.reduce(lines, function (arr, word) {
-        var obj = Highcharts.find(arr, function (obj) {
-            return obj.name === word;
-        });
-        if (obj) {
-            obj.weight += 1;
-        } else {
-            obj = {
-                name: word,
-                weight: 1
-            };
-            arr.push(obj);
-        }
-        return arr;
-    }, []);
+  // var text = '<%=@hashtag %>';
+  // var lines = text.split(/[,\. ]+/g),
+  //     data = Highcharts.reduce(lines, function (arr, word) {
+  //         var obj = Highcharts.find(arr, function (obj) {
+  //             return obj.name === word;
+  //         });
+  //         if (obj) {
+  //             obj.weight += 1;
+  //         } else {
+  //             obj = {
+  //                 name: word,
+  //                 weight: 1
+  //             };
+  //             arr.push(obj);
+  //         }
+  //         return arr;
+  //     }, []);
 
-Highcharts.chart('container2', {
-    accessibility: {
-        screenReaderSection: {
-            beforeChartFormat: '<h5>{chartTitle}</h5>' +
-                '<div>{chartSubtitle}</div>' +
-                '<div>{chartLongdesc}</div>' +
-                '<div>{viewTableButton}</div>'
-        }
-    },
-    series: [{
-        type: 'wordcloud',
-        data: data,
-        name: 'Occurrences'
-    }],
-    title: {
-        text: 'Hastags'
-    }
-});
+  // Highcharts.chart('container2', {
+  //     accessibility: {
+  //         screenReaderSection: {
+  //             beforeChartFormat: '<h5>{chartTitle}</h5>' +
+  //                 '<div>{chartSubtitle}</div>' +
+  //                 '<div>{chartLongdesc}</div>' +
+  //                 '<div>{viewTableButton}</div>'
+  //         }
+  //     },
+  //     series: [{
+  //         type: 'wordcloud',
+  //         data: data,
+  //         name: 'Occurrences'
+  //     }],
+  //     title: {
+  //         text: 'Hastags'
+  //     }
+  // });
 </script>
 
 
