@@ -1,7 +1,8 @@
+
 .bar2 {
   position: absolute;
-  height: 5px;
-  width: 150px;
+  height: 10px;
+  width: 420px;
 }
 
 .emptybar2 {
@@ -12,7 +13,7 @@
 
 .filledbar2 {
   position: absolute;
-  top: 0px;
+  top: 24px;
   z-index: 3;
   width: 0px;
   height: 100%;
@@ -21,33 +22,73 @@
   transition: 0.8s ease-out;
 }
 
-.card2:hover .filledbar2 {
-  width: 75%;
+.card34:hover .filledbar2 {
+  width: 90%;
   transition: 0.8s ease all;
 }
 
 
+
+.bar3 {
+  position: absolute;
+  height: 10px;
+  width: 420px;
+}
+
+.emptybar3 {
+  background-color: #2e3033;
+  width: 100%;
+  height: 100%;
+}
+
+.filledbar3 {
+  position: absolute;
+  top: 24px;
+  z-index: 3;
+  width: 0px;
+  height: 100%;
+  background: rgb(0,154,217);
+  background: linear-gradient(145deg, #fdf497 5%, #fd5949 25%,#d6249f 75%,#d6249f 100%);
+  transition: 0.8s ease-out;
+}
+
+.card34:hover .filledbar3 {
+  width: 5%;
+  transition: 0.8s ease all;
+}
+
+
+.card-campaigns {
+    display: inline-block !important;
+}
+
+.card-campaigns .form-group {
+  display: none;
+}
+
+
+
+
+
+
 .card2 {
   display: flex;
-  height: 600px;
+  height: 596px;
   text-align: center;
   background:white;
   border-radius: 12px;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
-  margin : 12px;
+  margin : 8px;
   transition: 0.4s ease-out;
   position: relative;
 
 
-  .image2 {
-
-    width: 80px;
-    height: 80px;
+  .image32 {
+    position: relative;
+    width: 150px;
+    height: 150px;
     margin: 8px auto 0 auto;
-    border-radius: 50%;
-    position:relative;
-    top: 56px;
-    right:50px;
+
 
 
     img {
@@ -58,34 +99,23 @@
 
   }
 
-    .image3 {
 
-    width: 300px;
-    height: 300px;
-    margin: 8px auto 0 auto;
-
-
-
-    img {
-      border-color: 1px solid white;
- }
- }
+  }
 
   .name2 {
-    font-size: 15px;
-    font-weight: 600;
+    font-size: 24px;
+    font-weight: 800;
   }
 
   .job2 {
-    font-size: 11px;
+    font-size: 14px;
+       font-weight: 700;
     line-height: 15px;
-  }
-
   }
 
 
 // .card2:hover {
-//   transform: scale(0.95);
+//   transform: scale(1.10);
 //   transition: transform 0.8s cubic-bezier(0,0,.2,1);
 // }
 
@@ -100,10 +130,10 @@
 
   .box2 {
     box-sizing: border-box;
-    width: 81px;
-    height: 196px;
+    width: 100px;
+    height: 198px;
     text-align: center;
-    padding-top: 28px;
+    padding-top: 27px;
 
   }
 
@@ -113,13 +143,14 @@
   }
 
   .value2 {
-    font-size: 18px;
-    font-weight: 600;
+    font-size: 20px;
+    font-weight: 800;
     color:white;
   }
 
   .parameter2 {
-    font-size: 11px;
+    font-size: 14px;
+       font-weight: 700;
     color:white;
   }
 
@@ -134,21 +165,158 @@ font-size:12px;
 
 
 .padd2 {
-padding:0 12px 0px 12px;
+padding:12px 12px 0px 12px;
   }
 
+.head_logoab1 {
+  width: 60px;
+  border-radius: 50%;
+  border: 1px solid white;
+  position: relative;
+  bottom: 12px;
+  margin-bottom: 12px;
+}
 
-.image2 {
+.head_logoab1:hover {
+transform: scale(1.50) !important;
+        transition: transform 0.8s cubic-bezier(0,0,.2,1);
+}
 
-    width: 80px;
-    height: 80px;
-    margin: 8px auto 0 auto;
-    border-radius: 50%;
-    position: relative;
-    bottom: 113px;
-    left: 52px;
-    z-index: 1;
+.head_logoab1::after {
+transition: 0.5s ease all;
+}
+
+.head_logoab2 {
+  width: 60px;
+  border-radius: 50%;
+  border: 1px solid white;
+  position: relative;
+  bottom: 12px;
+  right:12px;
+    margin-bottom: 12px;
+}
+
+.head_logoab2:hover {
+transform: scale(1.50) !important;
+        transition: transform 0.8s cubic-bezier(0,0,.2,1);
+}
+
+.head_logoab2::after {
+transition: 0.5s ease all;
+}
+
+.head_logoab3 {
+  width: 60px;
+  border-radius: 50%;
+  border: 1px solid white;
+  position: relative;
+  bottom: 12px;
+  right:24px;
+    margin-bottom: 12px;
+}
+
+.head_logoab3:hover {
+transform: scale(1.50) !important;
+        transition: transform 0.8s cubic-bezier(0,0,.2,1);
+}
+
+.head_logoab3::after {
+transition: 0.5s ease all;
+}
 
 
+.head_logoab4 {
+  width: 60px;
+  border-radius: 50%;
+  border: 1px solid white;
+  position: relative;
+  bottom: 12px;
+  right:36px;
+    margin-bottom: 12px;
+}
+
+.head_logoab4:hover {
+transform: scale(1.50) !important;
+        transition: transform 0.8s cubic-bezier(0,0,.2,1);
+}
+
+.head_logoab4::after {
+transition: 0.5s ease all;
+}
+
+.head_logoab5 {
+  width: 60px;
+  border-radius: 50%;
+  border: 1px solid white;
+  position: relative;
+  bottom: 12px;
+  right:48px;
+    margin-bottom: 12px;
+}
+
+.head_logoab5:hover {
+transform: scale(1.50) !important;
+        transition: transform 0.8s cubic-bezier(0,0,.2,1);
+}
+
+.head_logoab5::after {
+transition: 0.5s ease all;
+}
+
+.head_logoab6 {
+  width: 60px;
+  border-radius: 50%;
+  border: 1px solid white;
+  position: relative;
+  bottom: 12px;
+  right:60px;
+    margin-bottom: 12px;
+}
+
+.head_logoab6:hover {
+transform: scale(1.50) !important;
+        transition: transform 0.8s cubic-bezier(0,0,.2,1);
+}
+
+.head_logoab6::after {
+transition: 0.5s ease all;
+}
+.head_logoab7 {
+  width: 60px;
+  border-radius: 50%;
+  border: 1px solid white;
+  position: relative;
+  bottom: 12px;
+  right:72px;
+    margin-bottom: 12px;
+}
+
+.head_logoab7:hover {
+transform: scale(1.50) !important;
+        transition: transform 0.8s cubic-bezier(0,0,.2,1);
+}
+
+.head_logoab7::after {
+transition: 0.5s ease all;
+}
+
+.plus15{
+  position:relative;
+  right:60px;
+  top:20px;
+  font-weight: 800;
+  font-size:16px;
+}
+
+.card-campaign-list {
+  text-align: center;
+  background-color: white;
+  border-radius: 12px;
+  padding: 12px;
+}
+
+.content-card-campaign {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
 }
 
