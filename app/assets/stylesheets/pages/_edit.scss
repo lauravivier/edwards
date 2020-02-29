@@ -236,3 +236,26 @@ font-size:12px;
 .padd {
 padding:0 12px 0px 12px;
   }
+
+
+  // custom checbox
+INPUT[type=checkbox]:focus
+{
+    outline: 1px solid rgba(0, 0, 0, 0.2);
+}
+INPUT[type=checkbox]
+{
+    background-color: #DDD;
+    border-radius: 2px;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    width: 14px;
+    height: 14px;
+    cursor: pointer;
+}
+INPUT[type=checkbox]:checked
+{
+    background-color: #fe9467;
+    background: red url(“data:image/gif;base64,R0lGODlhCwAKAIABAP////3cnSH5BAEKAAEALAAAAAALAAoAAAIUjH+AC73WHIsw0UCjglraO20PNhYAOw==“) 3px 3px no-repeat;
+}
