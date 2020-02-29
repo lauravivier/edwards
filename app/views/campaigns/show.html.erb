@@ -12,53 +12,64 @@
   <br>
     <hshow>VOS PROJECTIONS POUR LA CAMPAGNE</hshow>
     <br>
-  <div class="flexshow ">
-    <div>
-        <span class="icon"></span>
+  <div class="flexshow d-flex">
+      <div class="iconab">
         <%=image_tag "date.png", class: "iconb"%>
-          <h3>Date</h3>
+        <h3>Date</h3>
         <p>Du <%= @campaign.starts_at %> au <%= @campaign.ends_at %></p>
-    </div>
-<div>
-  <span class="icon"></span>
-    <%=image_tag "objectif.png", class: "iconb"%>
-    <h3>Objectif</h3>
-      <p><%= @campaign.goal%></p>
+      </div>
 
-</div>
-  <div>
-    <span class="icon"></span>
-    <%=image_tag "brief.png", class: "iconb"%>
-      <h3>Brief</h3>
-      <p><%= @campaign.message %></p>
-  </div>
+      <div class="iconab">
+        <%=image_tag "objectif.png", class: "iconb"%>
+        <h3>Objectif</h3>
+        <p><%= @campaign.goal%></p>
+      </div>
+
+      <div class="iconab">
+        <%=image_tag "brief.png", class: "iconb"%>
+        <h3>Brief</h3>
+        <p><%= @campaign.message %></p>
+      </div>
+
 </header>
 
 
 <div>
-  <div class="container4 m-5">
+  <div class="container4">
     <div class="one">
-      <fn> <%=@campaign.influencers.count %> </fn>
+      <fn> <txtbil0><%=@campaign.influencers.count %></txtbil0> </fn>
       <txtbil>INFLUENCEURS</txtbil>
+      <%=image_tag "https://res.cloudinary.com/ddciebk6s/image/upload/w_1000,ar_1:1,c_fill,g_auto,e_art:hokusai/v1582955953/Influencers/Lucrezia_De_Luca_mqkd1f.png", class: "head_logo1"%>
+      <%=image_tag "https://res.cloudinary.com/ddciebk6s/image/upload/w_1000,ar_1:1,c_fill,g_auto,e_art:hokusai/v1582955953/Influencers/Lucrezia_De_Luca_mqkd1f.png", class: "head_logo2"%>
+      <%=image_tag "https://res.cloudinary.com/ddciebk6s/image/upload/w_1000,ar_1:1,c_fill,g_auto,e_art:hokusai/v1582955953/Influencers/Lucrezia_De_Luca_mqkd1f.png", class: "head_logo3"%>
+      <%=image_tag "https://res.cloudinary.com/ddciebk6s/image/upload/w_1000,ar_1:1,c_fill,g_auto,e_art:hokusai/v1582955953/Influencers/Lucrezia_De_Luca_mqkd1f.png", class: "head_logo4"%>
+      <%=image_tag "https://res.cloudinary.com/ddciebk6s/image/upload/w_1000,ar_1:1,c_fill,g_auto,e_art:hokusai/v1582955953/Influencers/Lucrezia_De_Luca_mqkd1f.png", class: "head_logo5"%>
+      <%=image_tag "https://res.cloudinary.com/ddciebk6s/image/upload/w_1000,ar_1:1,c_fill,g_auto,e_art:hokusai/v1582955953/Influencers/Lucrezia_De_Luca_mqkd1f.png", class: "head_logo1"%>
+      <%=image_tag "https://res.cloudinary.com/ddciebk6s/image/upload/w_1000,ar_1:1,c_fill,g_auto,e_art:hokusai/v1582955953/Influencers/Lucrezia_De_Luca_mqkd1f.png", class: "head_logo2"%>
+      <%=image_tag "https://res.cloudinary.com/ddciebk6s/image/upload/w_1000,ar_1:1,c_fill,g_auto,e_art:hokusai/v1582955953/Influencers/Lucrezia_De_Luca_mqkd1f.png", class: "head_logo3"%>
+      <%=image_tag "https://res.cloudinary.com/ddciebk6s/image/upload/w_1000,ar_1:1,c_fill,g_auto,e_art:hokusai/v1582955953/Influencers/Lucrezia_De_Luca_mqkd1f.png", class: "head_logo4"%>
+      <%=image_tag "https://res.cloudinary.com/ddciebk6s/image/upload/w_1000,ar_1:1,c_fill,g_auto,e_art:hokusai/v1582955953/Influencers/Lucrezia_De_Luca_mqkd1f.png", class: "head_logo5"%>
+      <%=image_tag "https://res.cloudinary.com/ddciebk6s/image/upload/w_1000,ar_1:1,c_fill,g_auto,e_art:hokusai/v1582955953/Influencers/Lucrezia_De_Luca_mqkd1f.png", class: "head_logo1"%>
+      <%=image_tag "https://res.cloudinary.com/ddciebk6s/image/upload/w_1000,ar_1:1,c_fill,g_auto,e_art:hokusai/v1582955953/Influencers/Lucrezia_De_Luca_mqkd1f.png", class: "head_logo2"%>
     </div>
+
     <div class="two">
-      <txtbil><%= @community_age %></txtbil><br/>
-      <br>
-      <br>
-      <txtbil2> Pays Ciblé : France </txtbil2><br/>
-        <br><txtbil> <%= @community_location %> </txtbil> <br/>
+      <br><txtbil3>Pays Ciblé(s) :</txttbil3><br/>
+        <br>
+        <br>
+      <br><txtbil4>- FRANCE 🇫🇷<txtbil4><br/>
     </div>
-      <br>
-      <br>
-      <div class="one">
-      <br>
-      <br>
-    <txtbil> PRÉVISIONS </txttbil>
-    </div>
-    <div class="two">
-      <br><txtbil2> 20 000 impressions</txttbil2><br/>
-      <br><txtbil2> 5 000 like</txttbil2><br/>
-      <br><txtbil2> 3 000 commentaires </txttbil2><br/>
+
+    <div class="three">
+      <br><txtbil2> Prévisions de campagne :</txttbil2><br/>
+      <br><txtbil5>- 22 500 impressions</txttbil5><br/>
+        <br>
+      <br><txtbil5>- 4 900 like</txttbil5><br/>
+        <br>
+      <br><txtbil5>- 1500 reposts</txttbil5><br/>
+        <br>
+      <br><txtbil5>- 800 commentaires</txttbil5><br/>
+        <br>
       <br>
     </div>
   </div>
@@ -74,7 +85,7 @@
 
 
 
-<div class= "m-5 foo">
+<!-- <div class= "m-5 foo">
 <h2> Le bilan brut de la campagne est le suivant :</h2>
  <p> Nombre de personne engagées : <%= @nbr_engagement %></p>
   <p> le nombre total de posts est (calcul à vérifier) : <%= @nbr_post %></p>
@@ -87,7 +98,7 @@
   <p> le nombre de likes est : <%= @like_by_influencer %></p>
   <p> le nombre de commentaires est : <%= @comment_by_influencer %></p>
 </div>
-
+ -->
 <link rel="stylesheet" href="https://github.com/downloads/lafeber/world-flags-sprite/flags16.css" />
 
 <figure class="highcharts-figure">
@@ -101,73 +112,73 @@
 <%= @hashtag %>
 <script>
 console.log('<%=@campaign.metrics.pluck(:hashtag)%>')
-Highcharts.chart('container1', {
-    colors: ['#FFD700', '#C0C0C0', '#CD7F32'],
-    chart: {
-        type: 'column',
-        inverted: true,
-        polar: true
-    },
-    title: {
-        text: 'Impression par influenceur'
-    },
-    tooltip: {
-        outside: true
-    },
-    pane: {
-        size: '85%',
-        innerSize: '20%',
-        endAngle: 270
-    },
-    xAxis: {
-        tickInterval: 1,
-        labels: {
-            align: 'right',
-            useHTML: true,
-            allowOverlap: true,
-            step: 1,
-            y: 3,
-            style: {
-                fontSize: '13px'
-            }
-        },
-        lineWidth: 0,
-        categories: [
-            <% @impression_by_influencer.keys.each do |key| %>
-            '<%=key%>',
-            <% end %>
-        ]
-    },
-    yAxis: {
-        crosshair: {
-            enabled: true,
-            color: '#333'
-        },
-        lineWidth: 0,
-        tickInterval: 25,
-        reversedStacks: false,
-        endOnTick: true,
-        showLastLabel: true
-    },
-    plotOptions: {
-        column: {
-            stacking: 'normal',
-            borderWidth: 0,
-            pointPadding: 0,
-            groupPadding: 0.15
-        }
-    },
-    series: [{
-        name: 'Impression',
-        data:
-          <%=@impression_by_influencer.values%>
+// Highcharts.chart('container1', {
+//     colors: ['#FFD700', '#C0C0C0', '#CD7F32'],
+//     chart: {
+//         type: 'column',
+//         inverted: true,
+//         polar: true
+//     },
+//     title: {
+//         text: 'Impression par influenceur'
+//     },
+//     tooltip: {
+//         outside: true
+//     },
+//     pane: {
+//         size: '85%',
+//         innerSize: '20%',
+//         endAngle: 270
+//     },
+//     xAxis: {
+//         tickInterval: 1,
+//         labels: {
+//             align: 'right',
+//             useHTML: true,
+//             allowOverlap: true,
+//             step: 1,
+//             y: 3,
+//             style: {
+//                 fontSize: '13px'
+//             }
+//         },
+//         lineWidth: 0,
+//         categories: [
+//             <% @impression_by_influencer.keys.each do |key| %>
+//             '<%=key%>',
+//             <% end %>
+//         ]
+//     },
+//     yAxis: {
+//         crosshair: {
+//             enabled: true,
+//             color: '#333'
+//         },
+//         lineWidth: 0,
+//         tickInterval: 25,
+//         reversedStacks: false,
+//         endOnTick: true,
+//         showLastLabel: true
+//     },
+//     plotOptions: {
+//         column: {
+//             stacking: 'normal',
+//             borderWidth: 0,
+//             pointPadding: 0,
+//             groupPadding: 0.15
+//         }
+//     },
+//     series: [{
+//         name: 'Impression',
+//         data:
+//           <%=@impression_by_influencer.values%>
 
 
-    }, {
-        name: 'Audience',
-        data: [10000, 15000, 20000]
-    }]
-});
+//     }, {
+//         name: 'Audience',
+//         data: [10000, 15000, 20000]
+//     }]
+// });
 
 
 var text = '<%=@hashtag %>';

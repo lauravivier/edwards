@@ -142,14 +142,13 @@
 
 .btn-ghost8 {
   position:relative;
-  left:950px;
-  color: #0047FE;
-  border: 2px solid #0047FE;
+  left:512px;
+  right:512px;
+  color: #1ddd88;
+  border: 2px solid #1ddd88;
   background-color: white;
-  font-weight:600;
+  font-weight:700;
   padding: 8px 24px;
-  margin-right:12px;
-  margin-left:12px;
   border-radius: 12px !important;
   transition: background 0.3s ease;
   justify-content: flex-end;
@@ -158,7 +157,7 @@
 .btn-ghost8:hover {
   color:white;
   border: 2px solid #1ddd88;
-  font-weight:700;
+  font-weight:800;
   background-color: #1ddd88;
   text-decoration:none;
   transform: scale(1.08) !important;

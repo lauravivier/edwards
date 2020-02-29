@@ -31,13 +31,13 @@ User.destroy_all
 # MEDIAS = ["Instagram", "Facebook", "Twitter", "Youtube", "Pinterest"]
 
 puts 'Creating User...'
-user_01 = User.new(name: "Ken", email: "ken@decathlon.com", password: "helloo")
+user_01 = User.new(name: "Ken", email: "ken@sunny.com", password: "helloo")
 user_01.save!
 
-user_02 = User.new(name: "Laura", email: "lau@decathlon.com", password: "helloo")
+user_02 = User.new(name: "Laura", email: "laura@sunny.com", password: "helloo")
 user_02.save!
 
-user_03 = User.new(name: "Cyrille", email: "cyrille@decathlon.com", password: "helloo")
+user_03 = User.new(name: "Cyrille", email: "cyrille@sunny.com", password: "helloo")
 user_03.save!
 
 puts 'Creating Campaign...'
@@ -55,19 +55,19 @@ campaign_03.save!
 
 puts 'Creating Influencer01...'
 file = URI.open('https://res.cloudinary.com/ddciebk6s/image/upload/w_1000,ar_1:1,c_fill,g_auto/v1582379354/Influencers/Jean_Michel_y4usdq.png')
-influencer_01 = Influencer.new(name: "Jean Michel", location_list: "France", size_list: "20 000 à 30 000 followers", age_list:"18 à 24 ans", followers: 24642, likes:1351, posts: 170, influencer_type:"Business", engagement_rate: "10,45%", media_list: "Instagram")
+influencer_01 = Influencer.new(name: "Jean Michelo", location_list: "France", size_list: "20 000 à 30 000 followers", age_list:"18 à 24 ans", followers: 24642, likes:1351, posts: 170, influencer_type:"Business", engagement_rate: "10,45%", media_list: "Instagram")
 influencer_01.photo.attach(io: file, filename: 'Jean_Michel_y4usdq.png', content_type: 'image/png')
 influencer_01.save!
 
 puts 'Creating Influencer02...'
 file = URI.open('https://res.cloudinary.com/ddciebk6s/image/upload/w_1000,ar_1:1,c_fill,g_auto/v1582379706/Influencers/Michel_Berger_i9leqo.png')
-influencer_02 = Influencer.new(name: "Michel Berger", location_list: "Italie", size_list: "30 000 à 50 000 followers", age_list:"35 à 44 ans", followers: 35120, likes:136, posts: 245, influencer_type:"Lifestyle", engagement_rate: "9,45%", media_list: "Pinterest")
+influencer_02 = Influencer.new(name: "Joe Bergato", location_list: "Italie", size_list: "30 000 à 50 000 followers", age_list:"35 à 44 ans", followers: 35120, likes:136, posts: 245, influencer_type:"Lifestyle", engagement_rate: "9,45%", media_list: "Pinterest")
 influencer_02.photo.attach(io: file, filename: 'Michel_Berger_i9leqo.png', content_type: 'image/png')
 influencer_02.save!
 
 puts 'Creating Influencer03...'
 file = URI.open('https://res.cloudinary.com/ddciebk6s/image/upload/w_1000,ar_1:1,c_fill,g_auto/v1582380121/Influencers/Patricia_Ka_yiotqa.png')
-influencer_03 = Influencer.new(name: "Patricia Ka", location_list: "Italie", size_list: "100 000 followers et +", age_list:"18 à 24 ans", followers: 125302, likes:630, posts: 240, influencer_type:"Business", engagement_rate: "8,45%", media_list: "Youtube")
+influencer_03 = Influencer.new(name: "Patricia Dalou", location_list: "Italie", size_list: "100 000 followers et +", age_list:"18 à 24 ans", followers: 125302, likes:630, posts: 240, influencer_type:"Business", engagement_rate: "8,45%", media_list: "Youtube")
 influencer_03.photo.attach(io: file, filename: 'Patricia_Ka_yiotqa.png', content_type: 'image/png')
 influencer_03.save!
 
@@ -79,7 +79,7 @@ influencer_04.save!
 
 puts 'Creating Influencer05...'
 file = URI.open('https://res.cloudinary.com/ddciebk6s/image/upload/w_1000,ar_1:1,c_fill,g_auto/v1582379355/Influencers/Alice_Rocher_qz3aaa.png')
-influencer_05 = Influencer.new(name: "Alice Rocher", location_list: "Belgique", size_list: "100 000 followers et +", age_list:"25 à 34ans",  followers: 124153, likes:112, posts: 324, influencer_type:"Fitness", engagement_rate: "6,45%", media_list: "Facebook")
+influencer_05 = Influencer.new(name: "Alice Rocher", location_list: "Belgique", size_list: "100 000 followers et +", age_list:"25 à 34ans",  followers: 124153, likes:112, posts: 324, influencer_type:"Fashion", engagement_rate: "6,45%", media_list: "Facebook")
 influencer_05.photo.attach(io: file, filename: 'Alice_Rocher_qz3aaa.png', content_type: 'image/png')
 influencer_05.save!
 
@@ -93,6 +93,7 @@ puts 'Creating Influencer07...'
 file = URI.open('https://res.cloudinary.com/ddciebk6s/image/upload/w_1000,ar_1:1,c_fill,g_auto/v1582770525/Influencers/Marine_Pain_fhl8ef.png')
 influencer_07 = Influencer.new(name: "Marine Pain", location_list: "Angleterre", size_list: "30 000 à 50 000 followers", age_list:"45 à 54 ans", followers: 40521, likes: 252, posts: 250, influencer_type:"Vlog", engagement_rate: "4,45%", media_list: "Youtube")
 influencer_07.photo.attach(io: file, filename: 'Marine_Pain_fhl8ef.png', content_type: 'image/png')
+influencer_07.save!
 
 puts 'Creating Influencer08...'
 file = URI.open('https://res.cloudinary.com/ddciebk6s/image/upload/w_1000,ar_1:1,c_fill,g_auto/v1582379354/Influencers/Helene_Roger_lseqb7.png')
@@ -123,6 +124,157 @@ file = URI.open('https://res.cloudinary.com/ddciebk6s/image/upload/w_1000,ar_1:1
 influencer_12 = Influencer.new(name: "Edith Loiseau", location_list: "France", size_list: "10 000 à 20 000 followers", age_list:"13 à 17 ans", followers: 15391, likes:421, posts: 469, influencer_type:"Travel", engagement_rate: "3,45%", media_list: "Instagram")
 influencer_12.photo.attach(io: file, filename: 'Edith_Loiseau_amgyer.png', content_type: 'image/png')
 influencer_12.save!
+
+puts 'Creating Influencer13...'
+file = URI.open('https://res.cloudinary.com/ddciebk6s/image/upload/w_1000,ar_1:1,c_fill,g_auto,e_art:hokusai/v1582955950/Influencers/Louis_Harris_kp6vel.png')
+influencer_13 = Influencer.new(name: "Louis Harris", location_list: "Italie", size_list: "100 000 followers et +", age_list:"18 à 24 ans", followers: 125302, likes:630, posts: 240, influencer_type:"Travel", engagement_rate: "8,45%", media_list: "Youtube")
+influencer_13.photo.attach(io: file, filename: 'Louis_Harris_kp6vel.png', content_type: 'image/png')
+influencer_13.save!
+
+puts 'Creating Influencer14...'
+file = URI.open('https://res.cloudinary.com/ddciebk6s/image/upload/w_1000,ar_1:1,c_fill,g_auto,e_art:hokusai/v1582955947/Influencers/Blanche_Dubee_gydjrw.png')
+influencer_14 = Influencer.new(name: "Blanche Dube", location_list: "Belgique", size_list: "20 000 à 30 000 followers", age_list:"45 à 54 ans", followers: 29821, likes:703, posts: 868, influencer_type:"Vlog", engagement_rate: "7,45%", media_list: "Twitter")
+influencer_14.photo.attach(io: file, filename: 'Blanche_Dubee_gydjrw.png', content_type: 'image/png')
+influencer_14.save!
+
+puts 'Creating Influencer15...'
+file = URI.open('https://res.cloudinary.com/ddciebk6s/image/upload/w_1000,ar_1:1,c_fill,g_auto,e_art:hokusai/v1582955953/Influencers/Lucrezia_De_Luca_mqkd1f.png')
+influencer_15 = Influencer.new(name: "Lucrezia De Luca", location_list: "Belgique", size_list: "100 000 followers et +", age_list:"25 à 34ans",  followers: 124153, likes:112, posts: 324, influencer_type:"Fitness", engagement_rate: "6,45%", media_list: "Facebook")
+influencer_15.photo.attach(io: file, filename: 'Lucrezia_De_Luca_mqkd1f.png', content_type: 'image/png')
+influencer_15.save!
+
+puts 'Creating Influencer16...'
+file = URI.open('https://res.cloudinary.com/ddciebk6s/image/upload/w_1000,ar_1:1,c_fill,g_auto,e_art:hokusai/v1582955953/Influencers/Marianna_Greco_xnehra.png')
+influencer_16 = Influencer.new(name: "Marianna Greco", location_list: "Belgique", size_list: "30 000 à 50 000 followers", age_list:"18 à 24 ans", followers: 30294, likes:250, posts: 734, influencer_type:"Fitness", engagement_rate: "5,45%", media_list: "Twitter")
+influencer_16.photo.attach(io: file, filename: 'Marianna_Greco_xnehra.png', content_type: 'image/png')
+influencer_16.save!
+
+puts 'Creating Influencer17...'
+file = URI.open('https://res.cloudinary.com/ddciebk6s/image/upload/w_1000,ar_1:1,c_fill,g_auto,e_art:hokusai/v1582955953/Influencers/Matthew_Jerry_qh6hhg.png')
+influencer_17 = Influencer.new(name: "Matthew Jerry", location_list: "Angleterre", size_list: "30 000 à 50 000 followers", age_list:"45 à 54 ans", followers: 40521, likes: 252, posts: 250, influencer_type:"Vlog", engagement_rate: "4,45%", media_list: "Youtube")
+influencer_17.photo.attach(io: file, filename: 'Matthew_Jerry_qh6hhg.png', content_type: 'image/png')
+influencer_17.save!
+
+puts 'Creating Influencer18...'
+file = URI.open('https://res.cloudinary.com/ddciebk6s/image/upload/w_1000,ar_1:1,c_fill,g_auto,e_art:hokusai/v1582955950/Influencers/Frank_Rosario_x4f1fy.png')
+influencer_18 = Influencer.new(name: "Frank Rosario", location_list: "Espagne", size_list: "30 000 à 50 000 followers", age_list:"25 à 34ans", followers: 49310, likes: 964, posts: 100, influencer_type:"Lifestyle", engagement_rate: "3,45%", media_list: "Facebook")
+influencer_18.photo.attach(io: file, filename: 'Frank_Rosario_x4f1fy.png', content_type: 'image/png')
+influencer_18.save!
+
+puts 'Creating Influencer19...'
+file = URI.open('https://res.cloudinary.com/ddciebk6s/image/upload/w_1000,ar_1:1,c_fill,g_auto,e_art:hokusai/v1582955951/Influencers/Kristin_Boston_lju5ov.png')
+influencer_19 = Influencer.new(name: "Kristin Boston", location_list: "Espagne", size_list: "10 000 à 20 000 followers", age_list:"18 à 24 ans", followers: 19502, likes:652, posts: 107, influencer_type:"Travel", engagement_rate: "3,45%",  media_list: "Instagram")
+influencer_19.photo.attach(io: file, filename: 'Kristin_Boston_lju5ov.png', content_type: 'image/png')
+influencer_19.save!
+
+puts 'Creating Influencer20...'
+file = URI.open('https://res.cloudinary.com/ddciebk6s/image/upload/w_1000,ar_1:1,c_fill,g_auto,e_art:hokusai/v1582955947/Influencers/Corinne_Lemelin_ofyziw.png')
+influencer_20 = Influencer.new(name: "Corinne Lemelin", location_list: "France", size_list: "20 000 à 30 000 followers", age_list:"13 à 17 ans", followers: 21987, likes:2051, posts: 103, influencer_type:"Fitness", engagement_rate: "3,45%", media_list: "Instagram")
+influencer_20.photo.attach(io: file, filename: 'Corinne_Lemelin_ofyziw.png', content_type: 'image/png')
+influencer_20 .save!
+
+puts 'Creating Influencer21...'
+file = URI.open('https://res.cloudinary.com/ddciebk6s/image/upload/w_1000,ar_1:1,c_fill,g_auto,e_art:hokusai/v1582955948/Influencers/Estelle_Giroux_pjsabw.png')
+influencer_21 = Influencer.new(name: "Estelle Giroux", location_list: "Belgique", size_list: "100 000 followers et +", age_list:"25 à 34ans",  followers: 124153, likes:112, posts: 324, influencer_type:"Fashion", engagement_rate: "6,45%", media_list: "Facebook")
+influencer_21.photo.attach(io: file, filename: 'Alice_Rocher_qz3aaa.png', content_type: 'image/png')
+influencer_21.save!
+
+puts 'Creating Influencer22...'
+file = URI.open('https://res.cloudinary.com/ddciebk6s/image/upload/w_1000,ar_1:1,c_fill,g_auto,e_art:hokusai/v1582955952/Influencers/Leo_Rymill_a0wnux.png')
+influencer_22 = Influencer.new(name: "Leo Rymill", location_list: "Angleterre", size_list: "30 000 à 50 000 followers", age_list:"45 à 54 ans", followers: 40521, likes: 252, posts: 250, influencer_type:"Fitness", engagement_rate: "4,45%", media_list: "Youtube")
+influencer_22.photo.attach(io: file, filename: 'Leo_Rymill_a0wnux.png', content_type: 'image/png')
+influencer_22.save!
+
+puts 'Creating Influencer23...'
+file = URI.open('https://res.cloudinary.com/ddciebk6s/image/upload/w_1000,ar_1:1,c_fill,g_auto,e_art:hokusai/v1582955949/Influencers/Diana_Loewe_sqt8ek.png')
+influencer_23 = Influencer.new(name: "Diana Loewe", location_list: "Belgique", size_list: "30 000 à 50 000 followers", age_list:"18 à 24 ans", followers: 30294, likes:250, posts: 734, influencer_type:"Lifestyle", engagement_rate: "5,45%", media_list: "Twitter")
+influencer_23.photo.attach(io: file, filename: 'Diana_Loewe_sqt8ek.png', content_type: 'image/png')
+influencer_23.save!
+
+puts 'Creating Influencer24...'
+file = URI.open('https://res.cloudinary.com/ddciebk6s/image/upload/w_1000,ar_1:1,c_fill,g_auto,e_art:hokusai/v1582955950/Influencers/Evie_Stone_thsbyd.png')
+influencer_24 = Influencer.new(name: "Evie Stone", location_list: "Espagne", size_list: "30 000 à 50 000 followers", age_list:"25 à 34ans", followers: 49310, likes: 964, posts: 100, influencer_type:"Lifestyle", engagement_rate: "3,45%", media_list: "Facebook")
+influencer_24.photo.attach(io: file, filename: 'Evie_Stone_thsbyd.png', content_type: 'image/png')
+influencer_24.save!
+
+puts 'Creating Influencer25...'
+file = URI.open('https://res.cloudinary.com/ddciebk6s/image/upload/w_1000,ar_1:1,c_fill,g_auto,e_art:hokusai/v1582955952/Influencers/Luke_Butler_gglile.png')
+influencer_25 = Influencer.new(name: "Luke Butler", location_list: "Espagne", size_list: "10 000 à 20 000 followers", age_list:"18 à 24 ans", followers: 19502, likes:652, posts: 107, influencer_type:"Travel", engagement_rate: "3,45%",  media_list: "Instagram")
+influencer_25.photo.attach(io: file, filename: 'Luke_Butler_gglile.png', content_type: 'image/png')
+influencer_25.save!
+
+puts 'Creating Influencer26...'
+file = URI.open('https://res.cloudinary.com/ddciebk6s/image/upload/w_1000,ar_1:1,c_fill,g_auto,e_art:hokusai/v1582955946/Influencers/Charles_Mitchell_fe1n7s.png')
+influencer_26 = Influencer.new(name: "Charles Mitchell", location_list: "France", size_list: "20 000 à 30 000 followers", age_list:"13 à 17 ans", followers: 21987, likes:2051, posts: 103, influencer_type:"Fitness", engagement_rate: "3,45%", media_list: "Instagram")
+influencer_26.photo.attach(io: file, filename: 'Charles_Mitchell_fe1n7s.png', content_type: 'image/png')
+influencer_26.save!
+
+puts 'Creating Influencer27...'
+file = URI.open('https://res.cloudinary.com/ddciebk6s/image/upload/w_1000,ar_1:1,c_fill,g_auto,e_art:hokusai/v1582955948/Influencers/Apolonio_Ruvalcaba_l4mvyr.png')
+influencer_27 = Influencer.new(name: "Apolonio Ruvalcaba", location_list: "France", size_list: "20 000 à 30 000 followers", age_list:"13 à 17 ans", followers: 21987, likes:2051, posts: 103, influencer_type:"Fitness", engagement_rate: "3,45%", media_list: "Instagram")
+influencer_27.photo.attach(io: file, filename: 'Apolonio_Ruvalcaba_l4mvyr.png', content_type: 'image/png')
+influencer_27.save!
+
+puts 'Creating Influencer28...'
+file = URI.open('https://res.cloudinary.com/ddciebk6s/image/upload/w_1000,ar_1:1,c_fill,g_auto,e_art:hokusai/v1582955949/Influencers/Petrona_Ybarra_ssjpan.png')
+influencer_28 = Influencer.new(name: "Petrona Ybarra", location_list: "France", size_list: "20 000 à 30 000 followers", age_list:"13 à 17 ans", followers: 21987, likes:2051, posts: 103, influencer_type:"Travel", engagement_rate: "3,45%", media_list: "Instagram")
+influencer_28.photo.attach(io: file, filename: 'Petrona_Ybarra_ssjpan.png', content_type: 'image/png')
+influencer_28.save!
+
+puts 'Creating Influencer29...'
+file = URI.open('https://res.cloudinary.com/ddciebk6s/image/upload/w_1000,ar_1:1,c_fill,g_auto,e_art:hokusai/v1582955951/Influencers/Iris_Espinal_v7hjdg.png')
+influencer_29 = Influencer.new(name: "Iris Espinal", location_list: "France", size_list: "20 000 à 30 000 followers", age_list:"13 à 17 ans", followers: 21987, likes:2051, posts: 103, influencer_type:"Fitness", engagement_rate: "3,45%", media_list: "Instagram")
+influencer_29.photo.attach(io: file, filename: 'Iris_Espinal_v7hjdg.png', content_type: 'image/png')
+influencer_29.save!
+
+puts 'Creating Influencer30...'
+file = URI.open('https://res.cloudinary.com/ddciebk6s/image/upload/w_1000,ar_1:1,c_fill,g_auto,e_art:hokusai/v1582955951/Influencers/Urszula_Duda_tzwfdk.png')
+influencer_30 = Influencer.new(name: "Urszula_Duda_tzwfdk.png", location_list: "France", size_list: "20 000 à 30 000 followers", age_list:"13 à 17 ans", followers: 21987, likes:2051, posts: 103, influencer_type:"Fitness", engagement_rate: "3,45%", media_list: "Instagram")
+influencer_30.photo.attach(io: file, filename: 'Veronica_Eliot_uufgbi.png', content_type: 'image/png')
+influencer_30.save!
+
+puts 'Creating Influencer31...'
+file = URI.open('https://res.cloudinary.com/ddciebk6s/image/upload/w_1000,ar_1:1,c_fill,g_auto,e_art:hokusai/v1582955947/Influencers/Ziemowit_Kaminskii_rbega7.png')
+influencer_21 = Influencer.new(name: "Ziemowit Kaminski", location_list: "Belgique", size_list: "100 000 followers et +", age_list:"25 à 34ans",  followers: 124153, likes:112, posts: 324, influencer_type:"Travel", engagement_rate: "6,45%", media_list: "Facebook")
+influencer_21.photo.attach(io: file, filename: 'Ziemowit_Kaminskii_rbega7.png', content_type: 'image/png')
+influencer_21.save!
+
+puts 'Creating Influencer32...'
+file = URI.open('https://res.cloudinary.com/ddciebk6s/image/upload/w_1000,ar_1:1,c_fill,g_auto,e_art:hokusai/v1582955948/Influencers/Victor_Silva_nkl2jb.png')
+influencer_32 = Influencer.new(name: "Victor Silva", location_list: "Angleterre", size_list: "30 000 à 50 000 followers", age_list:"45 à 54 ans", followers: 40521, likes: 252, posts: 250, influencer_type:"Fitness", engagement_rate: "4,45%", media_list: "Youtube")
+influencer_32.photo.attach(io: file, filename: 'Victor_Silva_nkl2jb.png', content_type: 'image/png')
+influencer_32.save!
+
+puts 'Creating Influencer33...'
+file = URI.open('https://res.cloudinary.com/ddciebk6s/image/upload/w_1000,ar_1:1,c_fill,g_auto,e_art:hokusai/v1582955949/Influencers/Janice_Milligan_kwsgwm.png')
+influencer_33 = Influencer.new(name: "Janice Milligan", location_list: "Belgique", size_list: "30 000 à 50 000 followers", age_list:"18 à 24 ans", followers: 30294, likes:250, posts: 734, influencer_type:"Lifestyle", engagement_rate: "5,45%", media_list: "Twitter")
+influencer_33.photo.attach(io: file, filename: 'Janice_Milligan_kwsgwm.png', content_type: 'image/png')
+influencer_33.save!
+
+puts 'Creating Influencer34...'
+file = URI.open('https://res.cloudinary.com/ddciebk6s/image/upload/w_1000,ar_1:1,c_fill,g_auto,e_art:hokusai/v1582955949/Influencers/Charles_Sowers_sikmxe.png')
+influencer_34 = Influencer.new(name: "Charles Sowers", location_list: "Espagne", size_list: "30 000 à 50 000 followers", age_list:"25 à 34ans", followers: 49310, likes: 964, posts: 100, influencer_type:"Lifestyle", engagement_rate: "3,45%", media_list: "Facebook")
+influencer_34.photo.attach(io: file, filename: 'Charles_Sowers_sikmxe.png', content_type: 'image/png')
+influencer_34.save!
+
+puts 'Creating Influencer35...'
+file = URI.open('https://res.cloudinary.com/ddciebk6s/image/upload/w_1000,ar_1:1,c_fill,g_auto,e_art:hokusai/v1582955947/Influencers/Sarah_Neely_kufvid.png')
+influencer_35 = Influencer.new(name: "Sarah Neely", location_list: "Espagne", size_list: "10 000 à 20 000 followers", age_list:"18 à 24 ans", followers: 19502, likes:652, posts: 107, influencer_type:"Travel", engagement_rate: "3,45%",  media_list: "Instagram")
+influencer_35.photo.attach(io: file, filename: 'Sarah_Neely_kufvid.png', content_type: 'image/png')
+influencer_35.save!
+
+puts 'Creating Influencer36...'
+file = URI.open('https://res.cloudinary.com/ddciebk6s/image/upload/w_1000,ar_1:1,c_fill,g_auto,e_art:hokusai/v1582955950/Influencers/Jerome_Holcomb_j1jcn6.png')
+influencer_36 = Influencer.new(name: "Jerome Holcomb", location_list: "France", size_list: "20 000 à 30 000 followers", age_list:"13 à 17 ans", followers: 21987, likes:2051, posts: 103, influencer_type:"Lifestyle", engagement_rate: "3,45%", media_list: "Instagram")
+influencer_36.photo.attach(io: file, filename: 'Jerome_Holcomb_j1jcn6.png', content_type: 'image/png')
+influencer_36.save!
+
+puts 'Creating Influencer37...'
+file = URI.open('https://res.cloudinary.com/ddciebk6s/image/upload/w_1000,ar_1:1,c_fill,g_auto,e_art:hokusai/v1582955950/Influencers/Henry_Morgan_i2jzpy.png')
+influencer_37 = Influencer.new(name: "Henry Morgan", location_list: "France", size_list: "20 000 à 30 000 followers", age_list:"13 à 17 ans", followers: 21987, likes:2051, posts: 103, influencer_type:"Travel", engagement_rate: "3,45%", media_list: "Instagram")
+influencer_37.photo.attach(io: file, filename: 'Henry_Morgan_i2jzpy.png', content_type: 'image/png')
+influencer_37.save!
+
 
 puts 'Creating Campaign_influencer...'
 
